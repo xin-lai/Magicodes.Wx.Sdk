@@ -4,7 +4,15 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- main
+  branches:
+    include:
+    - main
+    - release/*
+  paths:
+    include:
+    - src/*
+    exclude:
+    - *.md
 
 pool:
   vmImage: 'windows-latest'
@@ -23,7 +31,7 @@ steps:
 
 - task: PowerShell@2
   displayName: 'Package Push'
-  condition: eq(variables['Build.SourceBranchName'], 'master')
+  condition: eq(variables['Build.SourceBranchName'], 'main')
   env:
     NUGET_API_KEY: ${nugetapikey}
     GITHUB_API_KEY: ${githubapikey}
