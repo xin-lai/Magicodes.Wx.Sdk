@@ -1,4 +1,4 @@
-﻿namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.AspNet
+﻿namespace Magicodes.Wx.PublicAccount.Sdk.AspNet
 {
     public static class WeChatAspNetConsts
     {
