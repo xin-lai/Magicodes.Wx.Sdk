@@ -53,4 +53,4 @@ steps:
       gpr push --api-key ${env:GITHUB_APIKEY} $(Build.ArtifactStagingDirectory)\*.nupkg
     failOnStderr: true
     showWarnings: true
-    ignoreLASTEXITCODE: true
+    ignoreLASTEXITCODE: false
