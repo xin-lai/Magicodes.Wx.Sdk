@@ -1,0 +1,50 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: PowerShell@2
+  displayName: 'Package Push'
+  condition: eq(variables['Build.SourceBranchName'], 'master')
+  env:
+    NUGET_API_KEY: ${nugetapikey}
+    GITHUB_API_KEY: ${githubapikey}
+  inputs:
+    targetType: 'inline'
+    script: |
+      # 打包
+      Get-ChildItem -Path ./ -Recurse |
+        Where-Object { $_.Name.EndsWith(".csproj") -and !$_.Name.Contains("Test") } |
+        ForEach-Object -Process { 
+              Write-Host $_.Name
+              dotnet pack $_.FullName -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg --include-source --output $(Build.ArtifactStagingDirectory) -c $(BuildConfiguration)
+         }
+      ls $(Build.ArtifactStagingDirectory)
+
+      #推包
+      dotnet nuget push $(Build.ArtifactStagingDirectory)\*.nupkg -k $env:NUGET_API_KEY --skip-duplicate  -s https://api.nuget.org/v3/index.json
+
+      #使用gpr工具推送到GitHub
+      dotnet tool install -g gpr --no-cache -v q
+      gpr push --api-key $env:GITHUB_API_KEY $(Build.ArtifactStagingDirectory)\*.nupkg
+    failOnStderr: true
+    showWarnings: true
+    ignoreLASTEXITCODE: true
