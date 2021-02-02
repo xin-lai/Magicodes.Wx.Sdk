@@ -33,9 +33,6 @@ steps:
 - task: PowerShell@2
   displayName: 'Package Push'
   condition: eq(variables['Build.SourceBranchName'], 'main')
-  env:
-    NUGET_API_KEY: ${nugetapikey}
-    GITHUB_API_KEY: ${githubapikey}
   inputs:
     targetType: 'inline'
     script: |
@@ -53,7 +50,7 @@ steps:
 
       #使用gpr工具推送到GitHub
       dotnet tool install -g gpr --no-cache -v q
-      gpr push --api-key $env:GITHUB_API_KEY $(Build.ArtifactStagingDirectory)\*.nupkg
+      gpr push --api-key ${env:GITHUB_APIKEY} $(Build.ArtifactStagingDirectory)\*.nupkg
     failOnStderr: true
     showWarnings: true
     ignoreLASTEXITCODE: true
