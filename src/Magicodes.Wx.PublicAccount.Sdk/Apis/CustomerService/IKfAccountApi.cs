@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
 
-namespace Magicodes.WeChat.Sdk.Apis.CustomerService
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService
 {
     [HttpHost("https://api.weixin.qq.com/customservice/kfaccount")]
     [AccessTokenApiFilter]

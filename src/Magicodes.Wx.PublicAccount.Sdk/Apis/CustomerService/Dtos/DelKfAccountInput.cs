@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Magicodes.WeChat.Sdk.Apis.CustomerService
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService
 {
     public class DelKfAccountInput
     {

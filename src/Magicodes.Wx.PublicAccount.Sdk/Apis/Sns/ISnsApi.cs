@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
 
-namespace Magicodes.WeChat.Sdk.Apis.Sns
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Sns
 {
     /// <summary>
     /// https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html

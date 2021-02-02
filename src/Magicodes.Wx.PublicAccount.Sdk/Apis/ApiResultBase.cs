@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Magicodes.WeChat.Sdk.Apis
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis
 {
     /// <summary>
     ///     API请求结果

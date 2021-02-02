@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Magicodes.WeChat.Sdk.Apis.Message
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
 {
     public class SendTemplateMessageApiResult
     {

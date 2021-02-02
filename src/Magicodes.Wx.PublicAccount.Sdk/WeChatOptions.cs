@@ -1,4 +1,4 @@
-﻿namespace Magicodes.WeChat.Sdk
+﻿namespace Magicodes.Wx.PublicAccount.Sdk
 {
     /// <summary>
     /// 微信配置信息

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Magicodes.WeChat.Sdk
+namespace Magicodes.Wx.PublicAccount.Sdk
 {
     public class WeChatFuncs
     {

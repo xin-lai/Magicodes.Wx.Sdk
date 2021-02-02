@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
 
-namespace Magicodes.WeChat.Sdk.Apis.Message
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
 {
     /// <summary>
     /// 模板消息接口

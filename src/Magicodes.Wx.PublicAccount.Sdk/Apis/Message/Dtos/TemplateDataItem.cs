@@ -1,4 +1,4 @@
-﻿namespace Magicodes.WeChat.Sdk.Apis.Message
+﻿namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
 {
     /// <summary>
     ///     模板消息的数据项类型

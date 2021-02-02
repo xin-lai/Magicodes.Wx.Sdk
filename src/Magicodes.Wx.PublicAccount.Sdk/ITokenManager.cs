@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Magicodes.WeChat.Sdk
+namespace Magicodes.Wx.PublicAccount.Sdk
 {
     public interface ITokenManager
     {

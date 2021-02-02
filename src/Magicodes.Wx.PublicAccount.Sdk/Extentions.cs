@@ -1,12 +1,12 @@
-﻿using Magicodes.WeChat.Sdk.Apis;
-using Magicodes.WeChat.Sdk.Apis.Sns;
-using Magicodes.WeChat.Sdk.Apis.Token;
+﻿using Magicodes.Wx.PublicAccount.Sdk.Apis;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.Sns;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.Token;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Magicodes.WeChat.Sdk
+namespace Magicodes.Wx.PublicAccount.Sdk
 {
     public static class Extentions
     {

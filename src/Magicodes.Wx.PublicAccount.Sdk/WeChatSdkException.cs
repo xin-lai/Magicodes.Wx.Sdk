@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Magicodes.WeChat.Sdk
+namespace Magicodes.Wx.PublicAccount.Sdk
 {
     [Serializable]
     internal class WeChatSdkException : Exception

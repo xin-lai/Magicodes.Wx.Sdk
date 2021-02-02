@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
 
-namespace Magicodes.WeChat.Sdk.Apis.Token
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Token
 {
     [HttpHost("https://api.weixin.qq.com/cgi-bin/")]
     public interface ITokenApi : IWeChatApi

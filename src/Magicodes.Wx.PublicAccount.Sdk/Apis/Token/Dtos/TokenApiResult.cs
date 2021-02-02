@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Magicodes.WeChat.Sdk.Apis.Token
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Token
 {
     public class TokenApiResult : ApiResultBase
     {

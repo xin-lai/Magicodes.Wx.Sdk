@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using WebApiClientCore;
 using WebApiClientCore.Attributes;
 
-namespace Magicodes.WeChat.Sdk.Apis
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis
 {
     public class AccessTokenApiFilter : ApiFilterAttribute
     {

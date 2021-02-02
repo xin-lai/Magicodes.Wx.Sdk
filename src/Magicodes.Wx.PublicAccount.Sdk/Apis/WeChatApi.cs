@@ -1,6 +1,6 @@
 ﻿using WebApiClientCore.Attributes;
 
-namespace Magicodes.WeChat.Sdk.Apis
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis
 {
 
     [JsonNetReturn(EnsureMatchAcceptContentType = false)]

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
 
-namespace Magicodes.WeChat.Sdk.Apis.Sns
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Sns
 {
     /// <summary>
     /// 网页授权接口

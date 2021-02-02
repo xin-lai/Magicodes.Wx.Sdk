@@ -1,4 +1,4 @@
-﻿namespace Magicodes.WeChat.Sdk.Apis.Sns
+﻿namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Sns
 {
     /// <summary>
     ///     应用授权作用域，snsapi_base （不弹出授权页面，直接跳转，只能获取用户openid），snsapi_userinfo

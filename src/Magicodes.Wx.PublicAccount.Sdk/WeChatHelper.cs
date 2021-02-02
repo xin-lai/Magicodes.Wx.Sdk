@@ -1,10 +1,10 @@
-﻿using Magicodes.WeChat.Sdk.Apis.Sns;
+﻿using Magicodes.Wx.PublicAccount.Sdk.Apis.Sns;
 using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Encodings.Web;
 
-namespace Magicodes.WeChat.Sdk
+namespace Magicodes.Wx.PublicAccount.Sdk
 {
     public class WeChatHelper
     {

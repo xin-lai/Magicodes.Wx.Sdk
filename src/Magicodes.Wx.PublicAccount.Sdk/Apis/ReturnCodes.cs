@@ -1,4 +1,4 @@
-﻿namespace Magicodes.WeChat.Sdk.Apis
+﻿namespace Magicodes.Wx.PublicAccount.Sdk.Apis
 {
     /// <summary>
     ///     公众号返回码（JSON）

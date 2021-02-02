@@ -9,7 +9,7 @@
 //using RestSharp.Serialization.Json;
 //using RestSharp.Serializers.NewtonsoftJson;
 
-//namespace Magicodes.WeChat.Sdk.Apis
+//namespace Magicodes.Wx.PublicAccount.Sdk.Apis
 //{
 //    /// <summary>
 //    ///     接口基类

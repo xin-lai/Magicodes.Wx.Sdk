@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Magicodes.WeChat.Sdk.Apis.Sns
+namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Sns
 {
     /// <summary>
     ///     性别类型

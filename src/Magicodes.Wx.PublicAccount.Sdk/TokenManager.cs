@@ -1,9 +1,9 @@
-﻿using Magicodes.WeChat.Sdk.Apis.Token;
+﻿using Magicodes.Wx.PublicAccount.Sdk.Apis.Token;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
 
-namespace Magicodes.WeChat.Sdk
+namespace Magicodes.Wx.PublicAccount.Sdk
 {
     public class TokenManager : ITokenManager
     {
