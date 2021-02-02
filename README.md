@@ -5,6 +5,10 @@
 
 [![Build Status](https://dev.azure.com/xinlaiopencode/Magicodes.Wx.Sdk/_apis/build/status/xin-lai.Magicodes.Wx.Sdk?branchName=main)](https://dev.azure.com/xinlaiopencode/Magicodes.Wx.Sdk/_build/latest?definitionId=15&branchName=main)
 
+| **名称** |      **Nuget**      |
+|----------|:-------------:|
+| **Magicodes.Wx.PublicAccount.Sdk** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk)** |
+
 ## 联系我们
 
 ### 订阅号
