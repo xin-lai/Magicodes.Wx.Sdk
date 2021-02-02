@@ -12,7 +12,8 @@ trigger:
     include:
     - src/*
     exclude:
-    - *.md
+    - docs/*.md
+    - README.md
 
 pool:
   vmImage: 'windows-latest'
