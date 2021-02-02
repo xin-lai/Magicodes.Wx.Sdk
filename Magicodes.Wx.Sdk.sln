@@ -5,10 +5,11 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublicAccount", "PublicAccount", "{8F81A401-76DB-4F52-A8E1-CEEE6D45DA2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicodes.Wx.PublicAccount.Sdk", "src\Magicodes.Wx.PublicAccount.Sdk\Magicodes.Wx.PublicAccount.Sdk.csproj", "{6C26FC2C-E1A2-4FC4-BE0C-362F4752638C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicodes.Wx.PublicAccount.Sdk", "src\Magicodes.Wx.PublicAccount.Sdk\Magicodes.Wx.PublicAccount.Sdk.csproj", "{6C26FC2C-E1A2-4FC4-BE0C-362F4752638C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2B356C4-A7ED-4C3A-9DA2-7505AFC527D9}"
 	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
