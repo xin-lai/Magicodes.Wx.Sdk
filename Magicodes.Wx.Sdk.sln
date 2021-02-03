@@ -14,7 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicodes.Wx.PublicAccount.Sdk.AspNet", "src\Magicodes.Wx.PublicAccount.Sdk.AspNet\Magicodes.Wx.PublicAccount.Sdk.AspNet.csproj", "{9D11A1F9-3BB4-46FE-A4FF-17FACF505119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicodes.Wx.PublicAccount.Sdk.AspNet", "src\Magicodes.Wx.PublicAccount.Sdk.AspNet\Magicodes.Wx.PublicAccount.Sdk.AspNet.csproj", "{9D11A1F9-3BB4-46FE-A4FF-17FACF505119}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{21B20DAF-56D3-414B-91FE-DD0D176A5277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicodes.Wx.PublicAccount.Sdk.Test", "tests\Magicodes.Wx.PublicAccount.Sdk.Test\Magicodes.Wx.PublicAccount.Sdk.Test.csproj", "{F6098294-2CAC-4320-8AA4-4FA95079BD3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +34,10 @@ Global
 		{9D11A1F9-3BB4-46FE-A4FF-17FACF505119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D11A1F9-3BB4-46FE-A4FF-17FACF505119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D11A1F9-3BB4-46FE-A4FF-17FACF505119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6098294-2CAC-4320-8AA4-4FA95079BD3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6098294-2CAC-4320-8AA4-4FA95079BD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6098294-2CAC-4320-8AA4-4FA95079BD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6098294-2CAC-4320-8AA4-4FA95079BD3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6C26FC2C-E1A2-4FC4-BE0C-362F4752638C} = {8F81A401-76DB-4F52-A8E1-CEEE6D45DA2A}
 		{9D11A1F9-3BB4-46FE-A4FF-17FACF505119} = {8F81A401-76DB-4F52-A8E1-CEEE6D45DA2A}
+		{F6098294-2CAC-4320-8AA4-4FA95079BD3F} = {21B20DAF-56D3-414B-91FE-DD0D176A5277}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC173392-7AB2-4DB8-8FAF-D9ED2201A2B3}
