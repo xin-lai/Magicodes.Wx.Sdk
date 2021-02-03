@@ -31,19 +31,10 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             if (funcs.GetWeChatOptions == null)
             {
                 IConfiguration config = app.ApplicationServices.GetRequiredService<IConfiguration>();
-                IConfigurationSection wechatConfig = config.GetSection("WeChat");
+                IConfigurationSection wechatConfig = config.GetSection("Wx");
                 if (wechatConfig != null)
                 {
-                    funcs.GetWeChatOptions = () =>
-                    {
-                        return new WeChatOptions()
-                        {
-                            AppId = wechatConfig["AppId"],
-                            AppSecret = wechatConfig["AppSecret"],
-                            Token = wechatConfig["Token"],
-                            WeiXinAccount = wechatConfig["WeiXinAccount"],
-                        };
-                    };
+                    funcs.GetWeChatOptions = () => WeChatHelper.GetWeChatOptionsByConfiguration(config);
                 }
             }
         }

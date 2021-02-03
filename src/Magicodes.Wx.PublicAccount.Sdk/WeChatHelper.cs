@@ -1,4 +1,5 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.Apis.Sns;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Security.Cryptography;
 using System.Text;
@@ -58,6 +59,23 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             string retStr = BitConverter.ToString(outputBye);
             retStr = retStr.Replace("-", "").ToUpper();
             return retStr;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
+        public static WeChatOptions GetWeChatOptionsByConfiguration(IConfiguration configuration)
+        {
+            IConfigurationSection wechatConfig = configuration.GetSection("Wx");
+            if (wechatConfig == null) return null;
+            return new WeChatOptions()
+            {
+                AppId = wechatConfig["AppId"],
+                AppSecret = wechatConfig["AppSecret"],
+                Token = wechatConfig["Token"],
+                WeiXinAccount = wechatConfig["WeiXinAccount"],
+            };
         }
     }
 }
