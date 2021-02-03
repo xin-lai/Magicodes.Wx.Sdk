@@ -9,7 +9,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Sns
     /// https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html
     /// </summary>
     [HttpHost("https://api.weixin.qq.com/sns/oauth2/")]
-    public interface IOauth2Api : IWeChatApi
+    public interface IOauth2Api : IWxApiBase
     {
         /// <summary>
         /// 通过code换取网页授权access_token

@@ -2,9 +2,9 @@
 
 namespace Magicodes.Wx.PublicAccount.Sdk
 {
-    public class WeChatFuncs
+    public class WxFuncs
     {
-        public Func<WeChatOptions> GetWeChatOptions { get; set; }
+        public Func<WxPublicAccountOption> GetWeChatOptions { get; set; }
 
         public Func<string, string> GetAccessTokenByAppId { get; set; }
 

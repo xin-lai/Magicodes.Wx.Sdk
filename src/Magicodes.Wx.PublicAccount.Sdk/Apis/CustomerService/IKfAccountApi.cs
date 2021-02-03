@@ -5,7 +5,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService
 {
     [HttpHost("https://api.weixin.qq.com/customservice/kfaccount")]
     [AccessTokenApiFilter]
-    public interface IKfAccountApi : IWeChatApiWithAccessTokenFilter
+    public interface IKfAccountApi : IWxApiWithAccessTokenFilter
     {
         /// <summary>
         /// 添加客服账号

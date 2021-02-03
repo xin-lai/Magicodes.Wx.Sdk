@@ -7,10 +7,10 @@ namespace Magicodes.Wx.PublicAccount.Sdk
 {
     public class TokenManager : ITokenManager
     {
-        private readonly WeChatFuncs weChatFuncs;
+        private readonly WxFuncs weChatFuncs;
         private readonly IServiceProvider serviceProvider;
 
-        public TokenManager(WeChatFuncs weChatFuncs, IServiceProvider serviceProvider)
+        public TokenManager(WxFuncs weChatFuncs, IServiceProvider serviceProvider)
         {
             this.weChatFuncs = weChatFuncs;
             this.serviceProvider = serviceProvider;
@@ -18,7 +18,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
 
         public virtual async Task<string> GetAccessTokenAsync()
         {
-            WeChatOptions options = weChatFuncs?.GetWeChatOptions();
+            WxPublicAccountOption options = weChatFuncs?.GetWeChatOptions();
             string token = weChatFuncs?.GetAccessTokenByAppId(options?.AppId);
             if (string.IsNullOrEmpty(token))
             {

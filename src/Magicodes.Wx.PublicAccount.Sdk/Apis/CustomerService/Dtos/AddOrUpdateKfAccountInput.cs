@@ -21,7 +21,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService
             get => password;
             set =>
                 //MD5加密
-                password = WeChatHelper.GetWeChatMd5(value);
+                password = WxHelper.GetWeChatMd5(value);
         }
     }
 }

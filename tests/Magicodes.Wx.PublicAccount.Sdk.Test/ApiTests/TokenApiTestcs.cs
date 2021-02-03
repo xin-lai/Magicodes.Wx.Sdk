@@ -11,11 +11,11 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
     public class TokenApiTestcs : TestBase, IClassFixture<TestWebApplicationFactory>
     {
         private readonly ITokenApi tokenApi;
-        private readonly WeChatFuncs weChatFuncs;
+        private readonly WxFuncs weChatFuncs;
         public TokenApiTestcs(TestWebApplicationFactory webApplicationFactory) : base(webApplicationFactory)
         {
             tokenApi = GetRequiredService<ITokenApi>();
-            weChatFuncs = GetRequiredService<WeChatFuncs>();
+            weChatFuncs = GetRequiredService<WxFuncs>();
         }
 
         [Fact]

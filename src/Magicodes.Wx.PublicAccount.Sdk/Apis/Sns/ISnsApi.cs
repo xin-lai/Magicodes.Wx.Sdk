@@ -7,7 +7,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Sns
     /// https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html
     /// </summary>
     [HttpHost("https://api.weixin.qq.com/sns/")]
-    public interface ISnsApi : IWeChatApi
+    public interface ISnsApi : IWxApiBase
     {
         /// <summary>
         /// 拉取用户信息(需scope为 snsapi_userinfo)

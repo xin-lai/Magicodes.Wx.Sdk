@@ -2,9 +2,12 @@
 
 namespace Magicodes.Wx.PublicAccount.Sdk.Apis
 {
-
+    /// <summary>
+    /// 
+    /// </summary>
     [JsonNetReturn(EnsureMatchAcceptContentType = false)]
-    public interface IWeChatApi
+    [AccessTokenApiFilter]
+    public interface IWxApiWithAccessTokenFilter
     {
     }
 }

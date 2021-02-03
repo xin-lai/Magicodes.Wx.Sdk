@@ -3,10 +3,8 @@
     /// <summary>
     /// 微信配置信息
     /// </summary>
-    public class WeChatOptions
+    public class WxPublicAccountOption
     {
-        public const string WeChat = "WeChat";
-
         /// <summary>
         /// Gets or sets the AppId
         /// </summary>

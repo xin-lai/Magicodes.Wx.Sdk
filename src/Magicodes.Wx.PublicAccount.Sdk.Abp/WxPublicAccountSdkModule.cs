@@ -27,13 +27,13 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Abp
                     setup.GetWeChatOptions = () =>
                     {
                         var settingProvider = app.ApplicationServices.GetRequiredService<ISettingProvider>();
-                        var appId = settingProvider.GetOrNullAsync("Wx.AppId").GetAwaiter().GetResult();
+                        var appId = settingProvider.GetOrNullAsync($"{WxConsts.WX_CONFIG_SECTION_KEY}.AppId").GetAwaiter().GetResult();
                         if (!string.IsNullOrEmpty(appId))
                         {
-                            var appSecret = settingProvider.GetOrNullAsync("Wx.AppSecret").GetAwaiter().GetResult();
-                            var token = settingProvider.GetOrNullAsync("Wx.Token").GetAwaiter().GetResult();
-                            var weiXinAccount = settingProvider.GetOrNullAsync("Wx.WeiXinAccount").GetAwaiter().GetResult();
-                            return new WeChatOptions()
+                            var appSecret = settingProvider.GetOrNullAsync($"{WxConsts.WX_CONFIG_SECTION_KEY}.AppSecret").GetAwaiter().GetResult();
+                            var token = settingProvider.GetOrNullAsync($"{WxConsts.WX_CONFIG_SECTION_KEY}.Token").GetAwaiter().GetResult();
+                            var weiXinAccount = settingProvider.GetOrNullAsync($"{WxConsts.WX_CONFIG_SECTION_KEY}.WeiXinAccount").GetAwaiter().GetResult();
+                            return new WxPublicAccountOption()
                             {
                                 AppId = appId,
                                 AppSecret = appSecret,
@@ -44,15 +44,15 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Abp
                         else
                         {
                             IConfiguration config = app.ApplicationServices.GetRequiredService<IConfiguration>();
-                            return WeChatHelper.GetWeChatOptionsByConfiguration(config);
+                            return WxHelper.GetWeChatOptionsByConfiguration(config);
                         }
                     };
                 }
-                setup.GetAccessTokenByAppId = (appid) => cache.Get($"AssessToken::{appid}");
+                setup.GetAccessTokenByAppId = (appid) => cache.Get($"{WxConsts.WX_PUBLICACCOUNT_CACHE_NAMESPACE}::AT::{appid}");
 
                 setup.CacheAccessToken = (appid, token) =>
                 {
-                    cache.Set($"AssessToken::{appid}", token, new Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions()
+                    cache.Set($"{WxConsts.WX_PUBLICACCOUNT_CACHE_NAMESPACE}::AT::{appid}", token, new Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions()
                     {
                         AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(115)
                     });

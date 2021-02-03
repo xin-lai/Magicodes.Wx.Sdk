@@ -10,22 +10,22 @@ namespace Magicodes.Wx.PublicAccount.Sdk
 {
     public static class Extentions
     {
-        public static void AddMagicodesWeChatSdk(this IServiceCollection services, Action<WeChatOptions> setupAction = null)
+        public static void AddMagicodesWeChatSdk(this IServiceCollection services, Action<WxPublicAccountOption> setupAction = null)
         {
             services
                 .AddWebApiClient()
                 .UseJsonFirstApiActionDescriptor();
 
-            services.AddSingleton<WeChatFuncs>();
+            services.AddSingleton<WxFuncs>();
             services.AddHttpApi<ITokenApi>();
             services.AddHttpApi<IOauth2Api>();
             services.AddHttpApi<ISnsApi>();
             services.AddSingleton<ITokenManager, TokenManager>();
         }
 
-        public static void UseMagicodesWeChatSdk(this IApplicationBuilder app, Action<WeChatFuncs> setupAction = null)
+        public static void UseMagicodesWeChatSdk(this IApplicationBuilder app, Action<WxFuncs> setupAction = null)
         {
-            WeChatFuncs funcs = app.ApplicationServices.GetRequiredService<WeChatFuncs>();
+            WxFuncs funcs = app.ApplicationServices.GetRequiredService<WxFuncs>();
             setupAction?.Invoke(funcs);
             //如果没有设置获取微信配置逻辑，则自动从配置文件读取
             if (funcs.GetWeChatOptions == null)
@@ -34,7 +34,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
                 IConfigurationSection wechatConfig = config.GetSection("Wx");
                 if (wechatConfig != null)
                 {
-                    funcs.GetWeChatOptions = () => WeChatHelper.GetWeChatOptionsByConfiguration(config);
+                    funcs.GetWeChatOptions = () => WxHelper.GetWeChatOptionsByConfiguration(config);
                 }
             }
         }
@@ -43,7 +43,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
         {
             if (!apiResult.IsSuccess())
             {
-                throw new WeChatSdkException(apiResult.GetFriendlyMessage());
+                throw new WxSdkException(apiResult.GetFriendlyMessage());
             }
         }
     }

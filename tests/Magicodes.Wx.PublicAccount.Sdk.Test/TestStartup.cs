@@ -22,7 +22,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test
                 setup.GetWeChatOptions = () =>
                 {
                     //测试号
-                    return new WeChatOptions()
+                    return new WxPublicAccountOption()
                     {
                         AppId = "wx941100f605a8c3bd",
                         AppSecret = "ffb2f8569c76f45c5bd667227b2a8c2d"

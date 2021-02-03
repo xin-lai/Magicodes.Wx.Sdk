@@ -7,7 +7,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
     /// 模板消息接口
     /// </summary>
     [HttpHost("https://api.weixin.qq.com/cgi-bin/message/template")]
-    public interface ITemplateApi : IWeChatApiWithAccessTokenFilter
+    public interface ITemplateApi : IWxApiWithAccessTokenFilter
     {
         Task<SendTemplateMessageApiResult> SendAsync(SendTemplateMessageInput input);
     }

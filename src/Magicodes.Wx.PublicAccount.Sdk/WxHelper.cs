@@ -7,13 +7,17 @@ using System.Text.Encodings.Web;
 
 namespace Magicodes.Wx.PublicAccount.Sdk
 {
-    public class WeChatHelper
+    /// <summary>
+    /// 微信公众号辅助类
+    /// </summary>
+    public class WxHelper
     {
         /// <summary>
         ///     获取网页授权链接
         /// </summary>
         /// <param name="redirectUrl">授权后重定向的回调链接地址，请使用urlencode对链接进行处理</param>
         /// <param name="state">重定向后会带上state参数，开发者可以填写a-zA-Z0-9的参数值，最多128字节</param>
+        /// <param name="appid"></param>
         /// <param name="scope">
         ///     应用授权作用域
         ///     snsapi_base （不弹出授权页面，直接跳转，只能获取用户openid），
@@ -65,11 +69,11 @@ namespace Magicodes.Wx.PublicAccount.Sdk
         /// 
         /// </summary>
         /// <param name="configuration"></param>
-        public static WeChatOptions GetWeChatOptionsByConfiguration(IConfiguration configuration)
+        public static WxPublicAccountOption GetWeChatOptionsByConfiguration(IConfiguration configuration)
         {
-            IConfigurationSection wechatConfig = configuration.GetSection("Wx");
+            IConfigurationSection wechatConfig = configuration.GetSection(WxConsts.WX_CONFIG_SECTION_KEY);
             if (wechatConfig == null) return null;
-            return new WeChatOptions()
+            return new WxPublicAccountOption()
             {
                 AppId = wechatConfig["AppId"],
                 AppSecret = wechatConfig["AppSecret"],

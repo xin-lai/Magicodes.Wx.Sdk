@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublicAccount", "PublicAcco
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicodes.Wx.PublicAccount.Sdk", "src\Magicodes.Wx.PublicAccount.Sdk\Magicodes.Wx.PublicAccount.Sdk.csproj", "{6C26FC2C-E1A2-4FC4-BE0C-362F4752638C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2B356C4-A7ED-4C3A-9DA2-7505AFC527D9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Public", "0.Public", "{A2B356C4-A7ED-4C3A-9DA2-7505AFC527D9}"
 	ProjectSection(SolutionItems) = preProject
 		azure-pipelines.yml = azure-pipelines.yml
 		common.props = common.props
@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{21B20DAF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicodes.Wx.PublicAccount.Sdk.Test", "tests\Magicodes.Wx.PublicAccount.Sdk.Test\Magicodes.Wx.PublicAccount.Sdk.Test.csproj", "{F6098294-2CAC-4320-8AA4-4FA95079BD3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicodes.Wx.PublicAccount.Sdk.Abp", "src\Magicodes.Wx.PublicAccount.Sdk.Abp\Magicodes.Wx.PublicAccount.Sdk.Abp.csproj", "{28701632-7434-4CC2-89AB-4C6D1F631776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicodes.Wx.PublicAccount.Sdk.Abp", "src\Magicodes.Wx.PublicAccount.Sdk.Abp\Magicodes.Wx.PublicAccount.Sdk.Abp.csproj", "{28701632-7434-4CC2-89AB-4C6D1F631776}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
