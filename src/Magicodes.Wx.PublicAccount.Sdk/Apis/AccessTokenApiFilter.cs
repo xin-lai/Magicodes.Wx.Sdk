@@ -24,6 +24,10 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis
             //    }
             //}
 
+        }
+
+        public override Task OnResponseAsync(ApiResponseContext context)
+        {
             //if (context.HttpContext.ResponseMessage.Content != null && context.HttpContext.ResponseMessage.IsSuccessStatusCode)
             //{
             //    var data = await context.HttpContext.ResponseMessage.Content.ReadAsStringAsync();
@@ -33,10 +37,6 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis
             //        logger.LogInformation(data);
             //    }
             //}
-        }
-
-        public override Task OnResponseAsync(ApiResponseContext context)
-        {
             return Task.CompletedTask;
         }
     }

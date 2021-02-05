@@ -7,7 +7,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis
     /// </summary>
     [JsonNetReturn(EnsureMatchAcceptContentType = false)]
     [AccessTokenApiFilter]
-    [LoggingFilter]
+    //[LoggingFilter]
     public interface IWxApiWithAccessTokenFilter
     {
     }
