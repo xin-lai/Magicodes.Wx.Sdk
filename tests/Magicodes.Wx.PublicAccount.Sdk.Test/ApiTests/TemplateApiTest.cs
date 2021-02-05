@@ -19,7 +19,6 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
         [Fact]
         public async Task SendAsync_Test()
         {
-            //var settings = weChatFuncs.GetWeChatOptions();
             var result = await templateApi.SendAsync(new SendTemplateMessageInput()
             {
                 To = "oXELNwzZgamuLS0JrJhVgdelzKyw",

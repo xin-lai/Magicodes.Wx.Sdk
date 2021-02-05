@@ -1,4 +1,5 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.Apis;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.Menu;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Message;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Sns;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Token;
@@ -22,6 +23,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             services.AddHttpApi<IOauth2Api>();
             services.AddHttpApi<ISnsApi>();
             services.AddHttpApi<ITemplateApi>();
+            services.AddHttpApi<IMenuApi>();
             services.AddSingleton<ITokenManager, TokenManager>();
         }
 
