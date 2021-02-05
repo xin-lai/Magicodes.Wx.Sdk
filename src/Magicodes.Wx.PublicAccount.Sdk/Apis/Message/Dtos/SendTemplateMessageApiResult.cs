@@ -2,7 +2,7 @@
 
 namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
 {
-    public class SendTemplateMessageApiResult
+    public class SendTemplateMessageApiResult : ApiResultBase
     {
         [JsonProperty("msgid")]
         public string MessageId { get; set; }

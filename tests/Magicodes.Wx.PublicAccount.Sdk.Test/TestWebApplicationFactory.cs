@@ -11,14 +11,16 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test
 {
     public class TestWebApplicationFactory : WebApplicationFactory<TestStartup>
     {
+        public ITestOutputHelper Output { get; set; }
+
         protected override IHostBuilder CreateHostBuilder()
         {
             var builder = Host.CreateDefaultBuilder()
-                              //.ConfigureLogging((context, logging) =>
-                              //{
-                              //    logging.ClearProviders();
-                              //    logging.AddXunit(Output);
-                              //})
+                              .ConfigureLogging((context, logging) =>
+                              {
+                                  logging.ClearProviders();
+                                  logging.AddXunit(Output);
+                              })
                               .ConfigureWebHostDefaults(x =>
                               {
                                   x.UseStartup<TestStartup>().UseTestServer();

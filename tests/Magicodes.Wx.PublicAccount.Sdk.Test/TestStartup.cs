@@ -29,7 +29,11 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test
                     };
                 };
 
-                setup.GetAccessTokenByAppId = (appid) => cache[$"AssessToken::{appid}"];
+                setup.GetAccessTokenByAppId = (appid) =>
+                {
+                    var key = $"AssessToken::{appid}";
+                    return !cache.ContainsKey(key) ? null : cache[key];
+                };
 
                 setup.CacheAccessToken = (appid, token) =>
                 {

@@ -1,4 +1,5 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.Apis;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.Message;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Sns;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Token;
 using Microsoft.AspNetCore.Builder;
@@ -20,6 +21,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             services.AddHttpApi<ITokenApi>();
             services.AddHttpApi<IOauth2Api>();
             services.AddHttpApi<ISnsApi>();
+            services.AddHttpApi<ITemplateApi>();
             services.AddSingleton<ITokenManager, TokenManager>();
         }
 
@@ -39,6 +41,10 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             }
         }
 
+        /// <summary>
+        /// 确保成功执行
+        /// </summary>
+        /// <param name="apiResult"></param>
         public static void EnsureSuccess(this ApiResultBase apiResult)
         {
             if (!apiResult.IsSuccess())
