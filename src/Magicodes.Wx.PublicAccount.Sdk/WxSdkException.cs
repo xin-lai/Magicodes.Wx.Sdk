@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Magicodes.Wx.PublicAccount.Sdk
 {
     [Serializable]
-    internal class WxSdkException : Exception
+    public class WxSdkException : Exception
     {
         public WxSdkException()
         {

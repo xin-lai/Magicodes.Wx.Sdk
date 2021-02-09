@@ -1,24 +1,23 @@
 <Project>
-    <PropertyGroup>
-        <Version>0.0.6</Version>
-    </PropertyGroup>
-    <PropertyGroup>
-        <Authors>雪雁</Authors>
-        <Company>Magicodes</Company>
-        <Product>麦扣</Product>
-        <PackageProjectUrl>https://docs.xin-lai.com/</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/xin-lai/Magicodes.Wx.Sdk</RepositoryUrl>
-        <PackageTags>WeChat Sdk;Wx Sdk;Public Account;Magicodes</PackageTags>
-        <Description>
-          最简洁最易于使用的微信Sdk，包括公众号Sdk、小程序Sdk、企业微信Sdk等，以及Abp VNext集成。
-          开源库地址:https://github.com/xin-lai
-          博客地址：http://www.cnblogs.com/codelove/
-          公众号：麦扣聊技术
-          交流QQ群：85318032
-
-        </Description>
-    </PropertyGroup>
-    <PropertyGroup>
-        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-    </PropertyGroup>
+  <PropertyGroup>
+    <Version>0.0.7</Version>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Authors>雪雁</Authors>
+    <Company>Magicodes</Company>
+    <Product>麦扣</Product>
+    <PackageProjectUrl>https://docs.xin-lai.com/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/xin-lai/Magicodes.Wx.Sdk</RepositoryUrl>
+    <PackageTags>WeChat Sdk;Wx Sdk;Public Account;Magicodes</PackageTags>
+    <Description>
+      最简洁最易于使用的微信Sdk，包括公众号Sdk、小程序Sdk、企业微信Sdk等，以及Abp VNext集成。
+      开源库地址:https://github.com/xin-lai
+      博客地址：http://www.cnblogs.com/codelove/
+      公众号：麦扣聊技术
+      交流QQ群：85318032
+    </Description>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
 </Project>

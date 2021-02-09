@@ -12,7 +12,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
 {
     public static class Extentions
     {
-        public static void AddMagicodesWeChatSdk(this IServiceCollection services, Action<WxPublicAccountOption> setupAction = null)
+        public static IServiceCollection AddMagicodesWeChatSdk(this IServiceCollection services)
         {
             services
                 .AddWebApiClient()
@@ -25,6 +25,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             services.AddHttpApi<ITemplateApi>();
             services.AddHttpApi<IMenuApi>();
             services.AddSingleton<ITokenManager, TokenManager>();
+            return services;
         }
 
         public static void UseMagicodesWeChatSdk(this IApplicationBuilder app, Action<WxFuncs> setupAction = null)
