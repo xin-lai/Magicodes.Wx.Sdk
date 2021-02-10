@@ -18,7 +18,7 @@
         /// <summary>
         /// 公众号配置Key
         /// </summary>
-        public const string WX_CONFIG_SECTION_KEY = "Wx.PublicAccount";
+        public const string WX_CONFIG_SECTION_KEY = "Wx:PublicAccount";
 
         /// <summary>
         /// 公众号缓存命名空间

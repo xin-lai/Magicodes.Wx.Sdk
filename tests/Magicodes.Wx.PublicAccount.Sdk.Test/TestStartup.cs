@@ -19,15 +19,15 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test
             var cache = new Dictionary<string, string>();
             app.UseMagicodesWeChatSdk(setup =>
             {
-                setup.GetWeChatOptions = () =>
-                {
-                    //测试号
-                    return new WxPublicAccountOption()
-                    {
-                        AppId = "wx941100f605a8c3bd",
-                        AppSecret = "ffb2f8569c76f45c5bd667227b2a8c2d"
-                    };
-                };
+                //setup.GetWeChatOptions = () =>
+                //{
+                //    //测试号
+                //    return new WxPublicAccountOption()
+                //    {
+                //        AppId = "wx941100f605a8c3bd",
+                //        AppSecret = "ffb2f8569c76f45c5bd667227b2a8c2d"
+                //    };
+                //};
 
                 setup.GetAccessTokenByAppId = (appid) =>
                 {
