@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicodes.Wx.PublicAccount.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicodes.Wx.PublicAccount.Sdk.Abp", "src\Magicodes.Wx.PublicAccount.Sdk.Abp\Magicodes.Wx.PublicAccount.Sdk.Abp.csproj", "{28701632-7434-4CC2-89AB-4C6D1F631776}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicodes.Wx.PublicAccount.Sdk.AspNet.Test", "tests\Magicodes.Wx.PublicAccount.Sdk.AspNet.Test\Magicodes.Wx.PublicAccount.Sdk.AspNet.Test.csproj", "{3A8362C4-9E10-403B-A67A-3322B15CEE08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{28701632-7434-4CC2-89AB-4C6D1F631776}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28701632-7434-4CC2-89AB-4C6D1F631776}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28701632-7434-4CC2-89AB-4C6D1F631776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8362C4-9E10-403B-A67A-3322B15CEE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8362C4-9E10-403B-A67A-3322B15CEE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8362C4-9E10-403B-A67A-3322B15CEE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8362C4-9E10-403B-A67A-3322B15CEE08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{9D11A1F9-3BB4-46FE-A4FF-17FACF505119} = {8F81A401-76DB-4F52-A8E1-CEEE6D45DA2A}
 		{F6098294-2CAC-4320-8AA4-4FA95079BD3F} = {21B20DAF-56D3-414B-91FE-DD0D176A5277}
 		{28701632-7434-4CC2-89AB-4C6D1F631776} = {8F81A401-76DB-4F52-A8E1-CEEE6D45DA2A}
+		{3A8362C4-9E10-403B-A67A-3322B15CEE08} = {21B20DAF-56D3-414B-91FE-DD0D176A5277}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC173392-7AB2-4DB8-8FAF-D9ED2201A2B3}
