@@ -24,5 +24,10 @@
         /// 公众号缓存命名空间
         /// </summary>
         public const string WX_PUBLICACCOUNT_CACHE_NAMESPACE = "WX::PA";
+
+        /// <summary>
+        /// Abp设置
+        /// </summary>
+        public const string WX_ABPSETTING_CONTEXT_ROOT = "Wx.PublicAccount";
     }
 }

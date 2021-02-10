@@ -20,11 +20,18 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Menu
         Task<GetMenuApiResult> GetAsync();
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost("create")]
         Task<ApiResultBase> CreateAsync([JsonNetContent(CharSet = "utf-8")] CreateMenuInput input);
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("delete")]
+        Task<ApiResultBase> DeleteAsync();
     }
 }

@@ -72,5 +72,13 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             result.Menu.Button[0].Name.ShouldBe("今日歌曲");
             result.EnsureSuccess();
         }
+
+        [Fact]
+        public async Task DeleteAsync_Test()
+        {
+            var result = await menuApi.DeleteAsync();
+
+            result.EnsureSuccess();
+        }
     }
 }

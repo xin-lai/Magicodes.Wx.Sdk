@@ -27,12 +27,12 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Abp
                     setup.GetWeChatOptions = () =>
                     {
                         var settingProvider = app.ApplicationServices.GetRequiredService<ISettingProvider>();
-                        var appId = settingProvider.GetOrNullAsync($"{WxConsts.WX_CONFIG_SECTION_KEY}.AppId").GetAwaiter().GetResult();
+                        var appId = settingProvider.GetOrNullAsync(WxPublicAccountSettingNames.AppId).GetAwaiter().GetResult();
                         if (!string.IsNullOrEmpty(appId))
                         {
-                            var appSecret = settingProvider.GetOrNullAsync($"{WxConsts.WX_CONFIG_SECTION_KEY}.AppSecret").GetAwaiter().GetResult();
-                            var token = settingProvider.GetOrNullAsync($"{WxConsts.WX_CONFIG_SECTION_KEY}.Token").GetAwaiter().GetResult();
-                            var weiXinAccount = settingProvider.GetOrNullAsync($"{WxConsts.WX_CONFIG_SECTION_KEY}.WeiXinAccount").GetAwaiter().GetResult();
+                            var appSecret = settingProvider.GetOrNullAsync(WxPublicAccountSettingNames.AppSecret).GetAwaiter().GetResult();
+                            var token = settingProvider.GetOrNullAsync(WxPublicAccountSettingNames.Token).GetAwaiter().GetResult();
+                            var weiXinAccount = settingProvider.GetOrNullAsync(WxPublicAccountSettingNames.WeiXinAccount).GetAwaiter().GetResult();
                             return new WxPublicAccountOption()
                             {
                                 AppId = appId,
@@ -58,7 +58,6 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Abp
                     });
                 };
             });
-
         }
     }
 }
