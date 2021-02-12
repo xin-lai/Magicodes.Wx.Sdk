@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Magicodes.Wx.PublicAccount.Sdk.AspNet;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using Volo.Abp;
@@ -12,7 +13,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Abp
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddMagicodesWeChatSdk();
+            context.Services.AddMagicodesWeChatSdk().AddServerMessageHandler();
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
