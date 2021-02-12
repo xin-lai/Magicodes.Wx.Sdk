@@ -1,4 +1,5 @@
-﻿using Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages;
+﻿using Magicodes.Wx.PublicAccount.Sdk.AspNet.Controllers;
+using Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet
         public static IServiceCollection AddServerMessageHandler(this IServiceCollection services)
         {
             services.AddSingleton<ServerMessageHandler>();
+            services.AddTransient<WxEventController>();
             return services;
         }
     }
