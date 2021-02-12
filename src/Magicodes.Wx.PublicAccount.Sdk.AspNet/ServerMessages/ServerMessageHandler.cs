@@ -26,6 +26,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
     using System.Text;
     using System.Threading.Tasks;
     using System.Xml.Linq;
+    using Microsoft.Extensions.DependencyInjection;
 
     /// <summary>
     /// 服务器消息处理类
@@ -34,17 +35,13 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
     {
         private readonly WxFuncs wxFuncs;
         private readonly ILogger<ServerMessageHandler> logger;
+        private readonly IServiceProvider serviceProvider;
 
-        /// <summary>
-        /// 处理函数集合
-        /// </summary>
-        public Dictionary<Type, Func<IFromMessage, ToMessageBase>> HandleFuncs =
-            new Dictionary<Type, Func<IFromMessage, ToMessageBase>>();
-
-        public ServerMessageHandler(WxFuncs wxFuncs, ILogger<ServerMessageHandler> logger)
+        public ServerMessageHandler(WxFuncs wxFuncs, ILogger<ServerMessageHandler> logger, IServiceProvider serviceProvider)
         {
             this.wxFuncs = wxFuncs;
             this.logger = logger;
+            this.serviceProvider = serviceProvider;
         }
 
         /// <summary>
@@ -93,7 +90,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
             //接收的消息
             IFromMessage fromMessage = null;
             //处理结果
-            Tuple<ToMessageBase, IFromMessage> resulTuple = null;
+            Tuple<ToMessageBase, IFromMessage> resulTuple;
             //处理事件消息
             if (msgType == "event")
             {
@@ -106,39 +103,17 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
                 //处理微信服务器事件Key大小写不一致的问题
                 xmlStr = xmlStr.Replace("<Event><![CDATA[" + fromEventTypeElement.Value + "]]></Event>", "<Event><![CDATA[" + fromEvent + "]]></Event>");
                 var fromEventType = (FromEventTypes)Enum.Parse(typeof(FromEventTypes), fromEvent);
-                switch (fromEventType)
+                resulTuple = fromEventType switch
                 {
-                    case FromEventTypes.subscribe:
-                        resulTuple = await ExcuteHandleFunc<FromSubscribeEvent>(xmlStr);
-                        break;
-
-                    case FromEventTypes.unsubscribe:
-                        resulTuple = await ExcuteHandleFunc<FromUnsubscribeEvent>(xmlStr);
-                        break;
-
-                    case FromEventTypes.scan:
-                        resulTuple = await ExcuteHandleFunc<FromScanEvent>(xmlStr);
-                        break;
-
-                    case FromEventTypes.location:
-                        resulTuple = await ExcuteHandleFunc<FromLocationEvent>(xmlStr);
-                        break;
-
-                    case FromEventTypes.click:
-                        resulTuple = await ExcuteHandleFunc<FromClickEvent>(xmlStr);
-                        break;
-
-                    case FromEventTypes.view:
-                        resulTuple = await ExcuteHandleFunc<FromViewEvent>(xmlStr);
-                        break;
-
-                    case FromEventTypes.templatesendjobfinish:
-                        resulTuple = await ExcuteHandleFunc<FromTemplateSendJobFinishEvent>(xmlStr);
-                        break;
-
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
+                    FromEventTypes.subscribe => await ExecuteHandler<FromSubscribeEvent>(xmlStr),
+                    FromEventTypes.unsubscribe => await ExecuteHandler<FromUnsubscribeEvent>(xmlStr),
+                    FromEventTypes.scan => await ExecuteHandler<FromScanEvent>(xmlStr),
+                    FromEventTypes.location => await ExecuteHandler<FromLocationEvent>(xmlStr),
+                    FromEventTypes.click => await ExecuteHandler<FromClickEvent>(xmlStr),
+                    FromEventTypes.view => await ExecuteHandler<FromViewEvent>(xmlStr),
+                    FromEventTypes.templatesendjobfinish => await ExecuteHandler<FromTemplateSendJobFinishEvent>(xmlStr),
+                    _ => throw new ArgumentOutOfRangeException(),
+                };
             }
             else
             {
@@ -149,31 +124,31 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
                 switch (fromMessageType)
                 {
                     case FromMessageTypes.text:
-                        resulTuple = await ExcuteHandleFunc<FromTextMessage>(xmlStr);
+                        resulTuple = await ExecuteHandler<FromTextMessage>(xmlStr);
                         break;
 
                     case FromMessageTypes.image:
-                        resulTuple = await ExcuteHandleFunc<FromImageMessage>(xmlStr);
+                        resulTuple = await ExecuteHandler<FromImageMessage>(xmlStr);
                         break;
 
                     case FromMessageTypes.voice:
-                        resulTuple = await ExcuteHandleFunc<FromVoiceMessage>(xmlStr);
+                        resulTuple = await ExecuteHandler<FromVoiceMessage>(xmlStr);
                         break;
 
                     case FromMessageTypes.video:
-                        resulTuple = await ExcuteHandleFunc<FromVideoMessage>(xmlStr);
+                        resulTuple = await ExecuteHandler<FromVideoMessage>(xmlStr);
                         break;
 
                     case FromMessageTypes.shortvideo:
-                        resulTuple = await ExcuteHandleFunc<FromShortVideoMessage>(xmlStr);
+                        resulTuple = await ExecuteHandler<FromShortVideoMessage>(xmlStr);
                         break;
 
                     case FromMessageTypes.location:
-                        resulTuple = await ExcuteHandleFunc<FromLocationMessage>(xmlStr);
+                        resulTuple = await ExecuteHandler<FromLocationMessage>(xmlStr);
                         break;
 
                     case FromMessageTypes.link:
-                        resulTuple = await ExcuteHandleFunc<FromLinkMessage>(xmlStr);
+                        resulTuple = await ExecuteHandler<FromLinkMessage>(xmlStr);
                         break;
 
                     default:
@@ -196,7 +171,10 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
                     throw new WxSdkException("至少需要包含一条图文消息");
                 news.ArticleCount = news.Articles.Count;
             }
-
+            if (toMessage is ToNullMessage)
+            {
+                return null;
+            }
             if (toMessage != null && toMessage.CreateTimestamp == default)
             {
                 //设置时间戳
@@ -214,26 +192,19 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
         /// <typeparam name="T">接受类型</typeparam>
         /// <param name="xmlStr">XML字符串</param>
         /// <returns></returns>
-        private async Task<Tuple<ToMessageBase, IFromMessage>> ExcuteHandleFunc<T>(string xmlStr)
+        private async Task<Tuple<ToMessageBase, IFromMessage>> ExecuteHandler<T>(string xmlStr)
             where T : class, IFromMessage
         {
             ToMessageBase toMessage = null;
-            IFromMessage fromMessage = null;
             var type = typeof(T);
-            if (HandleFuncs.ContainsKey(type))
-            {
-                fromMessage = XmlHelper.DeserializeObject<T>(xmlStr);
-                if (fromMessage != null)
-                    toMessage = await Task.FromResult(HandleFuncs[type]
-                        .Invoke(fromMessage));
-                else
-                    logger.LogDebug($"序列化类型【{type.FullName}】失败");
-            }
+            var handler = serviceProvider.GetRequiredService<IWxEventsHandler>();
+            IFromMessage fromMessage = XmlHelper.DeserializeObject<T>(xmlStr);
+            if (fromMessage != null)
+                toMessage = await handler.Execute(fromMessage);
             else
-            {
-                logger.LogDebug($"没有找到类型为【{type.FullName}】的处理函数");
-            }
-            return await Task.FromResult(new Tuple<ToMessageBase, IFromMessage>(toMessage, fromMessage));
+                logger.LogWarning($"序列化类型【{type.FullName}】失败");
+
+            return new Tuple<ToMessageBase, IFromMessage>(toMessage, fromMessage);
         }
     }
 }

@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Magicodes.Wx.PublicAccount.Sdk.AspNet;
+using Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages;
+using Magicodes.Wx.PublicAccount.Sdk.AspNet.Test;
 
 namespace Magicodes.Wx.PublicAccount.Sdk.Test
 {
@@ -12,6 +14,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IWxEventsHandler, TestWxEventsHandler>();
             services.AddMagicodesWeChatSdk().AddServerMessageHandler();
         }
 
