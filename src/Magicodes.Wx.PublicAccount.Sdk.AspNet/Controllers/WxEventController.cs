@@ -55,23 +55,22 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.Controllers
         {
             logger.LogDebug("正在处理微信服务器消息...");
 
-            using (var reader = new StreamReader(Request.Body))
+            using var reader = new StreamReader(Request.Body);
+            var xmlStr = await reader.ReadToEndAsync();
+            //检查签名
+            if (!serverMessageHandler.CheckSignature(signature, timestamp, nonce))
             {
-                var xmlStr = reader.ReadToEnd();
-                //检查签名
-                if (!serverMessageHandler.CheckSignature(signature, timestamp, nonce))
-                {
-                    logger.LogWarning($"签名验证出错:\n signature:{signature}\t timestamp:{timestamp}\t nonce:{nonce}\t echostr:{echostr}");
-                    return BadRequest("签名验证出错!");
-                }
-                //处理事件消息
-                var result = await serverMessageHandler.HandleMessage(xmlStr);
-                if (result == null)
-                    return Ok();
-                var toXml = result.ToXml();
-                logger.LogDebug($"微信服务器事件处理成功，返回格式为:{Environment.NewLine}{toXml}");
-                return Content(toXml);
+                logger.LogWarning($"签名验证出错:\n signature:{signature}\t timestamp:{timestamp}\t nonce:{nonce}\t echostr:{echostr}");
+                return BadRequest("签名验证出错!");
             }
+            logger.LogDebug("签名校验完成...");
+            //处理事件消息
+            var result = await serverMessageHandler.HandleMessage(xmlStr);
+            if (result == null)
+                return Ok();
+            var toXml = result.ToXml();
+            logger.LogDebug($"微信服务器事件处理成功，返回格式为:{Environment.NewLine}{toXml}");
+            return Content(toXml);
         }
     }
 }
