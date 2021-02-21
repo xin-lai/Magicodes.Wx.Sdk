@@ -78,7 +78,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
         {
             ToMessageBase toMessage = null;
 
-            logger.LogDebug(xmlStr);
+            logger.LogDebug(Environment.NewLine + xmlStr);
             var xmlElement = XElement.Parse(xmlStr);
             var msgTypeElement = xmlElement.Element("MsgType");
             if (string.IsNullOrWhiteSpace(msgTypeElement?.Value))
@@ -197,7 +197,12 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
         {
             ToMessageBase toMessage = null;
             var type = typeof(T);
-            var handler = serviceProvider.GetRequiredService<IWxEventsHandler>();
+            var handler = serviceProvider.GetService<IWxEventsHandler>();
+            if (handler == null)
+            {
+                throw new WxSdkException($"接收公众号服务端事件消息需要先注册 {nameof(IWxEventsHandler)} ！");
+            }
+            
             IFromMessage fromMessage = XmlHelper.DeserializeObject<T>(xmlStr);
             if (fromMessage != null)
                 toMessage = await handler.Execute(fromMessage);
