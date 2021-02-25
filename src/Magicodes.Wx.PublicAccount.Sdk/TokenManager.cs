@@ -5,17 +5,28 @@ using System.Threading.Tasks;
 
 namespace Magicodes.Wx.PublicAccount.Sdk
 {
+    /// <summary>
+    /// 公众号AccessToken管理器
+    /// </summary>
     public class TokenManager : ITokenManager
     {
         private readonly WxFuncs weChatFuncs;
         private readonly IServiceProvider serviceProvider;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="weChatFuncs"></param>
+        /// <param name="serviceProvider"></param>
         public TokenManager(WxFuncs weChatFuncs, IServiceProvider serviceProvider)
         {
             this.weChatFuncs = weChatFuncs;
             this.serviceProvider = serviceProvider;
         }
 
+        /// <summary>
+        /// 获取Access Token
+        /// </summary>
+        /// <returns></returns>
         public virtual async Task<string> GetAccessTokenAsync()
         {
             WxPublicAccountOption options = weChatFuncs?.GetWeChatOptions();

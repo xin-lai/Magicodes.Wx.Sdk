@@ -13,7 +13,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Abp
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddMagicodesWeChatSdk().AddServerMessageHandler();
+            context.Services.AddMPublicAccountSdk().AddServerMessageHandler();
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
@@ -21,7 +21,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Abp
             var app = context.GetApplicationBuilder();
             var cache = context.ServiceProvider.GetRequiredService<IDistributedCache<string>>();
 
-            app.UseMagicodesWeChatSdk(setup =>
+            app.UseMPublicAccountSdk(setup =>
             {
                 if (setup.GetWeChatOptions == null)
                 {

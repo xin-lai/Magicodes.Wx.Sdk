@@ -12,7 +12,12 @@ namespace Magicodes.Wx.PublicAccount.Sdk
 {
     public static class Extentions
     {
-        public static IServiceCollection AddMagicodesWeChatSdk(this IServiceCollection services)
+        /// <summary>
+        /// 添加公众号Sdk集成
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddMPublicAccountSdk(this IServiceCollection services)
         {
             services
                 .AddWebApiClient()
@@ -28,7 +33,13 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             return services;
         }
 
-        public static void UseMagicodesWeChatSdk(this IApplicationBuilder app, Action<WxFuncs> setupAction = null)
+        /// <summary>
+        /// 配置公众号Sdk
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="setupAction"></param>
+        /// <returns></returns>
+        public static IApplicationBuilder UseMPublicAccountSdk(this IApplicationBuilder app, Action<WxFuncs> setupAction = null)
         {
             WxFuncs funcs = app.ApplicationServices.GetRequiredService<WxFuncs>();
             setupAction?.Invoke(funcs);
@@ -42,6 +53,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
                     funcs.GetWeChatOptions = () => WxHelper.GetWeChatOptionsByConfiguration(config);
                 }
             }
+            return app;
         }
 
         /// <summary>

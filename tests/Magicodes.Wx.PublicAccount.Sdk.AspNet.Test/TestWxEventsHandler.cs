@@ -8,21 +8,30 @@ using System.Threading.Tasks;
 
 namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.Test
 {
+    /// <summary>
+    /// 公众号事件消息处理程序
+    /// </summary>
     public class TestWxEventsHandler : IWxEventsHandler
     {
+        /// <summary>
+        /// 执行
+        /// </summary>
+        /// <param name="fromMessage"></param>
+        /// <returns></returns>
         public async Task<ToMessageBase> Execute(IFromMessage fromMessage)
         {
             if (fromMessage is FromTextMessage)
             {
+                //返回多图文
                 var toMsg = new ToNewsMessage()
                 {
                     Articles = new List<ToNewsMessage.ArticleInfo>()
                     {
                         new ToNewsMessage.ArticleInfo()
                         {
-                            Description = "湖南心莱信息科技有限公司是由一群从北上广回归的精英携手创建的一家专注软件开发的公司，公司成员基本上都有从事软件开发5年以上的工作经验，并且均领导实施过中大型软件项目。公司以“踏实，直率相处，乐于助人；对技术满怀热情；致力于帮助客户带来价值”为核心价值，希望通过专业水平和不懈努力，为中小企业提供优质的软件服务，为中小软件公司提供优质的软件技术服务。",
-                            PicUrl = "http://xin-lai.com/PlugIns/Magicodes.Home/wwwroot/unify/img/logo.png",
-                            Title="心莱科技官方介绍",
+                            Description = "最简洁最易于使用的微信Sdk，包括公众号Sdk、小程序Sdk、企业微信Sdk等，以及Abp VNext集成。",
+                            PicUrl = "https://www.xin-lai.com/imgs/xinlai-logo_9d2c29c2794e6a173738bf92b056ab69.png",
+                            Title="Magicodes.Wx.Sdk简介",
                             Url = "http://xin-lai.com"
                         }
                     },
@@ -33,13 +42,15 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.Test
             }
             else if (fromMessage is FromSubscribeEvent)
             {
+                //返回文本消息
                 return await Task.FromResult(new ToTextMessage()
                 {
-                    Content = "Test",
+                    Content = "欢迎关注!",
                 });
             }
             else if (fromMessage is FromTextMessage)
             {
+                //返回文本
                 return await Task.FromResult(new ToTextMessage()
                 {
                     Content = "Test",

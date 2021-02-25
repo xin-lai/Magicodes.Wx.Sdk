@@ -21,11 +21,6 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis
         public virtual string Message { get; set; }
 
         /// <summary>
-        ///     请求详情（一般请忽略）
-        /// </summary>
-        public virtual string DetailResult { get; set; }
-
-        /// <summary>
         ///     是否为成功返回
         /// </summary>
         /// <returns></returns>

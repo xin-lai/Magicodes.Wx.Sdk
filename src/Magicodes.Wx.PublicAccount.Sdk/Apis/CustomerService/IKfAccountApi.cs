@@ -3,6 +3,9 @@ using WebApiClientCore.Attributes;
 
 namespace Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService
 {
+    /// <summary>
+    /// 客服管理
+    /// </summary>
     [HttpHost("https://api.weixin.qq.com/customservice/kfaccount")]
     [AccessTokenApiFilter]
     public interface IKfAccountApi : IWxApiWithAccessTokenFilter
@@ -15,6 +18,11 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService
         [HttpPost("add")]
         Task<ApiResultBase> AddAsync(AddOrUpdateKfAccountInput input);
 
+        /// <summary>
+        /// 设置客服信息
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         [HttpPost("update")]
         Task<ApiResultBase> UpdateAsync(AddOrUpdateKfAccountInput input);
 

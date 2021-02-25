@@ -111,6 +111,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
                     FromEventTypes.location => await ExecuteHandler<FromLocationEvent>(xmlStr),
                     FromEventTypes.click => await ExecuteHandler<FromClickEvent>(xmlStr),
                     FromEventTypes.view => await ExecuteHandler<FromViewEvent>(xmlStr),
+                    FromEventTypes.viewminiprogram => await ExecuteHandler<FromViewMiniprogramEvent>(xmlStr),
                     FromEventTypes.templatesendjobfinish => await ExecuteHandler<FromTemplateSendJobFinishEvent>(xmlStr),
                     _ => throw new ArgumentOutOfRangeException(),
                 };

@@ -56,7 +56,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
                         }
                     }
                 }
-            }); ;
+            }); 
             result.EnsureSuccess();
         }
 

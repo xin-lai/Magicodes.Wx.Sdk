@@ -10,7 +10,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
     public interface ITemplateApi : IWxApiWithAccessTokenFilter
     {
         /// <summary>
-        /// 
+        /// 发送模板消息
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>

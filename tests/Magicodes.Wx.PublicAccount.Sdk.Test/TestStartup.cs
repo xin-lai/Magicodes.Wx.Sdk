@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Magicodes.Wx.PublicAccount.Sdk.AspNet;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -11,35 +12,18 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMagicodesWeChatSdk();
+            //添加公众号Sdk集成
+            services.AddMPublicAccountSdk()
+                //使用内存缓存
+                .AddDistributedMemoryCache();
         }
 
         public void Configure(IApplicationBuilder app)
         {
-            var cache = new Dictionary<string, string>();
-            app.UseMagicodesWeChatSdk(setup =>
-            {
-                //setup.GetWeChatOptions = () =>
-                //{
-                //    //测试号
-                //    return new WxPublicAccountOption()
-                //    {
-                //        AppId = "wx941100f605a8c3bd",
-                //        AppSecret = "ffb2f8569c76f45c5bd667227b2a8c2d"
-                //    };
-                //};
-
-                setup.GetAccessTokenByAppId = (appid) =>
-                {
-                    var key = $"AssessToken::{appid}";
-                    return !cache.ContainsKey(key) ? null : cache[key];
-                };
-
-                setup.CacheAccessToken = (appid, token) =>
-                {
-                    cache[$"AssessToken::{appid}"] = token;
-                };
-            });
+            //配置公众号Sdk
+            app.UseMPublicAccountSdk()
+                //使用分布式缓存缓存Access Token
+                .UseWxDistributedCacheForAccessToken();
         }
     }
 }

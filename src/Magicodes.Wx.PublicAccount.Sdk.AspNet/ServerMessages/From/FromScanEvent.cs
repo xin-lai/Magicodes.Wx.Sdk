@@ -20,17 +20,17 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages.From
     using System.Xml.Serialization;
 
     /// <summary>
-    /// 关注事件
+    /// 扫描带参数二维码事件
     /// </summary>
     [XmlRoot("xml")]
-    public class FromSubscribeEvent : FromEventBase
+    public class FromScanEvent : FromEventBase
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FromSubscribeEvent"/> class.
+        /// Initializes a new instance of the <see cref="FromScanEvent"/> class.
         /// </summary>
-        public FromSubscribeEvent()
+        public FromScanEvent()
         {
-            Event = FromEventTypes.subscribe;
+            Event = FromEventTypes.scan;
         }
 
         /// <summary>
@@ -38,6 +38,12 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages.From
         /// 事件KEY值，qrscene_为前缀，后面为二维码的参数值
         /// </summary>
         public string EventKey { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Ticket
+        /// 二维码的ticket，可用来换取二维码图片
+        /// </summary>
+        public string Ticket { get; set; }
 
         /// <summary>
         /// Gets the Data
@@ -55,11 +61,5 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages.From
                 return EventKey.StartsWith("{") ? JsonConvert.DeserializeObject<Dictionary<string, string>>(EventKey) : null;
             }
         }
-
-        /// <summary>
-        /// Gets or sets the Ticket
-        /// 二维码的ticket，可用来换取二维码图片
-        /// </summary>
-        public string Ticket { get; set; }
     }
 }

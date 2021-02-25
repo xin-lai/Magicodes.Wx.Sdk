@@ -56,6 +56,12 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages.From
         /// 模板消息发送完成
         /// </summary>
         [XmlEnum(Name = "templatesendjobfinish")]
-        templatesendjobfinish = 6
+        templatesendjobfinish = 6,
+
+        /// <summary>
+        ///     点击菜单跳转小程序的事件推送
+        /// </summary>
+        [XmlEnum(Name = "view_miniprogram")]
+        viewminiprogram = 7
     }
 }
