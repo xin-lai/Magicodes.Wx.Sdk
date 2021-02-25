@@ -33,5 +33,19 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             });
             result.EnsureSuccess();
         }
+
+
+        [Fact]
+        public async Task SetIndustryAsync_Test()
+        {
+            var result = await templateApi.SetIndustryAsync(new SetIndustryInput()
+            {
+                industry_id1 = "1",
+                industry_id2 = "4"
+
+
+            });
+            result.EnsureSuccess();
+        }
     }
 }

@@ -16,5 +16,12 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
         /// <returns></returns>
         [HttpPost("send")]
         Task<SendTemplateMessageApiResult> SendAsync([JsonNetContent(CharSet = "utf-8")] SendTemplateMessageInput input);
+
+        /// <summary>
+        /// 设置所属行业
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("api_set_industry")]
+        Task<ApiResultBase> SetIndustryAsync(SetIndustryInput input);
     }
 }
