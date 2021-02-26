@@ -33,5 +33,35 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             });
             result.EnsureSuccess();
         }
+
+
+        [Fact]
+        public async Task SetIndustryAsync_Test()
+        {
+            var result = await templateApi.SetIndustryAsync(new SetIndustryInput()
+            {
+                IndustryId1 = "1",
+                IndustryId2 = "4"
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetIndustryAsync_Test()
+        {
+            var result = await templateApi.GetIndustryAsync();
+            result.EnsureSuccess();
+        }
+        [Fact]
+        public async Task GetTemplateIdAsync_Test()
+        {
+            var result = await templateApi.GetTemplateIdAsync(new GetTemplateIdInput()
+            {
+                TemplateIdShort = "TM00015"
+
+            });
+            result.EnsureSuccess();
+        }
+
     }
 }
