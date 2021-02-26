@@ -1,4 +1,4 @@
-- # Magicodes.Wx.Sdk
+# Magicodes.Wx.Sdk
 
 
 ## 概述
@@ -11,6 +11,8 @@
 | **Magicodes.Wx.PublicAccount.Sdk** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk)** |
 | **Magicodes.Wx.PublicAccount.Sdk.AspNet** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk.AspNet)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk.AspNet)** |
 | **Magicodes.Wx.PublicAccount.Sdk.Abp** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk.Abp)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk.Abp)** |
+
+[如何快速编写一个微信Api？](./docs/如何快速编写一个微信Api.md)（2分钟一个Api，欢迎多多PR）
 
 ## RoadMap
 
@@ -104,7 +106,7 @@
 
   - [ ] 模板消息（`ITemplateApi`）
 
-    - [ ] [1 设置所属行业](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#0)
+    - [x] [1 设置所属行业](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#0)（`SetIndustryAsync`）
 
     - [ ] [2 获取设置的行业信息](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#1)
 
