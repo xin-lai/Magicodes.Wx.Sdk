@@ -6,16 +6,22 @@ using Xunit.Abstractions;
 
 namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
 {
+    /// <summary>
+    /// 模板消息单元测试
+    /// </summary>
     public class TemplateApiTest : TestBase, IClassFixture<TestWebApplicationFactory>
     {
         private readonly ITemplateApi templateApi;
-        private readonly WxFuncs weChatFuncs;
         public TemplateApiTest(TestWebApplicationFactory webApplicationFactory, ITestOutputHelper output) : base(webApplicationFactory, output)
         {
+            //通过父类的GetRequiredService获取到Api
             templateApi = GetRequiredService<ITemplateApi>();
-            weChatFuncs = GetRequiredService<WxFuncs>();
         }
 
+        /// <summary>
+        /// 模板消息发送测试
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public async Task SendAsync_Test()
         {
@@ -31,6 +37,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
                     {"remark",new TemplateDataItem("备注") },
                 }
             });
+            //判断Api是否调用成功，未成功将抛出异常WxSdkException
             result.EnsureSuccess();
         }
 

@@ -37,7 +37,5 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis
         {
             return ReturnCode.ToString();
         }
-
-
     }
 }

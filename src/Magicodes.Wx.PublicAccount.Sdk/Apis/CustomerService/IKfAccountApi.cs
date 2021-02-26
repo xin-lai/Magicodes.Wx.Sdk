@@ -7,7 +7,6 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService
     /// 客服管理
     /// </summary>
     [HttpHost("https://api.weixin.qq.com/customservice/kfaccount")]
-    [AccessTokenApiFilter]
     public interface IKfAccountApi : IWxApiWithAccessTokenFilter
     {
         /// <summary>
