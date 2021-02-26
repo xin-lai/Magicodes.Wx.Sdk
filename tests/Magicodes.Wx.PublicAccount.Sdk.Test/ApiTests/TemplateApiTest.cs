@@ -41,10 +41,15 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             var result = await templateApi.SetIndustryAsync(new SetIndustryInput()
             {
                 industry_id1 = "1",
-                industry_id2 = "4"
-
-
+                industry_id2 = "4" 
             });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetIndustryAsync_Test()
+        {
+            var result = await templateApi.GetIndustryAsync();
             result.EnsureSuccess();
         }
     }

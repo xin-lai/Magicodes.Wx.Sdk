@@ -23,5 +23,12 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
         /// <returns></returns>
         [HttpPost("api_set_industry")]
         Task<ApiResultBase> SetIndustryAsync(SetIndustryInput input);
+
+        /// <summary>
+        ///获取设置的行业信息
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("get_industry")]
+        Task<GetIndustryResult> GetIndustryAsync();
     }
 }
