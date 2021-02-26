@@ -38,5 +38,20 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
         /// <returns></returns>
         [HttpPost("api_add_template")]
         Task<GetTemplateIdApiResult> GetTemplateIdAsync(GetTemplateIdInput input);
+        /// <summary>
+        /// 获取模板列表 
+        /// </summary>
+        /// <returns></returns> 
+        [HttpGet("get_all_private_template")]
+        Task<GetAllPrivateTemplateApiResult> GetAllPrivateTemplateAsync();
+
+        /// <summary>
+        /// 根据模板id删除模板 
+        /// </summary>
+        /// <returns></returns> 
+        [HttpPost("del_private_template")]
+        Task<ApiResultBase> DelPrivateTemplateAsync(DelPrivateTemplateInput input);
+
+
     }
 }

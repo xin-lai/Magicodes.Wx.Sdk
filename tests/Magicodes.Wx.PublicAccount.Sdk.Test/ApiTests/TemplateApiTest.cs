@@ -63,5 +63,22 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             result.EnsureSuccess();
         }
 
+        [Fact]
+        public async Task GetAllPrivateTemplateAsync_Test()
+        {
+            var result = await templateApi.GetAllPrivateTemplateAsync();
+            result.EnsureSuccess();
+        }
+
+
+        [Fact]
+        public async Task DelPrivateTemplateAsync_Test()
+        {
+            var result = await templateApi.DelPrivateTemplateAsync(new DelPrivateTemplateInput()
+            {
+                TemplateId = "riid7aad8OKRQD9Ey6dclWBBkrqZSFDhlpKh0_spGLA"
+            });
+            result.EnsureSuccess();
+        }
     }
 }
