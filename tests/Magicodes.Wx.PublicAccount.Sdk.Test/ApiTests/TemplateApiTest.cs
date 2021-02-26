@@ -76,7 +76,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
         {
             var result = await templateApi.DelPrivateTemplateAsync(new DelPrivateTemplateInput()
             {
-                TemplateId = "riid7aad8OKRQD9Ey6dclWBBkrqZSFDhlpKh0_spGLA"
+                TemplateId = "Z5V2PJ7rOsAz_Ypkjk90WdU5ASm1y0jHggz2EIO46So"
             });
             result.EnsureSuccess();
         }
