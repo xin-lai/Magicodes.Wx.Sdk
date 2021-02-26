@@ -22,7 +22,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
         /// </summary>
         /// <returns></returns>
         [HttpPost("api_set_industry")]
-        Task<ApiResultBase> SetIndustryAsync(SetIndustryInput input);
+        Task<ApiResultBase> SetIndustryAsync([JsonNetContent(CharSet = "utf-8")] SetIndustryInput input);
 
         /// <summary>
         ///获取设置的行业信息
@@ -30,5 +30,13 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
         /// <returns></returns>
         [HttpGet("get_industry")]
         Task<GetIndustryResult> GetIndustryAsync();
+
+
+        /// <summary>
+        /// 根据模板编号获得模板ID
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("api_add_template")]
+        Task<GetTemplateIdApiResult> GetTemplateIdAsync(GetTemplateIdInput input);
     }
 }
