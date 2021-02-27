@@ -25,10 +25,9 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             var result = await kfAccountApi.AddAsync(new AddOrUpdateKfAccountInput()
             {
 
-                Account = "yangshuai@ceshi",
+                Account = "yangshuai@gh_b671e2ede569",
                 Nickname = "欧阳"
             }
-
             );
             result.EnsureSuccess();
         }

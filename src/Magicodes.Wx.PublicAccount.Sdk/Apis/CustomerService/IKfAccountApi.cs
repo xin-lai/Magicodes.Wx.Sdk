@@ -1,5 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
+using WebApiClientCore.Parameters;
 
 namespace Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService
 {
@@ -55,5 +57,13 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService
         [HttpPost("kfaccount/inviteworker")]
         Task<ApiResultBase> InviteWorkerAsync(InviteWorkerInput input);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="kf_account">完整客服帐号，格式为：帐号前缀@公众号微信号</param>
+        /// <param name="media">form-data 中媒体文件标识，有filename、filelength、content-type 等信息，文件大小为5M 以内</param>
+        /// <returns></returns>
+        [HttpPost("kfaccount/uploadheadimg")]
+        Task<ApiResultBase> UploadHeadimg([Required] string kf_account, FormDataFile media);
     }
 }

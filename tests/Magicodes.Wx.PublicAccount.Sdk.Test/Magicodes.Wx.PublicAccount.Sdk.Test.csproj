@@ -36,4 +36,10 @@
     <ProjectReference Include="..\..\src\Magicodes.Wx.PublicAccount.Sdk.AspNet\Magicodes.Wx.PublicAccount.Sdk.AspNet.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Media\wechat.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
