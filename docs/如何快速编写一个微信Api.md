@@ -1,38 +1,38 @@
-# ÈçºÎ¿ìËÙ±àĞ´Ò»¸öÎ¢ĞÅApi£¿
+# å¦‚ä½•å¿«é€Ÿç¼–å†™ä¸€ä¸ªå¾®ä¿¡Apiï¼Ÿ
 
 
-## ¸ÅÊö
-[Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)ÖÂÁ¦ÓÚ´òÔì×î¼ò½à×îÒ×ÓÚÊ¹ÓÃµÄÎ¢ĞÅSdk£¬Öğ²½°üÀ¨¹«ÖÚºÅSdk¡¢Ğ¡³ÌĞòSdk¡¢ÆóÒµÎ¢ĞÅSdkµÈ£¬ÒÔ¼°Abp VNext¼¯³É¡£
+## æ¦‚è¿°
+[Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)è‡´åŠ›äºæ‰“é€ æœ€ç®€æ´æœ€æ˜“äºä½¿ç”¨çš„å¾®ä¿¡Sdkï¼Œé€æ­¥åŒ…æ‹¬å…¬ä¼—å·Sdkã€å°ç¨‹åºSdkã€ä¼ä¸šå¾®ä¿¡Sdkç­‰ï¼Œä»¥åŠAbp VNexté›†æˆã€‚
 
-±¾Æª½«²àÖØÓÚ½²ÊöÈçºÎÏò[Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)½øĞĞ¹±Ï×¡£
+æœ¬ç¯‡å°†ä¾§é‡äºè®²è¿°å¦‚ä½•å‘[Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)è¿›è¡Œè´¡çŒ®ã€‚
 
 ## WebApiClientCore
 
-[Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)Ö®¼ò½àºÜ´ó²ãÃæÒÀÍĞÓÚNCCµÄ¿ªÔ´¿â[WebApiClientCore](https://github.com/dotnetcore/WebApiClient)¡£
+[Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)ä¹‹ç®€æ´å¾ˆå¤§å±‚é¢ä¾æ‰˜äºNCCçš„å¼€æºåº“[WebApiClientCore](https://github.com/dotnetcore/WebApiClient)ã€‚
 
-¿ªÔ´¿âµØÖ·£ºhttps://github.com/dotnetcore/WebApiClient
+å¼€æºåº“åœ°å€ï¼šhttps://github.com/dotnetcore/WebApiClient
 
-## ¿ìËÙ¿ªÊ¼
+## å¿«é€Ÿå¼€å§‹
 
-ÕâÀïÎÒÃÇÒÔ¡¾¿Í·şÏûÏ¢¡¿¡¾Ìí¼Ó¿Í·şÕËºÅ¡¿ÎªÀı½øĞĞ½²½â£¬¹Ù·½½Ó¿ÚÎÄµµµØÖ·Îª£ºhttps://developers.weixin.qq.com/doc/offiaccount/Customer_Service/Customer_Service_Management.html#2¡£
+è¿™é‡Œæˆ‘ä»¬ä»¥ã€å®¢æœæ¶ˆæ¯ã€‘ã€æ·»åŠ å®¢æœè´¦å·ã€‘ä¸ºä¾‹è¿›è¡Œè®²è§£ï¼Œå®˜æ–¹æ¥å£æ–‡æ¡£åœ°å€ä¸ºï¼šhttps://developers.weixin.qq.com/doc/offiaccount/Customer_Service/Customer_Service_Management.html#2ã€‚
 
-![Ìí¼Ó¿Í·şÕËºÅ](../res/image-20210226095153459.png)
+![æ·»åŠ å®¢æœè´¦å·](../res/image-20210226095153459.png)
 
-Ö÷Ìå²½ÖèÈçÏÂ£º
+ä¸»ä½“æ­¥éª¤å¦‚ä¸‹ï¼š
 
-### 1£©Ìí¼Ó½Ó¿ÚIKfAccountApi
+### 1ï¼‰æ·»åŠ æ¥å£IKfAccountApi
 
-²Î¿¼´úÂëÈçÏÂËùÊ¾£º
+å‚è€ƒä»£ç å¦‚ä¸‹æ‰€ç¤ºï¼š
 
 ```csharp
 /// <summary>
-/// ¿Í·ş¹ÜÀí
+/// å®¢æœç®¡ç†
 /// </summary>
-[HttpHost("https://api.weixin.qq.com/customservice/kfaccount")]
+[HttpHost("https://api.weixin.qq.com/customservice/kfaccount/")]
 public interface IKfAccountApi : IWxApiWithAccessTokenFilter
 {
     /// <summary>
-    /// Ìí¼Ó¿Í·şÕËºÅ
+    /// æ·»åŠ å®¢æœè´¦å·
     /// </summary>
     /// <param name="input"></param>
     /// <returns></returns>
@@ -40,7 +40,7 @@ public interface IKfAccountApi : IWxApiWithAccessTokenFilter
     Task<ApiResultBase> AddAsync(AddOrUpdateKfAccountInput input);
 
     /// <summary>
-    /// ÉèÖÃ¿Í·şĞÅÏ¢
+    /// è®¾ç½®å®¢æœä¿¡æ¯
     /// </summary>
     /// <param name="input"></param>
     /// <returns></returns>
@@ -48,7 +48,7 @@ public interface IKfAccountApi : IWxApiWithAccessTokenFilter
     Task<ApiResultBase> UpdateAsync(AddOrUpdateKfAccountInput input);
 
     /// <summary>
-    /// É¾³ı¿Í·şÕËºÅ
+    /// åˆ é™¤å®¢æœè´¦å·
     /// </summary>
     /// <param name="input"></param>
     /// <returns></returns>
@@ -56,37 +56,37 @@ public interface IKfAccountApi : IWxApiWithAccessTokenFilter
     Task<ApiResultBase> DelAsync(DelKfAccountInput input);
 }
 ```
-ÈçÉÏÊö´úÂëËùÊ¾£¬ÓĞ¼¸¸ö×¢ÒâÊÂÏî£º
+å¦‚ä¸Šè¿°ä»£ç æ‰€ç¤ºï¼Œæœ‰å‡ ä¸ªæ³¨æ„äº‹é¡¹ï¼š
 
-1. ĞèÒª¶¨Òå½Ó¿Ú
+1. éœ€è¦å®šä¹‰æ¥å£
 
-2. ¼Ì³Ğ×ÔIWxApiWithAccessTokenFilter½Ó¿Ú½«×Ô¶¯ÔÚ½Ó¿ÚÇëÇóÆôÓÃAccessTokenApiFilterÉ¸Ñ¡Æ÷£¬¼´»á×Ô¶¯»áÔÚ½Ó¿ÚÇëÇóÊ±´øÉÏaccess_token¡£
+2. ç»§æ‰¿è‡ªIWxApiWithAccessTokenFilteræ¥å£å°†è‡ªåŠ¨åœ¨æ¥å£è¯·æ±‚å¯ç”¨AccessTokenApiFilterç­›é€‰å™¨ï¼Œå³ä¼šè‡ªåŠ¨ä¼šåœ¨æ¥å£è¯·æ±‚æ—¶å¸¦ä¸Šaccess_tokenã€‚
 
-3. HttpHostÓÃÓÚ¶¨Òå½Ó¿Ú¸úµØÖ·
+3. HttpHostç”¨äºå®šä¹‰æ¥å£è·Ÿåœ°å€
 
-4. HttpPostÓÃÓÚÉèÖÃ½Ó¿ÚÇëÇó·½·¨£¬³£ÓÃÌØĞÔÓĞ£º
+4. HttpPostç”¨äºè®¾ç½®æ¥å£è¯·æ±‚æ–¹æ³•ï¼Œå¸¸ç”¨ç‰¹æ€§æœ‰ï¼š
 
-   | ÌØĞÔÃû³Æ                | ¹¦ÄÜÃèÊö                     | ±¸×¢                     |
+   | ç‰¹æ€§åç§°                | åŠŸèƒ½æè¿°                     | å¤‡æ³¨                     |
    | ----------------------- | ---------------------------- | ------------------------ |
-   | HttpHostAttribute       | ÇëÇó·şÎñhttp¾ø¶ÔÍêÕûÖ÷»úÓòÃû | ÓÅÏÈ¼¶±ÈOptionsÅäÖÃµÍ    |
-   | HttpGetAttribute        | ÉùÃ÷GetÇëÇó·½·¨ÓëÂ·¾¶        | Ö§³Önull¡¢¾ø¶Ô»òÏà¶ÔÂ·¾¶ |
-   | HttpPostAttribute       | ÉùÃ÷PostÇëÇó·½·¨ÓëÂ·¾¶       | Ö§³Önull¡¢¾ø¶Ô»òÏà¶ÔÂ·¾¶ |
-   | HttpPutAttribute        | ÉùÃ÷PutÇëÇó·½·¨ÓëÂ·¾¶        | Ö§³Önull¡¢¾ø¶Ô»òÏà¶ÔÂ·¾¶ |
-   | HttpDeleteAttribute     | ÉùÃ÷DeleteÇëÇó·½·¨ÓëÂ·¾¶     | Ö§³Önull¡¢¾ø¶Ô»òÏà¶ÔÂ·¾¶ |
-   | *HeaderAttribute*       | ÉùÃ÷ÇëÇóÍ·                   | ³£Á¿Öµ                   |
-   | *TimeoutAttribute*      | ÉùÃ÷³¬Ê±Ê±¼ä                 | ³£Á¿Öµ                   |
-   | *FormFieldAttribute*    | ÉùÃ÷Form±íµ¥×Ö¶ÎÓëÖµ         | ³£Á¿¼üºÍÖµ               |
-   | *FormDataTextAttribute* | ÉùÃ÷FormData±íµ¥×Ö¶ÎÓëÖµ     | ³£Á¿¼üºÍÖµ               |
+   | HttpHostAttribute       | è¯·æ±‚æœåŠ¡httpç»å¯¹å®Œæ•´ä¸»æœºåŸŸå | ä¼˜å…ˆçº§æ¯”Optionsé…ç½®ä½    |
+   | HttpGetAttribute        | å£°æ˜Getè¯·æ±‚æ–¹æ³•ä¸è·¯å¾„        | æ”¯æŒnullã€ç»å¯¹æˆ–ç›¸å¯¹è·¯å¾„ |
+   | HttpPostAttribute       | å£°æ˜Postè¯·æ±‚æ–¹æ³•ä¸è·¯å¾„       | æ”¯æŒnullã€ç»å¯¹æˆ–ç›¸å¯¹è·¯å¾„ |
+   | HttpPutAttribute        | å£°æ˜Putè¯·æ±‚æ–¹æ³•ä¸è·¯å¾„        | æ”¯æŒnullã€ç»å¯¹æˆ–ç›¸å¯¹è·¯å¾„ |
+   | HttpDeleteAttribute     | å£°æ˜Deleteè¯·æ±‚æ–¹æ³•ä¸è·¯å¾„     | æ”¯æŒnullã€ç»å¯¹æˆ–ç›¸å¯¹è·¯å¾„ |
+   | *HeaderAttribute*       | å£°æ˜è¯·æ±‚å¤´                   | å¸¸é‡å€¼                   |
+   | *TimeoutAttribute*      | å£°æ˜è¶…æ—¶æ—¶é—´                 | å¸¸é‡å€¼                   |
+   | *FormFieldAttribute*    | å£°æ˜Formè¡¨å•å­—æ®µä¸å€¼         | å¸¸é‡é”®å’Œå€¼               |
+   | *FormDataTextAttribute* | å£°æ˜FormDataè¡¨å•å­—æ®µä¸å€¼     | å¸¸é‡é”®å’Œå€¼               |
 
-### 2£©Ìí¼ÓDto
+### 2ï¼‰æ·»åŠ Dto
 
-ÕâÒ»²½ÊÇ·Ç±ØÒªµÄ£¬ĞèÒª¿´²ÎÊıµÄ¾ßÌåÄÚÈİºÍÒªÇó¡£Ìí¼Ó¿Í·ş½Ó¿ÚµÄÊäÈë²ÎÊı´úÂë²Î¿¼ÈçÏÂ£º
+è¿™ä¸€æ­¥æ˜¯éå¿…è¦çš„ï¼Œéœ€è¦çœ‹å‚æ•°çš„å…·ä½“å†…å®¹å’Œè¦æ±‚ã€‚æ·»åŠ å®¢æœæ¥å£çš„è¾“å…¥å‚æ•°ä»£ç å‚è€ƒå¦‚ä¸‹ï¼š
 
 ```csharp
     public class AddOrUpdateKfAccountInput
     {
         /// <summary>
-        /// ÍêÕû¿Í·şÕÊºÅ£¬¸ñÊ½Îª£ºÕÊºÅÇ°×º@¹«ÖÚºÅÎ¢ĞÅºÅ£¬ÕÊºÅÇ°×º×î¶à10¸ö×Ö·û£¬±ØĞëÊÇÓ¢ÎÄ¡¢Êı×Ö×Ö·û»òÕßÏÂ»®Ïß£¬ºó×ºÎª¹«ÖÚºÅÎ¢ĞÅºÅ£¬³¤¶È²»³¬¹ı30¸ö×Ö·û
+        /// å®Œæ•´å®¢æœå¸å·ï¼Œæ ¼å¼ä¸ºï¼šå¸å·å‰ç¼€@å…¬ä¼—å·å¾®ä¿¡å·ï¼Œå¸å·å‰ç¼€æœ€å¤š10ä¸ªå­—ç¬¦ï¼Œå¿…é¡»æ˜¯è‹±æ–‡ã€æ•°å­—å­—ç¬¦æˆ–è€…ä¸‹åˆ’çº¿ï¼Œåç¼€ä¸ºå…¬ä¼—å·å¾®ä¿¡å·ï¼Œé•¿åº¦ä¸è¶…è¿‡30ä¸ªå­—ç¬¦
         /// </summary>
         [JsonProperty("kf_account")]
         [StringLength(30, MinimumLength = 3)]
@@ -94,57 +94,57 @@ public interface IKfAccountApi : IWxApiWithAccessTokenFilter
         public string Account { get; set; }
 
         /// <summary>
-        /// ¿Í·şêÇ³Æ£¬×î³¤16¸ö×Ö
+        /// å®¢æœæ˜µç§°ï¼Œæœ€é•¿16ä¸ªå­—
         /// </summary>
         [JsonProperty("nickname")]
         [StringLength(16, MinimumLength = 1)]
         public string Nickname { get; set; }
     }
 ```
-### 3£©Ìí¼ÓApiResultBase
+### 3ï¼‰æ·»åŠ ApiResultBase
 
-¿ò¼ÜÖĞ·â×°ÁËÄ¬ÈÏµÄ·µ»Ø½á¹û»ùÀà£¬Èç¹ûÃ»ÓĞÆäËû¶îÍâµÄ·µ»ØÄÚÈİ£¬½öĞè·µ»Ø`ApiResultBase`¼´¿É¡£Èç¹ûÓĞ¶îÍâµÄ·¶Î§ÄÚÈİ£¬ÔòĞèÒª¶¨Òå×ÓÀà¼Ì³Ğ×Ô`ApiResultBase`£¬ÔÚ¿ÉÄÜµÄÇé¿öÏÂ£¬ÓĞ¿ÉÄÜĞèÒªÖØĞ´²¿·Ö·½·¨¡£ÈçÏÂÊö´úÂë£º
+æ¡†æ¶ä¸­å°è£…äº†é»˜è®¤çš„è¿”å›ç»“æœåŸºç±»ï¼Œå¦‚æœæ²¡æœ‰å…¶ä»–é¢å¤–çš„è¿”å›å†…å®¹ï¼Œä»…éœ€è¿”å›`ApiResultBase`å³å¯ã€‚å¦‚æœæœ‰é¢å¤–çš„èŒƒå›´å†…å®¹ï¼Œåˆ™éœ€è¦å®šä¹‰å­ç±»ç»§æ‰¿è‡ª`ApiResultBase`ï¼Œåœ¨å¯èƒ½çš„æƒ…å†µä¸‹ï¼Œæœ‰å¯èƒ½éœ€è¦é‡å†™éƒ¨åˆ†æ–¹æ³•ã€‚å¦‚ä¸‹è¿°ä»£ç ï¼š
 
 ```csharp
 public class TokenApiResult : ApiResultBase
 {
     /// <summary>
-    ///     »ñÈ¡µ½µÄÆ¾Ö¤
+    ///     è·å–åˆ°çš„å‡­è¯
     /// </summary>
     [JsonProperty("access_token")]
     public string AccessToken { get; set; }
 
     /// <summary>
-    ///     Æ¾Ö¤ÓĞĞ§Ê±¼ä£¬µ¥Î»£ºÃë
+    ///     å‡­è¯æœ‰æ•ˆæ—¶é—´ï¼Œå•ä½ï¼šç§’
     /// </summary>
     [JsonProperty("expires_in")]
     internal int Expires { get; set; }
 
     /// <summary>
-    ///     Æ¾Ö¤¹ıÆÚÊ±¼ä
+    ///     å‡­è¯è¿‡æœŸæ—¶é—´
     /// </summary>
     public DateTime ExpiresTime { get; set; }
 }
 ```
-ÖÁ´Ë£¬Ò»¸ö½Ó¿Ú¾Í±àĞ´Íê³ÉÁË¡£Ö»ĞèÒª¶¨ÒåinterfaceºÍDto¾Í¿ÉÒÔÁË¡£ÊÇ²»ÊÇ·Ç³£¼òµ¥£¿
+è‡³æ­¤ï¼Œä¸€ä¸ªæ¥å£å°±ç¼–å†™å®Œæˆäº†ã€‚åªéœ€è¦å®šä¹‰interfaceå’ŒDtoå°±å¯ä»¥äº†ã€‚æ˜¯ä¸æ˜¯éå¸¸ç®€å•ï¼Ÿ
 
-### 4£©µ¥Ôª²âÊÔ±àĞ´
+### 4ï¼‰å•å…ƒæµ‹è¯•ç¼–å†™
 
 ```csharp
 /// <summary>
-/// Ä£°åÏûÏ¢µ¥Ôª²âÊÔ
+/// æ¨¡æ¿æ¶ˆæ¯å•å…ƒæµ‹è¯•
 /// </summary>
 public class TemplateApiTest : TestBase, IClassFixture<TestWebApplicationFactory>
 {
     private readonly ITemplateApi templateApi;
     public TemplateApiTest(TestWebApplicationFactory webApplicationFactory, ITestOutputHelper output) : base(webApplicationFactory, output)
     {
-        //Í¨¹ı¸¸ÀàµÄGetRequiredService»ñÈ¡µ½Api
+        //é€šè¿‡çˆ¶ç±»çš„GetRequiredServiceè·å–åˆ°Api
         templateApi = GetRequiredService<ITemplateApi>();
     }
 
     /// <summary>
-    /// Ä£°åÏûÏ¢·¢ËÍ²âÊÔ
+    /// æ¨¡æ¿æ¶ˆæ¯å‘é€æµ‹è¯•
     /// </summary>
     /// <returns></returns>
     [Fact]
@@ -156,26 +156,26 @@ public class TemplateApiTest : TestBase, IClassFixture<TestWebApplicationFactory
             TemplateId = "riid7aad8OKRQD9Ey6dclWBBkrqZSFDhlpKh0_spGLA",
             Data = new System.Collections.Generic.Dictionary<string, TemplateDataItem>()
             {
-                {"first",new TemplateDataItem("²âÊÔ") },
-                {"keyword1",new TemplateDataItem("Ñ©Ñã") },
+                {"first",new TemplateDataItem("æµ‹è¯•") },
+                {"keyword1",new TemplateDataItem("é›ªé›") },
                 {"keyword2",new TemplateDataItem("2021.2.5") },
-                {"remark",new TemplateDataItem("±¸×¢") },
+                {"remark",new TemplateDataItem("å¤‡æ³¨") },
             }
         });
-        //ÅĞ¶ÏApiÊÇ·ñµ÷ÓÃ³É¹¦£¬Î´³É¹¦½«Å×³öÒì³£WxSdkException
+        //åˆ¤æ–­Apiæ˜¯å¦è°ƒç”¨æˆåŠŸï¼ŒæœªæˆåŠŸå°†æŠ›å‡ºå¼‚å¸¸WxSdkException
         result.EnsureSuccess();
     }
 }
 ```
-ÕûÌå²Î¿¼£º
+æ•´ä½“å‚è€ƒï¼š
 
 https://github.com/xin-lai/Magicodes.Wx.Sdk/pull/1/commits/85263ed9a807581f7315a90fe6e00c51c994d386
 
-## ÆäËû
+## å…¶ä»–
 
-### IWxApiWithAccessTokenFilter½Ó¿Ú
+### IWxApiWithAccessTokenFilteræ¥å£
 
-²Î¿¼´úÂë£º
+å‚è€ƒä»£ç ï¼š
 
 ```csharp
 /// <summary>
@@ -188,9 +188,9 @@ public interface IWxApiWithAccessTokenFilter
 {
 }
 ```
-### AccessTokenApiFilterÉ¸Ñ¡Æ÷
+### AccessTokenApiFilterç­›é€‰å™¨
 
-²Î¿¼´úÂë£º
+å‚è€ƒä»£ç ï¼š
 
 ```csharp
 public class AccessTokenApiFilter : ApiFilterAttribute
@@ -208,38 +208,38 @@ public class AccessTokenApiFilter : ApiFilterAttribute
     }
 }
 ```
-### ¹ØÓÚApiResultBase
+### å…³äºApiResultBase
 
 ```csharp
 /// <summary>
-///     APIÇëÇó½á¹û
+///     APIè¯·æ±‚ç»“æœ
 ///     {"errcode":40164,"errmsg":"invalid ip 218.76.8.29 ipv6 ::ffff:218.76.8.29, not in whitelist rid: 60122c35-705c3134-51b45a3d"}
 /// </summary>
 public class ApiResultBase
 {
     /// <summary>
-    ///     ·µ»ØÂë
+    ///     è¿”å›ç 
     /// </summary>
     [JsonProperty("errcode")]
     public virtual ReturnCodes ReturnCode { get; set; }
 
     /// <summary>
-    ///     ´íÎóÏûÏ¢
+    ///     é”™è¯¯æ¶ˆæ¯
     /// </summary>
     [JsonProperty("errmsg")]
     public virtual string Message { get; set; }
 
     /// <summary>
-    ///     ÊÇ·ñÎª³É¹¦·µ»Ø
+    ///     æ˜¯å¦ä¸ºæˆåŠŸè¿”å›
     /// </summary>
     /// <returns></returns>
     public virtual bool IsSuccess()
     {
-        return ReturnCode == ReturnCodes.ÇëÇó³É¹¦;
+        return ReturnCode == ReturnCodes.è¯·æ±‚æˆåŠŸ;
     }
 
     /// <summary>
-    ///     »ñÈ¡ÓÑºÃÌáÊ¾
+    ///     è·å–å‹å¥½æç¤º
     /// </summary>
     /// <returns></returns>
     public virtual string GetFriendlyMessage()
@@ -248,23 +248,23 @@ public class ApiResultBase
     }
 }
 ```
-## ÁªÏµÎÒÃÇ
+## è”ç³»æˆ‘ä»¬
 
-### ¶©ÔÄºÅ
-¹Ø×¢¡°**Âó¿ÛÁÄ¼¼Êõ**¡±¶©ÔÄºÅ¿ÉÒÔ»ñµÃ×îĞÂÎÄÕÂ¡¢½Ì³Ì¡¢ÎÄµµ£¬²¢ÇÒ¼ÓÈëÎ¢ĞÅÉúÌ¬Èº£º
-![](https://docs.xin-lai.com/medias/wechat.jpg "Âó¿ÛÁÄ¼¼Êõ")
+### è®¢é˜…å·
+å…³æ³¨â€œ**éº¦æ‰£èŠæŠ€æœ¯**â€è®¢é˜…å·å¯ä»¥è·å¾—æœ€æ–°æ–‡ç« ã€æ•™ç¨‹ã€æ–‡æ¡£ï¼Œå¹¶ä¸”åŠ å…¥å¾®ä¿¡ç”Ÿæ€ç¾¤ï¼š
+![](https://docs.xin-lai.com/medias/wechat.jpg "éº¦æ‰£èŠæŠ€æœ¯")
 
-### QQÈº
+### QQç¾¤
 
-- **±à³Ì½»Á÷Èº<85318032>**£¨ÓÉÓÚ²»¾­³£ÔÚÏß£¬ÎªÁË±ÜÃâÉ§ÈÅ£¬ÉèÖÃÁËÒ»¶¨ÃÅ¼÷£©
+- **ç¼–ç¨‹äº¤æµç¾¤<85318032>**ï¼ˆç”±äºä¸ç»å¸¸åœ¨çº¿ï¼Œä¸ºäº†é¿å…éªšæ‰°ï¼Œè®¾ç½®äº†ä¸€å®šé—¨æ§›ï¼‰
 
 
-#### ÎÄµµ¹ÙÍø&¹Ù·½²©¿Í
+#### æ–‡æ¡£å®˜ç½‘&å®˜æ–¹åšå®¢
 
-- **ÎÄµµ¹ÙÍø£º<https://docs.xin-lai.com/>**
-- **²©¿Í£º<http://www.cnblogs.com/codelove/>**
+- **æ–‡æ¡£å®˜ç½‘ï¼š<https://docs.xin-lai.com/>**
+- **åšå®¢ï¼š<http://www.cnblogs.com/codelove/>**
 
-#### ÆäËû¿ªÔ´¿â
+#### å…¶ä»–å¼€æºåº“
 
 - **<https://github.com/xin-lai>**
 - **<https://gitee.com/magicodes>**
