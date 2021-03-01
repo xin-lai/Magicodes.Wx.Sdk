@@ -1,4 +1,6 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.Apis;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.Media;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Menu;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Message;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Sns;
@@ -30,6 +32,8 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             services.AddHttpApi<ITemplateApi>();
             services.AddHttpApi<IMenuApi>();
             services.AddSingleton<ITokenManager, TokenManager>();
+            services.AddHttpApi<IKfAccountApi>();
+            services.AddHttpApi<IMediaApi>();
             return services;
         }
 

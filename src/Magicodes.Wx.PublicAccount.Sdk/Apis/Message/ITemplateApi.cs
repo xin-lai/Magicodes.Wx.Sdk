@@ -21,14 +21,14 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
         /// 设置所属行业
         /// </summary>
         /// <returns></returns>
-        [HttpPost("api_set_industry")]
+        [HttpPost("https://api.weixin.qq.com/cgi-bin/template/api_set_industry")]
         Task<ApiResultBase> SetIndustryAsync([JsonNetContent(CharSet = "utf-8")] SetIndustryInput input);
 
         /// <summary>
         ///获取设置的行业信息
         /// </summary>
         /// <returns></returns>
-        [HttpGet("get_industry")]
+        [HttpGet("https://api.weixin.qq.com/cgi-bin/template/get_industry")]
         Task<GetIndustryResult> GetIndustryAsync();
 
 
@@ -36,7 +36,22 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
         /// 根据模板编号获得模板ID
         /// </summary>
         /// <returns></returns>
-        [HttpPost("api_add_template")]
+        [HttpPost("https://api.weixin.qq.com/cgi-bin/template/api_add_template")]
         Task<GetTemplateIdApiResult> GetTemplateIdAsync(GetTemplateIdInput input);
+        /// <summary>
+        /// 获取模板列表 
+        /// </summary>
+        /// <returns></returns> 
+        [HttpGet("https://api.weixin.qq.com/cgi-bin/template/get_all_private_template")]
+        Task<GetAllPrivateTemplateApiResult> GetAllPrivateTemplateAsync();
+
+        /// <summary>
+        /// 根据模板id删除模板 
+        /// </summary>
+        /// <returns></returns> 
+        [HttpPost("https://api.weixin.qq.com/cgi-bin/template/del_private_template")]
+        Task<ApiResultBase> DelPrivateTemplateAsync([JsonNetContent(CharSet = "utf-8")] DelPrivateTemplateInput input);
+
+
     }
 }

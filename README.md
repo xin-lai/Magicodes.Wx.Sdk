@@ -1,41 +1,41 @@
 # Magicodes.Wx.Sdk
 
 
-## ¸ÅÊö
-×î¼ò½à×îÒ×ÓÚÊ¹ÓÃµÄÎ¢ĞÅSdk£¬°üÀ¨¹«ÖÚºÅSdk¡¢Ğ¡³ÌĞòSdk¡¢ÆóÒµÎ¢ĞÅSdkµÈ£¬ÒÔ¼°Abp VNext¼¯³É¡£
+## æ¦‚è¿°
+æœ€ç®€æ´æœ€æ˜“äºä½¿ç”¨çš„å¾®ä¿¡Sdkï¼ŒåŒ…æ‹¬å…¬ä¼—å·Sdkã€å°ç¨‹åºSdkã€ä¼ä¸šå¾®ä¿¡Sdkç­‰ï¼Œä»¥åŠAbp VNexté›†æˆã€‚
 
 [![Build Status](https://dev.azure.com/xinlaiopencode/Magicodes.Wx.Sdk/_apis/build/status/xin-lai.Magicodes.Wx.Sdk?branchName=main)](https://dev.azure.com/xinlaiopencode/Magicodes.Wx.Sdk/_build/latest?definitionId=15&branchName=main)
 
-| **Ãû³Æ** |      **Nuget**      |
+| **åç§°** |      **Nuget**      |
 |----------|:-------------:|
 | **Magicodes.Wx.PublicAccount.Sdk** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk)** |
 | **Magicodes.Wx.PublicAccount.Sdk.AspNet** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk.AspNet)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk.AspNet)** |
 | **Magicodes.Wx.PublicAccount.Sdk.Abp** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk.Abp)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk.Abp)** |
 
-[ÈçºÎ¿ìËÙ±àĞ´Ò»¸öÎ¢ĞÅApi£¿](./docs/ÈçºÎ¿ìËÙ±àĞ´Ò»¸öÎ¢ĞÅApi.md)£¨2·ÖÖÓÒ»¸öApi£¬»¶Ó­¶à¶àPR£©
+[å¦‚ä½•å¿«é€Ÿç¼–å†™ä¸€ä¸ªå¾®ä¿¡Apiï¼Ÿ](./docs/å¦‚ä½•å¿«é€Ÿç¼–å†™ä¸€ä¸ªå¾®ä¿¡Api.md)ï¼ˆ2åˆ†é’Ÿä¸€ä¸ªApiï¼Œæ¬¢è¿å¤šå¤šPRï¼‰
 
 ## RoadMap
 
-### ¹«ÖÚºÅ
+### å…¬ä¼—å·
 
-- [x] È«¾Ö
+- [x] å…¨å±€
 
-  - [x] ½Ó¿Ú½á¹û»ùÀà£¨`ApiResultBase`£©
+  - [x] æ¥å£ç»“æœåŸºç±»ï¼ˆ`ApiResultBase`ï¼‰
 
-    - [x] È«¾Ö·µ»ØÂë£¨`ReturnCodes`£©
-    - [x] ÊÇ·ñ³É¹¦·µ»Ø£¨`IsSuccess`£©
-    - [x] »ñÈ¡Òì³£ÓÑºÃÌáÊ¾ÏûÏ¢£¨`GetFriendlyMessage`£©
+    - [x] å…¨å±€è¿”å›ç ï¼ˆ`ReturnCodes`ï¼‰
+    - [x] æ˜¯å¦æˆåŠŸè¿”å›ï¼ˆ`IsSuccess`ï¼‰
+    - [x] è·å–å¼‚å¸¸å‹å¥½æç¤ºæ¶ˆæ¯ï¼ˆ`GetFriendlyMessage`ï¼‰
 
-  - [x] Access Token»ñÈ¡£¨`ITokenApi`£©
+  - [x] Access Tokenè·å–ï¼ˆ`ITokenApi`ï¼‰
 
-  - [x] Token¹ÜÀíÆ÷£¨`ITokenManager`£©
+  - [x] Tokenç®¡ç†å™¨ï¼ˆ`ITokenManager`ï¼‰
 
-  - [x] Access Token APIÇëÇóÉ¸Ñ¡Æ÷£¨`AccessTokenApiFilter`£©
+  - [x] Access Token APIè¯·æ±‚ç­›é€‰å™¨ï¼ˆ`AccessTokenApiFilter`ï¼‰
 
     - [x] IWxApiBase
-    - [x] IWxApiWithAccessTokenFilter£¨ÆôÓÃ`AccessTokenApiFilter`£©
+    - [x] IWxApiWithAccessTokenFilterï¼ˆå¯ç”¨`AccessTokenApiFilter`ï¼‰
 
-  - [x] ´ÓÅäÖÃÎÄ¼ş»ñÈ¡¹«ÖÚºÅÅäÖÃ
+  - [x] ä»é…ç½®æ–‡ä»¶è·å–å…¬ä¼—å·é…ç½®
 
     ```json
       "Wx": {
@@ -46,166 +46,277 @@
       }
     ```
 
-  - [x] º¯Êı×¢Èë£¨`WxFuncs`£©
+  - [x] å‡½æ•°æ³¨å…¥ï¼ˆ`WxFuncs`ï¼‰
 
-    - [x] GetWeChatOptions¡¾»ñÈ¡¹«ÖÚºÅÅäÖÃ¡¿
-    - [x] GetAccessTokenByAppId¡¾¸ù¾İAppId»ñÈ¡Access Token¡¿
-    - [x] CacheAccessToken¡¾»º´æAccess Token¡¿
+    - [x] GetWeChatOptionsã€è·å–å…¬ä¼—å·é…ç½®ã€‘
+    - [x] GetAccessTokenByAppIdã€æ ¹æ®AppIdè·å–Access Tokenã€‘
+    - [x] CacheAccessTokenã€ç¼“å­˜Access Tokenã€‘
 
-  - [x] Òì³££¨`WxSdkException`£©
+  - [x] å¼‚å¸¸ï¼ˆ`WxSdkException`ï¼‰
 
-  - [x] Abp Vnext¼¯³É£¨`Magicodes.Wx.PublicAccount.Sdk.Abp`£©
+  - [x] Abp Vnexté›†æˆï¼ˆ`Magicodes.Wx.PublicAccount.Sdk.Abp`ï¼‰
 
-    - [x] WxPublicAccountSdkModule£¨Ä¬ÈÏÒÑÊµÏÖIDistributedCache£©
+    - [x] WxPublicAccountSdkModuleï¼ˆé»˜è®¤å·²å®ç°IDistributedCacheï¼‰
 
-  - [x] Magicodes.Wx.PublicAccount.Sdk.AspNetÄ£¿é
+  - [x] Magicodes.Wx.PublicAccount.Sdk.AspNetæ¨¡å—
 
-    - [x] ÊÂ¼şÏûÏ¢¿ØÖÆÆ÷£¨`WxEventController`£©
-    - [x] ·şÎñÆ÷ÊÂ¼şÏûÏ¢´¦ÀíÆ÷£¨`IWxEventsHandler`£©
-    - [x] ¹«ÖÚºÅÍøÒ³¿ª·¢»ùÀà£¨`WxPublicAccountControllerBase`£©
-    - [x] ¹«ÖÚºÅÊÚÈ¨É¸Ñ¡Æ÷£¨`WxPublicAccountOAuthFilter`£©
+    - [x] äº‹ä»¶æ¶ˆæ¯æ§åˆ¶å™¨ï¼ˆ`WxEventController`ï¼‰
+    - [x] æœåŠ¡å™¨äº‹ä»¶æ¶ˆæ¯å¤„ç†å™¨ï¼ˆ`IWxEventsHandler`ï¼‰
+    - [x] å…¬ä¼—å·ç½‘é¡µå¼€å‘åŸºç±»ï¼ˆ`WxPublicAccountControllerBase`ï¼‰
+    - [x] å…¬ä¼—å·æˆæƒç­›é€‰å™¨ï¼ˆ`WxPublicAccountOAuthFilter`ï¼‰
 
-- [ ] »ù´¡ÏûÏ¢ÄÜÁ¦
+- [ ] åŸºç¡€æ¶ˆæ¯èƒ½åŠ›
 
-  - [x] ·şÎñÆ÷ÊÂ¼şÏûÏ¢
+  - [x] æœåŠ¡å™¨äº‹ä»¶æ¶ˆæ¯
 
-    - [x] ·şÎñÆ÷ÊÂ¼şÏûÏ¢ÅäÖÃ½ÓÈëÒÔ¼°ÑéÖ¤
-    - [x] ÊÂ¼şÍÆËÍ
-      - [x] ¹Ø×¢ÊÂ¼ş£º`FromSubscribeEvent`
-      - [x] È¡Ïû¹Ø×¢ÊÂ¼ş£º`FromUnsubscribeEvent`
-      - [x] É¨ÂëÊÂ¼ş£º`FromScanEvent`
-      - [x] µØÀíÎ»ÖÃÑ¡ÔñÆ÷ÊÂ¼ş£º`FromLocationEvent`
-      - [x] µã»÷ÊÂ¼ş£º`FromClickEvent`
-      - [x] µã»÷²Ëµ¥Á´½ÓÌø×ªÊÂ¼ş£º`FromViewEvent`
-      - [x] Ä£°åÏûÏ¢ÍÆËÍÍê³ÉÊÂ¼ş£º`FromTemplateSendJobFinishEvent`
-      - [x] µã»÷²Ëµ¥Ìø×ªĞ¡³ÌĞòÊÂ¼ş£º`FromViewMiniprogramEvent`
-    - [x] »ù´¡ÏûÏ¢
-      - [x] ÎÄ±¾ÏûÏ¢£º`FromTextMessage`
-      - [x] Í¼Æ¬ÏûÏ¢£º`FromImageMessage`
-      - [x] ÓïÒôÏûÏ¢£º`FromVoiceMessage`
-      - [x] ÊÓÆµÏûÏ¢£º`FromVideoMessage`
-      - [x] Ğ¡ÊÓÆµÏûÏ¢£º`FromShortVideoMessage`
-      - [x] µØÀíÎ»ÖÃÏûÏ¢£º`FromLocationMessage`
-      - [x] Á´½ÓÏûÏ¢£º`FromLinkMessage`
-    - [x] ±»¶¯ÏûÏ¢»Ø¸´
-      - [x] »Ø¸´ÎÄ±¾ÏûÏ¢£º`ToTextMessage`
-      - [x] »Ø¸´Í¼Æ¬ÏûÏ¢£º`ToImageMessage`
-      - [x] »Ø¸´ÓïÒôÏûÏ¢£º`ToVoiceMessage`
-      - [x] »Ø¸´ÊÓÆµÏûÏ¢£º`ToVideoMessage`
-      - [x] »Ø¸´ÒôÀÖÏûÏ¢£º`ToMusicMessage`
-      - [x] »Ø¸´Í¼ÎÄÏûÏ¢£º`ToNewsMessage`
-      - [x] »Ø¸´¿ÕÏûÏ¢£¨²»»Ø¸´£©£º`ToNullMessage`
+    - [x] æœåŠ¡å™¨äº‹ä»¶æ¶ˆæ¯é…ç½®æ¥å…¥ä»¥åŠéªŒè¯
+    - [x] äº‹ä»¶æ¨é€
+      - [x] å…³æ³¨äº‹ä»¶ï¼š`FromSubscribeEvent`
+      - [x] å–æ¶ˆå…³æ³¨äº‹ä»¶ï¼š`FromUnsubscribeEvent`
+      - [x] æ‰«ç äº‹ä»¶ï¼š`FromScanEvent`
+      - [x] åœ°ç†ä½ç½®é€‰æ‹©å™¨äº‹ä»¶ï¼š`FromLocationEvent`
+      - [x] ç‚¹å‡»äº‹ä»¶ï¼š`FromClickEvent`
+      - [x] ç‚¹å‡»èœå•é“¾æ¥è·³è½¬äº‹ä»¶ï¼š`FromViewEvent`
+      - [x] æ¨¡æ¿æ¶ˆæ¯æ¨é€å®Œæˆäº‹ä»¶ï¼š`FromTemplateSendJobFinishEvent`
+      - [x] ç‚¹å‡»èœå•è·³è½¬å°ç¨‹åºäº‹ä»¶ï¼š`FromViewMiniprogramEvent`
+    - [x] åŸºç¡€æ¶ˆæ¯
+      - [x] æ–‡æœ¬æ¶ˆæ¯ï¼š`FromTextMessage`
+      - [x] å›¾ç‰‡æ¶ˆæ¯ï¼š`FromImageMessage`
+      - [x] è¯­éŸ³æ¶ˆæ¯ï¼š`FromVoiceMessage`
+      - [x] è§†é¢‘æ¶ˆæ¯ï¼š`FromVideoMessage`
+      - [x] å°è§†é¢‘æ¶ˆæ¯ï¼š`FromShortVideoMessage`
+      - [x] åœ°ç†ä½ç½®æ¶ˆæ¯ï¼š`FromLocationMessage`
+      - [x] é“¾æ¥æ¶ˆæ¯ï¼š`FromLinkMessage`
+    - [x] è¢«åŠ¨æ¶ˆæ¯å›å¤
+      - [x] å›å¤æ–‡æœ¬æ¶ˆæ¯ï¼š`ToTextMessage`
+      - [x] å›å¤å›¾ç‰‡æ¶ˆæ¯ï¼š`ToImageMessage`
+      - [x] å›å¤è¯­éŸ³æ¶ˆæ¯ï¼š`ToVoiceMessage`
+      - [x] å›å¤è§†é¢‘æ¶ˆæ¯ï¼š`ToVideoMessage`
+      - [x] å›å¤éŸ³ä¹æ¶ˆæ¯ï¼š`ToMusicMessage`
+      - [x] å›å¤å›¾æ–‡æ¶ˆæ¯ï¼š`ToNewsMessage`
+      - [x] å›å¤ç©ºæ¶ˆæ¯ï¼ˆä¸å›å¤ï¼‰ï¼š`ToNullMessage`
 
-  - [ ] Èº·¢½Ó¿Ú
+  - [ ] ç¾¤å‘æ¥å£
 
-  - [ ] apiµ÷ÓÃ´ÎÊı½øĞĞÇåÁã
+  - [ ] apiè°ƒç”¨æ¬¡æ•°è¿›è¡Œæ¸…é›¶
 
-  - [ ] »ñÈ¡¹«ÖÚºÅµ±Ç°Ê¹ÓÃµÄ×Ô¶¯»Ø¸´¹æÔò
+  - [ ] è·å–å…¬ä¼—å·å½“å‰ä½¿ç”¨çš„è‡ªåŠ¨å›å¤è§„åˆ™
 
-  - [ ] ¹«ÖÚºÅÒ»´ÎĞÔ¶©ÔÄÏûÏ¢
+  - [ ] å…¬ä¼—å·ä¸€æ¬¡æ€§è®¢é˜…æ¶ˆæ¯
 
-  - [ ] Ä£°åÏûÏ¢£¨`ITemplateApi`£©
+  - [ ] æ¨¡æ¿æ¶ˆæ¯ï¼ˆ`ITemplateApi`ï¼‰
 
-    - [x] [1 ÉèÖÃËùÊôĞĞÒµ](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#0)£¨`SetIndustryAsync`£©
+    - [x] [1 è®¾ç½®æ‰€å±è¡Œä¸š](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#0)ï¼ˆ`SetIndustryAsync`ï¼‰
 
-    - [ ] [2 »ñÈ¡ÉèÖÃµÄĞĞÒµĞÅÏ¢](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#1)
+    - [ ] [2 è·å–è®¾ç½®çš„è¡Œä¸šä¿¡æ¯](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#1)
 
-      [3 »ñµÃÄ£°åID](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#2)
+      [3 è·å¾—æ¨¡æ¿ID](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#2)
 
-      [4 »ñÈ¡Ä£°åÁĞ±í](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#3)
+      [4 è·å–æ¨¡æ¿åˆ—è¡¨](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#3)
 
-      [5 É¾³ıÄ£°å](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#4)
+      [5 åˆ é™¤æ¨¡æ¿](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#4)
 
-    - [x] [6 ·¢ËÍÄ£°åÏûÏ¢](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#5)£¨`SendAsync`£©
+    - [x] [6 å‘é€æ¨¡æ¿æ¶ˆæ¯](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#5)ï¼ˆ`SendAsync`ï¼‰
 
-      [7 ÊÂ¼şÍÆËÍ](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#6)
+      [7 äº‹ä»¶æ¨é€](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#6)
 
-- [ ] ×Ô¶¨Òå²Ëµ¥£¨`IMenuApi`£©
+- [ ] è‡ªå®šä¹‰èœå•ï¼ˆ`IMenuApi`ï¼‰
 
-  - [x] ´´½¨½Ó¿Ú£¨`CreateAsync`£©
-  - [x] ²éÑ¯½Ó¿Ú£¨`GetAsync`£©
-  - [x] É¾³ı½Ó¿Ú£¨`DeleteAsync`£©
-  - [ ] ¸öĞÔ»¯²Ëµ¥½Ó¿Ú
-  - [ ] »ñÈ¡×Ô¶¨Òå²Ëµ¥ÅäÖÃ
+  - [x] åˆ›å»ºæ¥å£ï¼ˆ`CreateAsync`ï¼‰
+  - [x] æŸ¥è¯¢æ¥å£ï¼ˆ`GetAsync`ï¼‰
+  - [x] åˆ é™¤æ¥å£ï¼ˆ`DeleteAsync`ï¼‰
+  - [ ] ä¸ªæ€§åŒ–èœå•æ¥å£
+  - [ ] è·å–è‡ªå®šä¹‰èœå•é…ç½®
 
-- [ ] ¶©ÔÄÍ¨Öª
+- [ ] è®¢é˜…é€šçŸ¥
 
-  - [ ] Ñ¡ÓÃÄ£°å
-  - [ ] É¾³ıÄ£°å
-  - [ ] »ñÈ¡¹«ÖÚºÅÀàÄ¿
-  - [ ] »ñÈ¡Ä£°åÖĞµÄ¹Ø¼ü´Ê
-  - [ ] »ñÈ¡ËùÊôÀàÄ¿µÄ¹«¹²Ä£°å
-  - [ ] »ñÈ¡Ë½ÓĞÄ£°åÁĞ±í
-  - [ ] ·¢ËÍ¶©ÔÄÍ¨Öª
+  - [ ] é€‰ç”¨æ¨¡æ¿
+  - [ ] åˆ é™¤æ¨¡æ¿
+  - [ ] è·å–å…¬ä¼—å·ç±»ç›®
+  - [ ] è·å–æ¨¡æ¿ä¸­çš„å…³é”®è¯
+  - [ ] è·å–æ‰€å±ç±»ç›®çš„å…¬å…±æ¨¡æ¿
+  - [ ] è·å–ç§æœ‰æ¨¡æ¿åˆ—è¡¨
+  - [ ] å‘é€è®¢é˜…é€šçŸ¥
 
-- [ ] ¿Í·şÏûÏ¢
+- [ ] å®¢æœæ¶ˆæ¯
 
-  - [ ] ¿Í·ş¹ÜÀí£¨`IKfAccountApi`£©
-    - [ ] »ñÈ¡¿Í·ş»ù±¾ĞÅÏ¢
-    - [x] Ìí¼Ó¿Í·şÕËºÅ£¨`AddAsync`£©
-    - [ ] ÑûÇë°ó¶¨¿Í·şÕËºÅ
-    - [x] ÉèÖÃ¿Í·şĞÅÏ¢£¨`UpdateAsync`£©
-    - [ ] ÉÏ´«¿Í·şÍ·Ïñ
-    - [x] É¾³ı¿Í·şÕËºÅ£¨`DelAsync`£©
+  - [ ] å®¢æœç®¡ç†ï¼ˆ`IKfAccountApi`ï¼‰
+    - [ ] è·å–å®¢æœåŸºæœ¬ä¿¡æ¯
+    - [x] æ·»åŠ å®¢æœè´¦å·ï¼ˆ`AddAsync`ï¼‰
+    - [ ] é‚€è¯·ç»‘å®šå®¢æœè´¦å·
+    - [x] è®¾ç½®å®¢æœä¿¡æ¯ï¼ˆ`UpdateAsync`ï¼‰
+    - [ ] ä¸Šä¼ å®¢æœå¤´åƒ
+    - [x] åˆ é™¤å®¢æœè´¦å·ï¼ˆ`DelAsync`ï¼‰
 
-- [x] Î¢ĞÅÍøÒ³¿ª·¢
+- [x] å¾®ä¿¡ç½‘é¡µå¼€å‘
 
-  - [x] ÍøÒ³ÊÚÈ¨
-    - [x] »ñÈ¡ÊÚÈ¨Á´½Ó£¨`WxHelper >> GetAuthorizeUrl`£©
-    - [x] Í¨¹ıcode»»È¡ÍøÒ³ÊÚÈ¨access_token£¨`IOauth2Api >> GetAccessTokenAsync`)
-    - [x] Ë¢ĞÂaccess_token£¨`IOauth2Api >> RefreshTokenAsync`)
-    - [x] À­È¡ÓÃ»§ĞÅÏ¢£¨`ISnsApi >> GetUserInfoAsync`£©
-    - [x] ¼ìÑéÊÚÈ¨Æ¾Ö¤£¨access_token£©ÊÇ·ñÓĞĞ§£¨`ISnsApi >> AuthAsync`£©
+  - [x] ç½‘é¡µæˆæƒ
+    - [x] è·å–æˆæƒé“¾æ¥ï¼ˆ`WxHelper >> GetAuthorizeUrl`ï¼‰
+    - [x] é€šè¿‡codeæ¢å–ç½‘é¡µæˆæƒaccess_tokenï¼ˆ`IOauth2Api >> GetAccessTokenAsync`)
+    - [x] åˆ·æ–°access_tokenï¼ˆ`IOauth2Api >> RefreshTokenAsync`)
+    - [x] æ‹‰å–ç”¨æˆ·ä¿¡æ¯ï¼ˆ`ISnsApi >> GetUserInfoAsync`ï¼‰
+    - [x] æ£€éªŒæˆæƒå‡­è¯ï¼ˆaccess_tokenï¼‰æ˜¯å¦æœ‰æ•ˆï¼ˆ`ISnsApi >> AuthAsync`ï¼‰
 
-- [ ] ¶Ô»°ÄÜÁ¦
+- [ ] å¯¹è¯èƒ½åŠ›
 
-- [ ] ËØ²Ä¹ÜÀí
+  - [ ] é¡¾é—®ç®¡ç†
+    - [ ] æ·»åŠ é¡¾é—®
+    - [ ] è·å–é¡¾é—®ä¿¡æ¯
+    - [ ] ä¿®æ”¹é¡¾é—®ä¿¡æ¯
+    - [ ] åˆ é™¤é¡¾é—®
+    - [ ] è·å–æœåŠ¡å·é¡¾é—®åˆ—è¡¨
+    - [ ] ç”Ÿäº§é¡¾é—®äºŒç»´ç 
+    - [ ] æ‰«é¡¾é—®äºŒç»´ç åçš„äº‹ä»¶æ¨é€
+    - [ ] è·å–é¡¾é—®èŠå¤©è®°å½•
+    - [ ] è®¾ç½®å¿«æ·å›å¤ä¸å…³æ³¨è‡ªåŠ¨å›å¤
+    - [ ] è·å–å¿«æ·å›å¤ä¸å…³æ³¨è‡ªåŠ¨å›å¤
+    - [ ] è®¾ç½®ç¦»çº¿è‡ªåŠ¨å›å¤ä¸æ•æ„Ÿè¯
+    - [ ] è·å–ç¦»çº¿è‡ªåŠ¨å›å¤ä¸æ•æ„Ÿè¯
+    - [ ] æ–°å»ºé¡¾é—®åˆ†ç»„
+    - [ ] è·å–é¡¾é—®åˆ†ç»„åˆ—è¡¨
+    - [ ] è·å–é¡¾é—®åˆ†ç»„ä¿¡æ¯
+    - [ ] åˆ†ç»„å†…æ·»åŠ é¡¾é—®
+    - [ ] åˆ†ç»„å†…åˆ é™¤é¡¾é—®
+    - [ ] è·å–é¡¾é—®æ‰€åœ¨åˆ†ç»„
+    - [ ] åˆ é™¤é¡¾é—®åˆ†ç»„
+  - [ ] å®¢æˆ·ç®¡ç†
+    - [ ] ä¸ºé¡¾é—®åˆ†é…å®¢æˆ·
+    - [ ] ä¸ºé¡¾é—®ç§»é™¤å®¢æˆ·
+    - [ ] è·å–é¡¾é—®çš„å®¢æˆ·åˆ—è¡¨
+    - [ ] ä¸ºå®¢æˆ·æ›´å¥½é¡¾é—®
+    - [ ] ä¿®æ”¹å®¢æˆ·æ˜µç§°
+    - [ ] æŸ¥è¯¢å®¢æˆ·æ‰€å±é¡¾é—®
+    - [ ] æŸ¥è¯¢æŒ‡å®šé¡¾é—®å’Œå®¢æˆ·çš„å…³ç³»
+  - [ ] æ ‡ç­¾ç®¡ç†
+    - [ ] æ–°å»ºæ ‡ç­¾ç±»å‹
+    - [ ] åˆ é™¤æ ‡ç­¾ç±»å‹
+    - [ ] ä¸ºæ ‡ç­¾æ·»åŠ å¯é€‰å€¼
+    - [ ] è·å–æ ‡ç­¾å’Œå¯é€‰å€¼
+    - [ ] ä¸ºå®¢æˆ·è®¾ç½®æ ‡ç­¾
+    - [ ] æŸ¥è¯¢å®¢æˆ·æ ‡ç­¾
+    - [ ] æ ¹æ®æ ‡ç­¾å€¼åˆ·é€‰å®¢æˆ·
+    - [ ] åˆ é™¤å®¢æˆ·æ ‡ç­¾
+    - [ ] è®¾ç½®è‡ªå®šä¹‰å®¢æˆ·ä¿¡æ¯
+    - [ ] è·å–è‡ªå®šä¹‰å®¢æˆ·ä¿¡æ¯
+  - [ ] ç´ æç®¡ç†
+    - [ ] æ·»åŠ å°ç¨‹åºå¡ç‰‡ç´ æ
+    - [ ] æŸ¥è¯¢å°ç¨‹åºå¡ç‰‡ç´ æ
+    - [ ] åˆ é™¤ å°ç¨‹åºå¡ç‰‡ç´ æ
+    - [ ] æ·»åŠ å›¾ç‰‡ç´ æ
+    - [ ] æŸ¥è¯¢å›¾ç‰‡ç´ æ
+    - [ ] åˆ é™¤å›¾ç‰‡ç´ æ
+    - [ ] æ·»åŠ æ–‡å­—ç´ æ
+    - [ ] æŸ¥è¯¢æ–‡å­—ç´ æ
+    - [ ] åˆ é™¤æ–‡å­—ç´ æ
+  - [ ] ç¾¤å‘ä»»åŠ¡ç®¡ç†
+    - [ ] æ·»åŠ ç¾¤å‘ä»»åŠ¡
+    - [ ] è·å–ç¾¤å‘ä»»åŠ¡åˆ—è¡¨
+    - [ ] è·å–æŒ‡å®šç¾¤å‘ä»»åŠ¡ä¿¡æ¯
+    - [ ] ä¿®æ”¹ç¾¤å‘ä»»åŠ¡
+    - [ ] å–æ¶ˆç¾¤å‘ä»»åŠ¡
 
-- [ ] Í¼ÎÄÏûÏ¢ÁôÑÔ¹ÜÀí
+- [ ] ç´ æç®¡ç†
 
-- [ ] ÓÃ»§¹ÜÀí
+  - [ ] æ–°å¢ä¸´æ—¶ç´ æ
+  - [ ] è·å–ä¸´æ—¶ç´ æ
+  - [ ] æ–°å¢æ°¸ä¹…ç´ æ
+  - [ ] è·å–æ°¸ä¹…ç´ æ
+  - [ ] åˆ é™¤æ°¸ä¹…ç´ æ
+  - [ ] ä¿®æ”¹æ°¸ä¹…å›¾æ–‡ç´ æ
+  - [ ] è·å–ç´ ææ€»æ•°
+  - [ ] è·å–ç´ æåˆ—è¡¨
 
-- [ ] ÕËºÅ¹ÜÀí
+- [ ] å›¾æ–‡æ¶ˆæ¯ç•™è¨€ç®¡ç†
 
-- [ ] Êı¾İÍ³¼Æ
+- [ ] ç”¨æˆ·ç®¡ç†
 
-- [ ] Î¢ĞÅ¿¨È¯
+  - [ ] ç”¨æˆ·æ ‡ç­¾ç®¡ç†
+  - [ ] è®¾ç½®ç”¨æˆ·å¤‡æ³¨å
+  - [ ] è·å–ç”¨æˆ·åŸºæœ¬ä¿¡æ¯ï¼ˆUnionIDæœºåˆ¶ï¼‰
+  - [ ] è·å–ç”¨æˆ·åˆ—è¡¨
+  - [ ] è·å–ç”¨æˆ·åœ°ç†ä½ç½®
+  - [ ] é»‘åå•ç®¡ç†
 
-- [ ] Î¢ĞÅÃÅµê
+- [ ] è´¦å·ç®¡ç†
 
-- [ ] Î¢ĞÅĞ¡µê
+  - [ ] ç”Ÿäº§å¸¦å‚æ•°çš„äºŒç»´ç 
+  - [ ] é•¿é“¾æ¥è½¬çŸ­é“¾æ¥æ¥å£
+  - [ ] çŸ­keyæ‰˜ç®¡
+  - [ ] å¾®ä¿¡è®¤è¯æ—¶é—´æ¨é€
 
-- [ ] ÖÇÄÜ½Ó¿Ú
+- [ ] æ•°æ®ç»Ÿè®¡
 
-- [ ] Ò»ÎïÒ»Âë
+  - [ ] ç”¨æˆ·åˆ†æ
+  - [ ] å›¾æ–‡åˆ†æ
+  - [ ] æ¶ˆæ¯åˆ†æ
+  - [ ] å¹¿å‘Šåˆ†æ
+    - [ ] åˆ†å¹¿å‘Šä½æ•°æ®
+    - [ ] è¿”ä½£å•†å“æ•°æ®
+    - [ ] ç»“ç®—æ”¶å…¥æ•°æ®
+  - [ ] æ¥å£åˆ†æ
 
-- [ ] Î¢ĞÅ·¢Æ±
+- [ ] å¾®ä¿¡å¡åˆ¸
 
-- [ ] Î¢ĞÅ·ÇË°½É·Ñ
+  - [ ] å¾®ä¿¡å¡åˆ¸æ¥å£
+  - [ ] æ›´æ–°æ—¥å¿—
+  - [ ] åˆ›å»ºå¡åˆ¸
+  - [ ] æŠ•æ”¾å¡åˆ¸
+  - [ ] æ ¸é”€å¡åˆ¸
+  - [ ] ç®¡ç†å¡åˆ¸
+  - [ ] å¡åˆ¸äº‹ä»¶æ¨é€
+  - [ ] å¡åˆ¸-å°ç¨‹åºæ‰“é€š
+  - [ ] å¾®ä¿¡ç¤¼å“å¡
+  - [ ] ä¼šå‘˜å¡ä¸“åŒº
+    - [ ] ç©æ³•ä»‹ç»
+    - [ ] åˆ›å»ºä¼šå‘˜å¡
+    - [ ] ç®¡ç†ä¼šå‘˜å¡
+  - [ ] ç‰¹æ®Šç¥¨åˆ¸
+  - [ ] å¡åˆ¸é”™è¯¯ç 
+  - [ ] ç¬¬ä¸‰æ–¹å¼€å‘è€…æ¨¡å¼
 
-### Ğ¡³ÌĞò
+- [ ] å¾®ä¿¡é—¨åº—
 
-- [ ] µÇÂ¼
-- [ ] ÓÃ»§ĞÅÏ¢
+  - [ ] å¾®ä¿¡é—¨åº—æ¥å£
+  - [ ] å¾®ä¿¡é—¨åº—å°ç¨‹åºæ¥å£
+
+- [ ] å¾®ä¿¡å°åº—
+
+- [ ] æ™ºèƒ½æ¥å£
+
+  - [ ] è¯­ä¹‰ç†è§£
+  - [ ] AIå¼€æ”¾æ¥å£
+  - [ ] OCRè¯†åˆ«
+  - [ ] å›¾åƒå¤„ç†
+
+- [ ] ä¸€ç‰©ä¸€ç 
+
+- [ ] å¾®ä¿¡å‘ç¥¨
+
+- [ ] å¾®ä¿¡éç¨ç¼´è´¹
+
+### å°ç¨‹åº
+
+- [ ] ç™»å½•
+- [ ] ç”¨æˆ·ä¿¡æ¯
 - [ ] ...
 
-## ¿ìËÙÉÏÊÖ
+## å¿«é€Ÿä¸Šæ‰‹
 
-±¾SdkÉÏÊÖ·Ç³£¼òµ¥£¬²Î¿¼½Ì³ÌÈçÏÂËùÊ¾¡£
+æœ¬Sdkä¸Šæ‰‹éå¸¸ç®€å•ï¼Œå‚è€ƒæ•™ç¨‹å¦‚ä¸‹æ‰€ç¤ºã€‚
 
-### 1£©°²×°°ü
+### 1ï¼‰å®‰è£…åŒ…
 
 ```powershell
 Install-Package Magicodes.Wx.PublicAccount.Sdk.AspNet
 ```
 
-ÍÆ¼öÊ¹ÓÃ´Ë°ü£¬Òà¿ÉÊ¹ÓÃ`Magicodes.Wx.PublicAccount.Sdk`À´½øĞĞ¸ü¶àµÄ×Ô¶¨ÒåÅäÖÃ¡£
+æ¨èä½¿ç”¨æ­¤åŒ…ï¼Œäº¦å¯ä½¿ç”¨`Magicodes.Wx.PublicAccount.Sdk`æ¥è¿›è¡Œæ›´å¤šçš„è‡ªå®šä¹‰é…ç½®ã€‚
 
-### 2£©»ù´¡ÅäÖÃ
+### 2ï¼‰åŸºç¡€é…ç½®
 
-- **ÅäÖÃÎÄ¼şÅäÖÃ**
+- **é…ç½®æ–‡ä»¶é…ç½®**
 
-¹«ÖÚºÅµÄ²Î¿¼ÅäÖÃÈçÏÂËùÊ¾£¬ÇëÔÚ`appsettings.json`ÎÄ¼şÖĞ½øĞĞÅäÖÃ£º
+å…¬ä¼—å·çš„å‚è€ƒé…ç½®å¦‚ä¸‹æ‰€ç¤ºï¼Œè¯·åœ¨`appsettings.json`æ–‡ä»¶ä¸­è¿›è¡Œé…ç½®ï¼š
 
 ```json
   "Wx": {
@@ -215,16 +326,16 @@ Install-Package Magicodes.Wx.PublicAccount.Sdk.AspNet
     }
 ```
 
-- **Í¨¹ı´úÂëÅäÖÃ**
+- **é€šè¿‡ä»£ç é…ç½®**
 
-  ²Î¿¼´úÂëÈçÏÂËùÊ¾£º
+  å‚è€ƒä»£ç å¦‚ä¸‹æ‰€ç¤ºï¼š
 
   ```csharp
           app.UseMagicodesWeChatSdk(setup =>
           {
               setup.GetWeChatOptions = () =>
               {
-                  //ÅäÖÃ
+                  //é…ç½®
                   return new WxPublicAccountOption()
                   {
                       AppId = "",
@@ -234,30 +345,30 @@ Install-Package Magicodes.Wx.PublicAccount.Sdk.AspNet
           });
   ```
 
-### 3£©ÅäÖÃSdk
+### 3ï¼‰é…ç½®Sdk
 
-²Î¿¼´úÂëÈçÏÂËùÊ¾£º
+å‚è€ƒä»£ç å¦‚ä¸‹æ‰€ç¤ºï¼š
 
 ```csharp
         public void ConfigureServices(IServiceCollection services)
         {
-            //Ìí¼Ó¹«ÖÚºÅSdk¼¯³É
+            //æ·»åŠ å…¬ä¼—å·Sdké›†æˆ
             services.AddMPublicAccountSdk()
-                //Ê¹ÓÃÄÚ´æ»º´æ
+                //ä½¿ç”¨å†…å­˜ç¼“å­˜
                 .AddDistributedMemoryCache();
         }
 
         public void Configure(IApplicationBuilder app)
         {
-            //ÅäÖÃ¹«ÖÚºÅSdk
+            //é…ç½®å…¬ä¼—å·Sdk
             app.UseMPublicAccountSdk()
-                //Ê¹ÓÃ·Ö²¼Ê½»º´æ»º´æAccess Token
+                //ä½¿ç”¨åˆ†å¸ƒå¼ç¼“å­˜ç¼“å­˜Access Token
                 .UseWxDistributedCacheForAccessToken();
         }
 ```
-### 4£©µ÷ÓÃApi
+### 4ï¼‰è°ƒç”¨Api
 
-½ÓÏÂÀ´¾Í¼òµ¥ÁË£¬Í¨¹ıÒÀÀµ×¢ÈëµÄ·½Ê½×¢ÈëÏà¹ØApi£¬±ÈÈç¹¹Ôìº¯Êı×¢Èë£º
+æ¥ä¸‹æ¥å°±ç®€å•äº†ï¼Œé€šè¿‡ä¾èµ–æ³¨å…¥çš„æ–¹å¼æ³¨å…¥ç›¸å…³Apiï¼Œæ¯”å¦‚æ„é€ å‡½æ•°æ³¨å…¥ï¼š
 
 ```csharp
     public HomeController(IMenuApi menuApi)
@@ -265,7 +376,7 @@ Install-Package Magicodes.Wx.PublicAccount.Sdk.AspNet
         _menuApi = menuApi;
     }
 ```
-È»ºó¾Í¿ÉÒÔÊ¹ÓÃÁË£¬ÈçÏÂÃæ´úÂë£º
+ç„¶åå°±å¯ä»¥ä½¿ç”¨äº†ï¼Œå¦‚ä¸‹é¢ä»£ç ï¼š
 
 ```csharp
         var result = await _menuApi.CreateAsync(new CreateMenuInput()
@@ -274,20 +385,20 @@ Install-Package Magicodes.Wx.PublicAccount.Sdk.AspNet
             {
                 new ClickButton()
                 {
-                    Name = "½ñÈÕ¸èÇú",
+                    Name = "ä»Šæ—¥æ­Œæ›²",
                     Key = "V1001_TODAY_MUSIC"
                 },
                 new SubMenuButton()
                 {
-                    Name = "²Ëµ¥",
+                    Name = "èœå•",
                     SubButtons = new List<MenuButtonBase>()
                     {
                         new ViewButton()
                         {
-                            Name = "ËÑË÷",
+                            Name = "æœç´¢",
                             Url = "http://www.soso.com/"
                         },
-                        //Ğè¹ØÁªĞ¡³ÌĞòºó
+                        //éœ€å…³è”å°ç¨‹åºå
                         //new MiniprogramButton()
                         //{
                         //    Name = "wxa",
@@ -297,7 +408,7 @@ Install-Package Magicodes.Wx.PublicAccount.Sdk.AspNet
                         //},
                         new ClickButton()
                         {
-                            Name = "ÔŞÒ»ÏÂÎÒÃÇ",
+                            Name = "èµä¸€ä¸‹æˆ‘ä»¬",
                             Key = "V1001_GOOD"
                         }
                     }
@@ -306,45 +417,45 @@ Install-Package Magicodes.Wx.PublicAccount.Sdk.AspNet
         }); 
         result.EnsureSuccess();
 ```
-## Î¢ĞÅ·şÎñÆ÷ÊÂ¼ş¡¢ÏûÏ¢´¦ÀíºÍ±»¶¯ÏûÏ¢»Ø¸´
+## å¾®ä¿¡æœåŠ¡å™¨äº‹ä»¶ã€æ¶ˆæ¯å¤„ç†å’Œè¢«åŠ¨æ¶ˆæ¯å›å¤
 
-ÈçºÎ´¦ÀíÎ¢ĞÅ·şÎñÆ÷ÊÂ¼ş¡¢ÏûÏ¢£¬²½ÖèÈçÏÂËùÊ¾£º
+å¦‚ä½•å¤„ç†å¾®ä¿¡æœåŠ¡å™¨äº‹ä»¶ã€æ¶ˆæ¯ï¼Œæ­¥éª¤å¦‚ä¸‹æ‰€ç¤ºï¼š
 
-### 1£©ÅäÖÃSdk
+### 1ï¼‰é…ç½®Sdk
 
-nuget°üµÄ°²×°ºÍ¹«ÖÚºÅµÄÅäÖÃÎÒÃÇÕâÀïÌø¹ı£¬Ö±½ÓĞã³öSdkÅäÖÃ´úÂë£º
+nugetåŒ…çš„å®‰è£…å’Œå…¬ä¼—å·çš„é…ç½®æˆ‘ä»¬è¿™é‡Œè·³è¿‡ï¼Œç›´æ¥ç§€å‡ºSdké…ç½®ä»£ç ï¼š
 
 ```csharp
     public void ConfigureServices(IServiceCollection services)
     {
-        //×¢²áIWxEventsHandler,ÈçĞè´¦Àí×Ô¶¨ÒåÊÂ¼şÏûÏ¢,ÇëÎñ±ØÊµÏÖIWxEventsHandler
+        //æ³¨å†ŒIWxEventsHandler,å¦‚éœ€å¤„ç†è‡ªå®šä¹‰äº‹ä»¶æ¶ˆæ¯,è¯·åŠ¡å¿…å®ç°IWxEventsHandler
         services.AddSingleton<IWxEventsHandler, TestWxEventsHandler>();
         services.AddMPublicAccountSdk()
             .AddDistributedMemoryCache()
-            //Ìí¼Ó·şÎñÆ÷ÏûÏ¢ÊÂ¼ş´¦ÀíÆ÷
+            //æ·»åŠ æœåŠ¡å™¨æ¶ˆæ¯äº‹ä»¶å¤„ç†å™¨
             .AddServerMessageHandler();
     }
 
     public void Configure(IApplicationBuilder app)
     {
-        //ÅäÖÃ¹«ÖÚºÅSdk
+        //é…ç½®å…¬ä¼—å·Sdk
         app.UseMPublicAccountSdk()
-            //Ê¹ÓÃ·Ö²¼Ê½»º´æ»º´æAccess Token
+            //ä½¿ç”¨åˆ†å¸ƒå¼ç¼“å­˜ç¼“å­˜Access Token
             .UseWxDistributedCacheForAccessToken();
     }
 ```
-### 2£©ÊµÏÖIWxEventsHandler
+### 2ï¼‰å®ç°IWxEventsHandler
 
-²Î¿¼´úÂëÈçÏÂËùÊ¾£º
+å‚è€ƒä»£ç å¦‚ä¸‹æ‰€ç¤ºï¼š
 
 ```csharp
 /// <summary>
-/// ¹«ÖÚºÅÊÂ¼şÏûÏ¢´¦Àí³ÌĞò
+/// å…¬ä¼—å·äº‹ä»¶æ¶ˆæ¯å¤„ç†ç¨‹åº
 /// </summary>
 public class TestWxEventsHandler : IWxEventsHandler
 {
     /// <summary>
-    /// Ö´ĞĞ
+    /// æ‰§è¡Œ
     /// </summary>
     /// <param name="fromMessage"></param>
     /// <returns></returns>
@@ -352,16 +463,16 @@ public class TestWxEventsHandler : IWxEventsHandler
     {
         if (fromMessage is FromTextMessage)
         {
-            //·µ»Ø¶àÍ¼ÎÄ
+            //è¿”å›å¤šå›¾æ–‡
             var toMsg = new ToNewsMessage()
             {
                 Articles = new List<ToNewsMessage.ArticleInfo>()
                 {
                     new ToNewsMessage.ArticleInfo()
                     {
-                        Description = "×î¼ò½à×îÒ×ÓÚÊ¹ÓÃµÄÎ¢ĞÅSdk£¬°üÀ¨¹«ÖÚºÅSdk¡¢Ğ¡³ÌĞòSdk¡¢ÆóÒµÎ¢ĞÅSdkµÈ£¬ÒÔ¼°Abp VNext¼¯³É¡£",
+                        Description = "æœ€ç®€æ´æœ€æ˜“äºä½¿ç”¨çš„å¾®ä¿¡Sdkï¼ŒåŒ…æ‹¬å…¬ä¼—å·Sdkã€å°ç¨‹åºSdkã€ä¼ä¸šå¾®ä¿¡Sdkç­‰ï¼Œä»¥åŠAbp VNexté›†æˆã€‚",
                         PicUrl = "https://www.xin-lai.com/imgs/xinlai-logo_9d2c29c2794e6a173738bf92b056ab69.png",
-                        Title="Magicodes.Wx.Sdk¼ò½é",
+                        Title="Magicodes.Wx.Sdkç®€ä»‹",
                         Url = "http://xin-lai.com"
                     }
                 },
@@ -372,15 +483,15 @@ public class TestWxEventsHandler : IWxEventsHandler
         }
         else if (fromMessage is FromSubscribeEvent)
         {
-            //·µ»ØÎÄ±¾ÏûÏ¢
+            //è¿”å›æ–‡æœ¬æ¶ˆæ¯
             return await Task.FromResult(new ToTextMessage()
             {
-                Content = "»¶Ó­¹Ø×¢!",
+                Content = "æ¬¢è¿å…³æ³¨!",
             });
         }
         else if (fromMessage is FromTextMessage)
         {
-            //·µ»ØÎÄ±¾
+            //è¿”å›æ–‡æœ¬
             return await Task.FromResult(new ToTextMessage()
             {
                 Content = "Test",
@@ -391,42 +502,42 @@ public class TestWxEventsHandler : IWxEventsHandler
 }
 ```
 
-Ïà¹ØÊÂ¼şºÍÏûÏ¢ÒÔ¼°ÏûÏ¢»Ø¸´µÄ¶¨Òå£¬ÈçÏÂËùÊ¾£º
+ç›¸å…³äº‹ä»¶å’Œæ¶ˆæ¯ä»¥åŠæ¶ˆæ¯å›å¤çš„å®šä¹‰ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š
 
-- ÊÂ¼şÍÆËÍ
-  - ¹Ø×¢ÊÂ¼ş£º`FromSubscribeEvent`
-  - È¡Ïû¹Ø×¢ÊÂ¼ş£º`FromUnsubscribeEvent`
-  - É¨ÂëÊÂ¼ş£º`FromScanEvent`
-  - µØÀíÎ»ÖÃÑ¡ÔñÆ÷ÊÂ¼ş£º`FromLocationEvent`
-  - µã»÷ÊÂ¼ş£º`FromClickEvent`
-  - µã»÷²Ëµ¥Á´½ÓÌø×ªÊÂ¼ş£º`FromViewEvent`
-  - Ä£°åÏûÏ¢ÍÆËÍÍê³ÉÊÂ¼ş£º`FromTemplateSendJobFinishEvent`
-  - µã»÷²Ëµ¥Ìø×ªĞ¡³ÌĞòÊÂ¼ş£º`FromViewMiniprogramEvent`
+- äº‹ä»¶æ¨é€
+  - å…³æ³¨äº‹ä»¶ï¼š`FromSubscribeEvent`
+  - å–æ¶ˆå…³æ³¨äº‹ä»¶ï¼š`FromUnsubscribeEvent`
+  - æ‰«ç äº‹ä»¶ï¼š`FromScanEvent`
+  - åœ°ç†ä½ç½®é€‰æ‹©å™¨äº‹ä»¶ï¼š`FromLocationEvent`
+  - ç‚¹å‡»äº‹ä»¶ï¼š`FromClickEvent`
+  - ç‚¹å‡»èœå•é“¾æ¥è·³è½¬äº‹ä»¶ï¼š`FromViewEvent`
+  - æ¨¡æ¿æ¶ˆæ¯æ¨é€å®Œæˆäº‹ä»¶ï¼š`FromTemplateSendJobFinishEvent`
+  - ç‚¹å‡»èœå•è·³è½¬å°ç¨‹åºäº‹ä»¶ï¼š`FromViewMiniprogramEvent`
 
-- »ù´¡ÏûÏ¢
-  - ÎÄ±¾ÏûÏ¢£º`FromTextMessage`
-  - Í¼Æ¬ÏûÏ¢£º`FromImageMessage`
-  - ÓïÒôÏûÏ¢£º`FromVoiceMessage`
-  - ÊÓÆµÏûÏ¢£º`FromVideoMessage`
-  - Ğ¡ÊÓÆµÏûÏ¢£º`FromShortVideoMessage`
-  - µØÀíÎ»ÖÃÏûÏ¢£º`FromLocationMessage`
-  - Á´½ÓÏûÏ¢£º`FromLinkMessage`
+- åŸºç¡€æ¶ˆæ¯
+  - æ–‡æœ¬æ¶ˆæ¯ï¼š`FromTextMessage`
+  - å›¾ç‰‡æ¶ˆæ¯ï¼š`FromImageMessage`
+  - è¯­éŸ³æ¶ˆæ¯ï¼š`FromVoiceMessage`
+  - è§†é¢‘æ¶ˆæ¯ï¼š`FromVideoMessage`
+  - å°è§†é¢‘æ¶ˆæ¯ï¼š`FromShortVideoMessage`
+  - åœ°ç†ä½ç½®æ¶ˆæ¯ï¼š`FromLocationMessage`
+  - é“¾æ¥æ¶ˆæ¯ï¼š`FromLinkMessage`
 
-- ±»¶¯ÏûÏ¢»Ø¸´
-  - »Ø¸´ÎÄ±¾ÏûÏ¢£º`ToTextMessage`
-  - »Ø¸´Í¼Æ¬ÏûÏ¢£º`ToImageMessage`
-  - »Ø¸´ÓïÒôÏûÏ¢£º`ToVoiceMessage`
-  - »Ø¸´ÊÓÆµÏûÏ¢£º`ToVideoMessage`
-  - »Ø¸´ÒôÀÖÏûÏ¢£º`ToMusicMessage`
-  - »Ø¸´Í¼ÎÄÏûÏ¢£º`ToNewsMessage`
-  - »Ø¸´¿ÕÏûÏ¢£¨²»»Ø¸´£©£º`ToNullMessage`
+- è¢«åŠ¨æ¶ˆæ¯å›å¤
+  - å›å¤æ–‡æœ¬æ¶ˆæ¯ï¼š`ToTextMessage`
+  - å›å¤å›¾ç‰‡æ¶ˆæ¯ï¼š`ToImageMessage`
+  - å›å¤è¯­éŸ³æ¶ˆæ¯ï¼š`ToVoiceMessage`
+  - å›å¤è§†é¢‘æ¶ˆæ¯ï¼š`ToVideoMessage`
+  - å›å¤éŸ³ä¹æ¶ˆæ¯ï¼š`ToMusicMessage`
+  - å›å¤å›¾æ–‡æ¶ˆæ¯ï¼š`ToNewsMessage`
+  - å›å¤ç©ºæ¶ˆæ¯ï¼ˆä¸å›å¤ï¼‰ï¼š`ToNullMessage`
 
-## MVCÍøÒ³ÊÚÈ¨
+## MVCç½‘é¡µæˆæƒ
 
-ÔÚASP.NET MVC£¬ÎÒÃÇ¿ÉÒÔÍ¨¹ı±¾SDK¿ìËÙ»ñµÃÎ¢ĞÅÓÃ»§ĞÅÏ¢£¬²Î¿¼´úÂëÈçÏÂËùÊ¾£º
+åœ¨ASP.NET MVCï¼Œæˆ‘ä»¬å¯ä»¥é€šè¿‡æœ¬SDKå¿«é€Ÿè·å¾—å¾®ä¿¡ç”¨æˆ·ä¿¡æ¯ï¼Œå‚è€ƒä»£ç å¦‚ä¸‹æ‰€ç¤ºï¼š
 
 ```csharp
-//×¢Òâ¼Ì³ĞWxPublicAccountControllerBase
+//æ³¨æ„ç»§æ‰¿WxPublicAccountControllerBase
 public class HomeController : WxPublicAccountControllerBase
 {
     private readonly ILogger<HomeController> _logger;
@@ -435,12 +546,12 @@ public class HomeController : WxPublicAccountControllerBase
     {
         _logger = logger;
     }
-    //ÉèÖÃÁËWxPublicAccountOAuthFilterµÄActionÔÚ»º´æ¹ıÆÚµÄÇé¿öÏÂ£¬½«×Ô¶¯Ìø×ªµ½Î¢ĞÅÍøÒ³ÊÚÈ¨Ò³Ãæ½øĞĞÊÚÈ¨
-    //OAuthLevelÉèÖÃÎªOpenIdAndUserInfoÔÊĞí»ñÈ¡·ÛË¿ĞÅÏ¢
+    //è®¾ç½®äº†WxPublicAccountOAuthFilterçš„Actionåœ¨ç¼“å­˜è¿‡æœŸçš„æƒ…å†µä¸‹ï¼Œå°†è‡ªåŠ¨è·³è½¬åˆ°å¾®ä¿¡ç½‘é¡µæˆæƒé¡µé¢è¿›è¡Œæˆæƒ
+    //OAuthLevelè®¾ç½®ä¸ºOpenIdAndUserInfoå…è®¸è·å–ç²‰ä¸ä¿¡æ¯
     [WxPublicAccountOAuthFilter(OAuthLevel = OAuthLevels.OpenIdAndUserInfo)]
     public async Task<IActionResult> IndexAsync()
     {
-        //µ÷ÓÃ¸¸¼¶¿ØÖÆÆ÷µÄ»ñÈ¡·ÛË¿ĞÅÏ¢·½·¨£¬¸Ã·½·¨´ÓISnsApiÖĞ»ñÈ¡·ÛË¿ÏêÏ¸ĞÅÏ¢
+        //è°ƒç”¨çˆ¶çº§æ§åˆ¶å™¨çš„è·å–ç²‰ä¸ä¿¡æ¯æ–¹æ³•ï¼Œè¯¥æ–¹æ³•ä»ISnsApiä¸­è·å–ç²‰ä¸è¯¦ç»†ä¿¡æ¯
         var userResult = await GetWeChatUserInfoAsync();
         var model = new UserInfo()
         {
@@ -453,24 +564,24 @@ public class HomeController : WxPublicAccountControllerBase
     }
 }
 ```
-## Abp VNext¼¯³É
+## Abp VNexté›†æˆ
 
-Magicodes.Wx.PublicAccount.SdkÄ¬ÈÏÌá¹©ÁËAbp VNextÄ£¿é£¬Ïà¹Ø²½ÖèÈçÏÂËùÊ¾£º
+Magicodes.Wx.PublicAccount.Sdké»˜è®¤æä¾›äº†Abp VNextæ¨¡å—ï¼Œç›¸å…³æ­¥éª¤å¦‚ä¸‹æ‰€ç¤ºï¼š
 
-### 1£©°²×°Magicodes.Wx.PublicAccount.Sdk.Abp
+### 1ï¼‰å®‰è£…Magicodes.Wx.PublicAccount.Sdk.Abp
 
 ```powershell
 Install-Package Magicodes.Wx.PublicAccount.Sdk.Abp
 ```
 
-### 2£©Ìí¼ÓÄ£¿éÒÀÀµ
+### 2ï¼‰æ·»åŠ æ¨¡å—ä¾èµ–
 
 ```csharp
 [DependsOn(
     typeof(WxPublicAccountSdkModule)
 )]
 ```
-ÈçĞè´¦Àí·şÎñÆ÷ÊÂ¼şÏûÏ¢£¬»¹Ğè×¢²áIWxEventsHandler£º
+å¦‚éœ€å¤„ç†æœåŠ¡å™¨äº‹ä»¶æ¶ˆæ¯ï¼Œè¿˜éœ€æ³¨å†ŒIWxEventsHandlerï¼š
 
 ```csharp
 context.Services.AddSingleton<IWxEventsHandler, WxEventsHandler>();
@@ -478,23 +589,23 @@ context.Services.AddSingleton<IWxEventsHandler, WxEventsHandler>();
 
 
 
-## ÁªÏµÎÒÃÇ
+## è”ç³»æˆ‘ä»¬
 
-### ¶©ÔÄºÅ
-¹Ø×¢¡°**Âó¿ÛÁÄ¼¼Êõ**¡±¶©ÔÄºÅ¿ÉÒÔ»ñµÃ×îĞÂÎÄÕÂ¡¢½Ì³Ì¡¢ÎÄµµ£¬²¢ÇÒ¼ÓÈëÎ¢ĞÅÉúÌ¬Èº£º
-![](https://docs.xin-lai.com/medias/wechat.jpg "Âó¿ÛÁÄ¼¼Êõ")
+### è®¢é˜…å·
+å…³æ³¨â€œ**éº¦æ‰£èŠæŠ€æœ¯**â€è®¢é˜…å·å¯ä»¥è·å¾—æœ€æ–°æ–‡ç« ã€æ•™ç¨‹ã€æ–‡æ¡£ï¼Œå¹¶ä¸”åŠ å…¥å¾®ä¿¡ç”Ÿæ€ç¾¤ï¼š
+![](https://docs.xin-lai.com/medias/wechat.jpg "éº¦æ‰£èŠæŠ€æœ¯")
 
-### QQÈº
+### QQç¾¤
 
-- **±à³Ì½»Á÷Èº<85318032>**£¨ÓÉÓÚ²»¾­³£ÔÚÏß£¬ÎªÁË±ÜÃâÉ§ÈÅ£¬ÉèÖÃÁËÒ»¶¨ÃÅ¼÷£©
+- **ç¼–ç¨‹äº¤æµç¾¤<85318032>**ï¼ˆç”±äºä¸ç»å¸¸åœ¨çº¿ï¼Œä¸ºäº†é¿å…éªšæ‰°ï¼Œè®¾ç½®äº†ä¸€å®šé—¨æ§›ï¼‰
 
 
-#### ÎÄµµ¹ÙÍø&¹Ù·½²©¿Í
+#### æ–‡æ¡£å®˜ç½‘&å®˜æ–¹åšå®¢
 
-- **ÎÄµµ¹ÙÍø£º<https://docs.xin-lai.com/>**
-- **²©¿Í£º<http://www.cnblogs.com/codelove/>**
+- **æ–‡æ¡£å®˜ç½‘ï¼š<https://docs.xin-lai.com/>**
+- **åšå®¢ï¼š<http://www.cnblogs.com/codelove/>**
 
-#### ÆäËû¿ªÔ´¿â
+#### å…¶ä»–å¼€æºåº“
 
 - **<https://github.com/xin-lai>**
 - **<https://gitee.com/magicodes>**
