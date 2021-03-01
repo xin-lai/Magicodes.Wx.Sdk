@@ -4,15 +4,17 @@
 ## 概述
 最简洁最易于使用的微信Sdk，包括公众号Sdk、小程序Sdk、企业微信Sdk等，以及Abp VNext集成。
 
-[![Build Status](https://dev.azure.com/xinlaiopencode/Magicodes.Wx.Sdk/_apis/build/status/xin-lai.Magicodes.Wx.Sdk?branchName=main)](https://dev.azure.com/xinlaiopencode/Magicodes.Wx.Sdk/_build/latest?definitionId=15&branchName=main)
-
 | **名称** |      **Nuget**      |
 |----------|:-------------:|
 | **Magicodes.Wx.PublicAccount.Sdk** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk)** |
 | **Magicodes.Wx.PublicAccount.Sdk.AspNet** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk.AspNet)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk.AspNet)** |
 | **Magicodes.Wx.PublicAccount.Sdk.Abp** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk.Abp)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk.Abp)** |
 
-[如何快速编写一个微信Api？](./docs/如何快速编写一个微信Api.md)（2分钟一个Api，欢迎多多PR）
+## 如何贡献？
+
+[如何快速封装一个微信接口？](./docs/如何快速编写一个微信Api.md)（30秒编写一个微信Api，欢迎多多PR）
+
+如何快速定义一个微信上传文件的接口？
 
 ## RoadMap
 
@@ -104,21 +106,19 @@
 
   - [ ] 公众号一次性订阅消息
 
-  - [ ] 模板消息（`ITemplateApi`）
+  - [x] 模板消息（`ITemplateApi`）
 
     - [x] [1 设置所属行业](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#0)（`SetIndustryAsync`）
 
-    - [ ] [2 获取设置的行业信息](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#1)
+    - [x] [2 获取设置的行业信息](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#1)（`GetIndustryAsync`）
 
-      [3 获得模板ID](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#2)
+    - [x] [3 获得模板ID](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#2)（`GetTemplateIdAsync`）
 
-      [4 获取模板列表](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#3)
+    - [x] [4 获取模板列表](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#3)（`GetAllPrivateTemplateAsync`）
 
-      [5 删除模板](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#4)
+    - [x] [5 删除模板](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#4)（`DelPrivateTemplateAsync`）
 
     - [x] [6 发送模板消息](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#5)（`SendAsync`）
-
-      [7 事件推送](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#6)
 
 - [ ] 自定义菜单（`IMenuApi`）
 
@@ -141,12 +141,13 @@
 - [ ] 客服消息
 
   - [ ] 客服管理（`IKfAccountApi`）
-    - [ ] 获取客服基本信息
+    - [x] 获取客服基本信息（`GetKFListAsync`）
     - [x] 添加客服账号（`AddAsync`）
-    - [ ] 邀请绑定客服账号
+    - [x] 邀请绑定客服账号（`InviteWorkerAsync`）
     - [x] 设置客服信息（`UpdateAsync`）
-    - [ ] 上传客服头像
+    - [x] 上传客服头像（`UploadHeadimg`）
     - [x] 删除客服账号（`DelAsync`）
+    - [x] 获取在线客服接待会话数（`GetOnlineKFListAsync`）
 
 - [x] 微信网页开发
 
@@ -215,9 +216,9 @@
     - [ ] 修改群发任务
     - [ ] 取消群发任务
 
-- [ ] 素材管理
+- [ ] 素材管理（`IMediaApi`）
 
-  - [ ] 新增临时素材
+  - [x] 新增临时素材（`UploadAsync`）
   - [ ] 获取临时素材
   - [ ] 新增永久素材
   - [ ] 获取永久素材

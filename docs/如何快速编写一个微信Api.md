@@ -8,13 +8,15 @@
 
 ## WebApiClientCore
 
-[Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)之简洁很大层面依托于NCC的开源库[WebApiClientCore](https://github.com/dotnetcore/WebApiClient)。
+[Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)之简洁很大层面依托于NCC的开源库[WebApiClientCore](https://github.com/dotnetcore/WebApiClient)。[Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)依托WebApiClientCore完成了微信接口的包装和校验。
 
 开源库地址：https://github.com/dotnetcore/WebApiClient
 
 ## 快速开始
 
 这里我们以【客服消息】【添加客服账号】为例进行讲解，官方接口文档地址为：https://developers.weixin.qq.com/doc/offiaccount/Customer_Service/Customer_Service_Management.html#2。
+
+比如添加客服账号接口官方接口文档说明如下所示：
 
 ![添加客服账号](../res/image-20210226095153459.png)
 
@@ -101,9 +103,13 @@ public interface IKfAccountApi : IWxApiWithAccessTokenFilter
         public string Nickname { get; set; }
     }
 ```
+Dto实体的添加这里给大家分享一个小技巧。当实体字段以及层级比较多时，大家可以使用VS的【编辑】==》【选择性粘贴】==》【将Json粘贴为类】：
+
+![选择性粘贴](../res/image-20210301185609777.png)
+
 ### 3）添加ApiResultBase
 
-框架中封装了默认的返回结果基类，如果没有其他额外的返回内容，仅需返回`ApiResultBase`即可。如果有额外的范围内容，则需要定义子类继承自`ApiResultBase`，在可能的情况下，有可能需要重写部分方法。如下述代码：
+框架中封装了默认的返回结果基类，如果没有其他额外的返回内容，仅需返回`ApiResultBase`即可。如果有额外的范围内容，则需要定义子类继承自`ApiResultBase`，在可能的情况下，有可能需要重写部分方法（比如`IsSuccess`）。如下述代码：
 
 ```csharp
 public class TokenApiResult : ApiResultBase
@@ -171,9 +177,13 @@ public class TemplateApiTest : TestBase, IClassFixture<TestWebApplicationFactory
 
 https://github.com/xin-lai/Magicodes.Wx.Sdk/pull/1/commits/85263ed9a807581f7315a90fe6e00c51c994d386
 
-## 其他
+## 其他须知内容
 
 ### IWxApiWithAccessTokenFilter接口
+
+**`IWxApiWithAccessTokenFilter`接口用于定义需要携带公众号Acces sToken的接口。**
+
+如下述参考代码所示，其启用了`AccessTokenApiFilter`筛选器，以及关闭了AcceptContentType的匹配约束（公众号的接口官方写的一塌糊涂，很不规范）。
 
 参考代码：
 
@@ -190,7 +200,9 @@ public interface IWxApiWithAccessTokenFilter
 ```
 ### AccessTokenApiFilter筛选器
 
-参考代码：
+**`AccessTokenApiFilter`接口筛选器会在启用的API、Action上自动添加access_token参数值。**
+
+参考代码如下所示：
 
 ```csharp
 public class AccessTokenApiFilter : ApiFilterAttribute
@@ -209,6 +221,10 @@ public class AccessTokenApiFilter : ApiFilterAttribute
 }
 ```
 ### 关于ApiResultBase
+
+**ApiResultBase定义了公众号API返回基类，用于接收错误码、错误消息、是否执行成功的判断以及获取友好消息提示。**
+
+参考代码：
 
 ```csharp
 /// <summary>

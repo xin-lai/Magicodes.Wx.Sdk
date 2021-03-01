@@ -38,6 +38,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Message
         /// <returns></returns>
         [HttpPost("https://api.weixin.qq.com/cgi-bin/template/api_add_template")]
         Task<GetTemplateIdApiResult> GetTemplateIdAsync(GetTemplateIdInput input);
+
         /// <summary>
         /// 获取模板列表 
         /// </summary>
