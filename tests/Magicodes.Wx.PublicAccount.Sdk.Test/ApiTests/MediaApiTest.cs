@@ -25,5 +25,13 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             var result = await mediaApi.UploadAsync("image", file);
             result.EnsureSuccess();
         }
+
+        [Fact]
+        public async Task UploadImageAsync_Test()
+        {
+            var file = new FormDataFile("Media/wechat.jpg");
+            var result = await mediaApi.UploadImageAsync(file);
+            result.EnsureSuccess();
+        }
     }
 }

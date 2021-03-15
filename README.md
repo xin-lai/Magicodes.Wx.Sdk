@@ -97,15 +97,17 @@
       - [x] 回复音乐消息：`ToMusicMessage`
       - [x] 回复图文消息：`ToNewsMessage`
       - [x] 回复空消息（不回复）：`ToNullMessage`
-
   - [ ] 群发接口
-
+    - [x] 上传图文消息内的图片获取URL【订阅号与服务号认证后均可用】（`IMediaApi`>>`UploadImageAsync`）
+    - [ ] 上传图文消息素材【订阅号与服务号认证后均可用】
+    - [ ] 根据标签进行群发【订阅号与服务号认证后均可用】
+    - [ ] 根据OpenID列表群发【订阅号不可用，服务号认证后可用】
+    - [ ] 删除群发【订阅号与服务号认证后均可用】
+    - [ ] 预览接口【订阅号与服务号认证后均可用】
+    - [ ] 查询群发消息发送状态【订阅号与服务号认证后均可用】
   - [ ] api调用次数进行清零
-
   - [ ] 获取公众号当前使用的自动回复规则
-
   - [ ] 公众号一次性订阅消息
-
   - [x] 模板消息（`ITemplateApi`）
 
     - [x] [1 设置所属行业](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html#0)（`SetIndustryAsync`）
