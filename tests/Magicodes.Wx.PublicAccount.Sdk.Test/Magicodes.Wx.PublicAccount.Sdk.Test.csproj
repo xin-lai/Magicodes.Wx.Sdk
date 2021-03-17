@@ -37,6 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Media\book.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Media\wechat.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

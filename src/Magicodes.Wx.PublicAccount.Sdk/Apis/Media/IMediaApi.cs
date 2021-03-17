@@ -35,5 +35,13 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Media
         /// <returns></returns>
         [HttpPost("uploadimg")]
         Task<UploadImageApiResult> UploadImageAsync(FormDataFile media);
+
+        /// <summary>
+        /// 上传图文消息素材【订阅号与服务号认证后均可用】
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("uploadnews")]
+        Task<UploadApiResult> UploadNewsAsync(UploadNewsInput input);
     }
 }
