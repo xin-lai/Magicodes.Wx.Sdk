@@ -4,6 +4,9 @@
 ## 概述
 最简洁最易于使用的微信Sdk，包括公众号Sdk、小程序Sdk、企业微信Sdk等，以及Abp VNext集成。
 
+- [GitHub地址：https://github.com/xin-lai/Magicodes.Wx.Sdk](https://github.com/xin-lai/Magicodes.Wx.Sdk)
+- [Gitee地址：https://gitee.com/xl_wenqiang/Magicodes.Wx.Sdk](https://gitee.com/xl_wenqiang/Magicodes.Wx.Sdk)
+
 | **名称** |      **Nuget**      |
 |----------|:-------------:|
 | **Magicodes.Wx.PublicAccount.Sdk** | **[![NuGet](https://buildstats.info/nuget/Magicodes.Wx.PublicAccount.Sdk)](https://www.nuget.org/packages/Magicodes.Wx.PublicAccount.Sdk)** |
