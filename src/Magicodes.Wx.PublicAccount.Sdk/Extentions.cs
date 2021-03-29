@@ -5,6 +5,7 @@ using Magicodes.Wx.PublicAccount.Sdk.Apis.Menu;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Message;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Sns;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Token;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,6 +35,8 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             services.AddSingleton<ITokenManager, TokenManager>();
             services.AddHttpApi<IKfAccountApi>();
             services.AddHttpApi<IMediaApi>();
+            services.AddHttpApi<IUserApi>();
+            services.AddHttpApi<ITagsApi>();
             return services;
         }
 

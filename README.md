@@ -234,14 +234,23 @@
 
 - [ ] 图文消息留言管理
 
-- [ ] 用户管理
+- [ ] 用户管理（`IUserApi`）
 
-  - [ ] 用户标签管理
-  - [ ] 设置用户备注名
-  - [ ] 获取用户基本信息（UnionID机制）
-  - [ ] 获取用户列表
-  - [ ] 获取用户地理位置
+  - [x] 设置用户备注名（`UpdateRemarkAsync`）
+  - [x] 获取用户基本信息（UnionID机制）（`InfoAsync`）
+  - [x] 获取用户列表（`GetAsync`）
   - [ ] 黑名单管理
+
+- [x] 用户标签管理（`ITagsApi`）
+
+  - [x] 创建标签（`CreateAsync`）
+  - [x] 获取公众号已创建的标签（`GetAsync`）
+  - [x] 编辑标签（`UpdateAsync`）
+  - [x] 删除标签（`DeleteAsync`）
+  - [x] 获取标签下粉丝列表（`IUserApi`>>`GetUserByTagAsync`）
+  - [x] 批量为用户打标签（`BatchTaggingAsync`）
+  - [x] 批量为用户取消标签（`BatchUnTaggingAsync`）
+  - [x] 获取用户身上的标签列表（`GetIdListAsync`）
 
 - [ ] 账号管理
 
