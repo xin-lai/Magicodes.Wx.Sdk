@@ -28,7 +28,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages.From
         /// </summary>
         public FromViewMiniprogramEvent()
         {
-            Event = FromEventTypes.viewminiprogram;
+            Event = FromEventTypes.view_miniprogram;
         }
 
         /// <summary>
