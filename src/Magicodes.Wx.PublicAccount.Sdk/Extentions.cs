@@ -3,6 +3,7 @@ using Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Media;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Menu;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Message;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.NewTmpl;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Sns;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Token;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.User;
@@ -37,6 +38,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             services.AddHttpApi<IMediaApi>();
             services.AddHttpApi<IUserApi>();
             services.AddHttpApi<ITagsApi>();
+            services.AddHttpApi<INewTmplApi>();
             return services;
         }
 

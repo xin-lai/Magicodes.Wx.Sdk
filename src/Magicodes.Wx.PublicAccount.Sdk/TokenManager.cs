@@ -31,7 +31,9 @@ namespace Magicodes.Wx.PublicAccount.Sdk
         public virtual async Task<string> GetAccessTokenAsync()
         {
             WxPublicAccountOption options = weChatFuncs?.GetWeChatOptions();
-            string token = weChatFuncs?.GetAccessTokenByAppId(options?.AppId);
+            string token =
+                "43_Khgm7pmrbB58SNUezNUNjLZQvxkNe7752ovEk5qGOm4ClCT2eYBTYoMFPd10UMgo6if3dA8gNvkWDPRjdkTqP4PyMOs2aZU6hwf4_2o2M5cyHajaZKXon68FLsUJ-FmInongOKStUe0LETvBDFEdBEAXZY";
+            //weChatFuncs?.GetAccessTokenByAppId(options?.AppId);
             if (string.IsNullOrEmpty(token))
             {
                 ITokenApi tokenApi = serviceProvider.GetService<ITokenApi>();

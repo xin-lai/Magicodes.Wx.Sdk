@@ -133,15 +133,15 @@
   - [ ] 个性化菜单接口
   - [ ] 获取自定义菜单配置
 
-- [ ] 订阅通知
+- [x] 订阅通知（`INewTmplApi`）
 
-  - [ ] 选用模板
-  - [ ] 删除模板
-  - [ ] 获取公众号类目
-  - [ ] 获取模板中的关键词
-  - [ ] 获取所属类目的公共模板
-  - [ ] 获取私有模板列表
-  - [ ] 发送订阅通知
+  - [x] 选用模板（`AddTemplateAsync`）
+  - [x] 删除模板（`DeleteTemplateAsync`）
+  - [x] 获取公众号类目（`GetCategoryAsync`）
+  - [x] 获取模板中的关键词（`GetPubTemplateKeyWordsByIdAsync`）
+  - [x] 获取所属类目的公共模板（`GetPubTemplateTitleListAsync`）
+  - [x] 获取私有模板列表（`GetTemplateListAsync`）
+  - [x] 发送订阅通知（`SendAsync`）
 
 - [ ] 客服消息
 
@@ -234,12 +234,17 @@
 
 - [ ] 图文消息留言管理
 
-- [ ] 用户管理（`IUserApi`）
+- [x] 用户管理（`IUserApi`）
 
   - [x] 设置用户备注名（`UpdateRemarkAsync`）
   - [x] 获取用户基本信息（UnionID机制）（`InfoAsync`）
   - [x] 获取用户列表（`GetAsync`）
-  - [ ] 黑名单管理
+
+  - [x] 黑名单管理（`ITagsApi`）
+
+    - [x] 获取公众号的黑名单列表（`GetBlackListAsync`）
+    - [x] 拉黑用户（`BatchBlackListAsync`）
+    - [x] 取消拉黑用户（`BatchUnBlackListAsync`）
 
 - [x] 用户标签管理（`ITagsApi`）
 
