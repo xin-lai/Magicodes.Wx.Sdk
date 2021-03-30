@@ -12,8 +12,9 @@ namespace Magicodes.Wx.PublicAccount.Sdk
     {
         private readonly WxFuncs weChatFuncs;
         private readonly IServiceProvider serviceProvider;
+
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="weChatFuncs"></param>
         /// <param name="serviceProvider"></param>

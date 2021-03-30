@@ -62,5 +62,28 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.User
         /// <returns></returns>
         [HttpPost("getidlist")]
         Task<GetIdListApiResult> GetIdListAsync([JsonNetContent(CharSet = "utf-8")] GetIdListInput input);
+
+        /// <summary>
+        /// 获取公众号的黑名单列表
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("members/getblacklist")]
+        Task<GetBlackListApiResult> GetBlackListAsync([JsonNetContent(CharSet = "utf-8")] GetBlackListInput input);
+
+        /// <summary>
+        /// 拉黑用户
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("members/batchblacklist")]
+        Task<ApiResultBase> BatchBlackListAsync([JsonNetContent(CharSet = "utf-8")] BatchBlackListInput input);
+
+        /// <summary>
+        /// 取消拉黑用户
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("members/batchunblacklist")]
+        Task<ApiResultBase> BatchUnBlackListAsync([JsonNetContent(CharSet = "utf-8")] BatchUnBlackListInput input);
     }
 }

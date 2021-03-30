@@ -94,5 +94,35 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             });
             result.EnsureSuccess();
         }
+
+        [Fact]
+        public async Task GetBlackListAsync_Test()
+        {
+            var result = await tagsApi.GetBlackListAsync(new GetBlackListInput
+            {
+                BeginOpenId = null
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task BatchBlackListAsync_Test()
+        {
+            var result = await tagsApi.BatchBlackListAsync(new BatchBlackListInput
+            {
+                OpenIdList = new[] { "o6l4Nv5rjCXOCkbaCDOAmH1Eoxl4" }
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task BatchUnBlackListAsync_Test()
+        {
+            var result = await tagsApi.BatchUnBlackListAsync(new BatchUnBlackListInput
+            {
+                OpenIdList = new[] { "o6l4Nv5rjCXOCkbaCDOAmH1Eoxl4" }
+            });
+            result.EnsureSuccess();
+        }
     }
 }
