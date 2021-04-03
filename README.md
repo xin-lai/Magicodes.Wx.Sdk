@@ -386,6 +386,12 @@ Install-Package Magicodes.Wx.PublicAccount.Sdk.AspNet
                 .UseWxDistributedCacheForAccessToken();
         }
 ```
+Tips:
+
+- [Configure(IApplicationBuilder) 方法：配置应用程序](https://docs.microsoft.com/zh-cn/dotnet/api/microsoft.aspnetcore.hosting.startupbase.configure?view=aspnetcore-5.0&WT.mc_id=DT-MVP-5004079)
+- [ConfigureServices(IServiceCollection) ：将服务注册到中 IServiceCollection](https://docs.microsoft.com/zh-cn/dotnet/api/microsoft.aspnetcore.hosting.startupbase.configureservices?view=aspnetcore-5.0&WT.mc_id=DT-MVP-5004079)
+- [ASP.NET Core 中的分布式缓存](https://docs.microsoft.com/zh-cn/aspnet/core/performance/caching/distributed?view=aspnetcore-5.0&WT.mc_id=DT-MVP-5004079)
+
 ### 4）调用Api
 
 接下来就简单了，通过依赖注入的方式注入相关Api，比如构造函数注入：
@@ -396,6 +402,10 @@ Install-Package Magicodes.Wx.PublicAccount.Sdk.AspNet
         _menuApi = menuApi;
     }
 ```
+Tips：
+
+- [在 ASP.NET Core 中将依赖项注入到控制器](https://docs.microsoft.com/zh-cn/aspnet/core/mvc/controllers/dependency-injection?view=aspnetcore-5.0&WT.mc_id=DT-MVP-5004079)
+
 然后就可以使用了，如下面代码：
 
 ```csharp
