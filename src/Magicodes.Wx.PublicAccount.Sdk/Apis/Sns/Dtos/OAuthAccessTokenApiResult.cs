@@ -15,12 +15,12 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Sns
         ///     凭证有效时间，单位：秒
         /// </summary>
         [JsonProperty("expires_in")]
-        internal int Expires { get; set; }
+        public int Expires { get; set; }
 
         /// <summary>
         ///     凭证过期时间
         /// </summary>
-        public DateTime ExpiresTime { get; set; }
+        public DateTime ExpiresTime => DateTime.Now.AddSeconds(Expires);
 
         /// <summary>
         ///     用户刷新access_token
