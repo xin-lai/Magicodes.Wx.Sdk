@@ -131,6 +131,9 @@
   - [x] 查询接口（`GetAsync`）
   - [x] 删除接口（`DeleteAsync`）
   - [ ] 个性化菜单接口
+    - [x] 创建个性化菜单（`AddConditionalAsync`）
+    - [ ] 删除个性化菜单
+    - [ ] 测试个性化菜单匹配结果
   - [ ] 获取自定义菜单配置
 
 - [x] 订阅通知（`INewTmplApi`）

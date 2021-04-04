@@ -33,5 +33,12 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Menu
         /// <returns></returns>
         [HttpGet("delete")]
         Task<ApiResultBase> DeleteAsync();
+
+        /// <summary>
+        /// 创建个性化菜单
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("addconditional")]
+        Task<AddConditionalApiResult> AddConditionalAsync([JsonNetContent(CharSet = "utf-8")] AddConditionalInput input);
     }
 }
