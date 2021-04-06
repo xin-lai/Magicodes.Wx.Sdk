@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Magicodes.Wx.PublicAccount.Sdk.Apis.Menu.Dtos;
 using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
 
@@ -40,5 +38,19 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Menu
         /// <returns></returns>
         [HttpPost("addconditional")]
         Task<AddConditionalApiResult> AddConditionalAsync([JsonNetContent(CharSet = "utf-8")] AddConditionalInput input);
+
+        /// <summary>
+        /// 删除个性化菜单
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("delconditional")]
+        Task<ApiResultBase> DelConditionalAsync([JsonNetContent(CharSet = "utf-8")] DelConditionalInput input);
+
+        /// <summary>
+        /// 测试个性化菜单匹配结果
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("trymatch")]
+        Task<TryMatchApiResult> TryMatchAsync([JsonNetContent(CharSet = "utf-8")] TryMatchInput input);
     }
 }

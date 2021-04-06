@@ -1,5 +1,6 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.Apis;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.CustomerService;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.Guide;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Media;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Menu;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Message;
@@ -39,6 +40,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             services.AddHttpApi<IUserApi>();
             services.AddHttpApi<ITagsApi>();
             services.AddHttpApi<INewTmplApi>();
+            services.AddHttpApi<IGuideApi>();
             return services;
         }
 

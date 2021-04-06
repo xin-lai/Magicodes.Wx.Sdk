@@ -130,11 +130,11 @@
   - [x] 创建接口（`CreateAsync`）
   - [x] 查询接口（`GetAsync`）
   - [x] 删除接口（`DeleteAsync`）
-  - [ ] 个性化菜单接口
+  - [x] 个性化菜单接口
     - [x] 创建个性化菜单（`AddConditionalAsync`）
-    - [ ] 删除个性化菜单
-    - [ ] 测试个性化菜单匹配结果
-  - [ ] 获取自定义菜单配置
+    - [x] 删除个性化菜单（`DelConditionalAsync`）
+    - [x] 测试个性化菜单匹配结果（`TryMatchAsync`）
+  - [x] 获取自定义菜单配置（`GetAsync`）
 
 - [x] 订阅通知（`INewTmplApi`）
 
@@ -168,11 +168,11 @@
 
 - [ ] 对话能力
 
-  - [ ] 顾问管理
-    - [ ] 添加顾问
-    - [ ] 获取顾问信息
-    - [ ] 修改顾问信息
-    - [ ] 删除顾问
+  - [ ] 顾问管理（`IGuideApi`）
+    - [x] 添加顾问（`AddGuideAcctAsync`）
+    - [x] 获取顾问信息（`GetGuideAcctAsync`）
+    - [x] 修改顾问信息（`UpdateGuideAcctAsync`）
+    - [x] 删除顾问（`DelGuideAcctAsync`）
     - [ ] 获取服务号顾问列表
     - [ ] 生产顾问二维码
     - [ ] 扫顾问二维码后的事件推送

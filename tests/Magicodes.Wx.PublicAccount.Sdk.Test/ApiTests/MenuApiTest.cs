@@ -1,8 +1,7 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.Apis.Menu;
+using Magicodes.Wx.PublicAccount.Sdk.Apis.Menu.Dtos;
 using Shouldly;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
@@ -56,7 +55,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
                         }
                     }
                 }
-            }); 
+            });
             result.EnsureSuccess();
         }
 
@@ -77,6 +76,28 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
         public async Task DeleteAsync_Test()
         {
             var result = await menuApi.DeleteAsync();
+
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task DelConditionalAsync_Test()
+        {
+            var result = await menuApi.DelConditionalAsync(new DelConditionalInput
+            {
+                MenuId = 1
+            });
+
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task TryMatchAsync_Test()
+        {
+            var result = await menuApi.TryMatchAsync(new TryMatchInput
+            {
+                UserId = "weixin"
+            });
 
             result.EnsureSuccess();
         }
