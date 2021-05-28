@@ -95,5 +95,67 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Guide
         /// <returns></returns>
         [HttpPost("getguideacctconfig")]
         Task<GetGuideAcctConfigResult> GetGuideAcctConfigAsync();
+
+        /// <summary>
+        /// 允许微信用户复制小程序页面路径
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("pushshowwxapathmenu")]
+        Task<ApiResultBase> PushShowWxaPathMenuAsync([JsonNetContent(CharSet = "utf-8")] PushShowWxaPathMenuInput input);
+
+        /// <summary>
+        /// 新建顾问分组
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("newguidegroup")]
+        Task<NewGuideGroupResult> NewGuideGroupAsync([JsonNetContent(CharSet = "utf-8")] NewGuideGroupInput input);
+
+        /// <summary>
+        /// 获取顾问分组列表
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("getguidegrouplist")]
+        Task<GetGuideGroupListResult> GetGuideGroupListAsync();
+
+        /// <summary>
+        /// 获取顾问分组信息
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getgroupinfo")]
+        Task<GetGroupInfoResult> GetGroupInfoAsync([JsonNetContent(CharSet = "utf-8")] GetGroupInfoInput input);
+
+        /// <summary>
+        /// 分组内添加顾问
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("addguide2guidegroup")]
+        Task<ApiResultBase> AddGuide2GuideGroupAsync([JsonNetContent(CharSet = "utf-8")] AddGuide2GuideGroupInput input);
+
+        /// <summary>
+        /// 分组内删除顾问
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("delguide2guidegroup")]
+        Task<ApiResultBase> DelGuide2GuideGroupAsync([JsonNetContent(CharSet = "utf-8")] DelGuide2GuideGroupInput input);
+
+        /// <summary>
+        /// 获取顾问所在分组
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getgroupbyguide")]
+        Task<GetGroupByGuideResult> GetGroupByGuideAsync([JsonNetContent(CharSet = "utf-8")] GetGroupByGuideInput input);
+
+        /// <summary>
+        /// 删除顾问分组
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("delguidegroup")]
+        Task<ApiResultBase> DelGuideGroupAsync([JsonNetContent(CharSet = "utf-8")] DelGuideGroupInput input);
     }
 }

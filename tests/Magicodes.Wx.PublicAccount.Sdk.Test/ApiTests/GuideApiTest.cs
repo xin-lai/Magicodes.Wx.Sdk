@@ -130,5 +130,87 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             var result = await guideApi.GetGuideAcctConfigAsync();
             result.EnsureSuccess();
         }
+
+        [Fact]
+        public async Task PushShowWxaPathMenuAsync_Test()
+        {
+            var result = await guideApi.PushShowWxaPathMenuAsync(new PushShowWxaPathMenuInput
+            {
+                WxaAppid = "",
+                WxUserName = ""
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task NewGuideGroupAsync_Test()
+        {
+            var result = await guideApi.NewGuideGroupAsync(new NewGuideGroupInput
+            {
+                GroupName = "Magicodes"
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideGroupListAsync_Test()
+        {
+            var result = await guideApi.GetGuideGroupListAsync();
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGroupInfoAsync_Test()
+        {
+            var result = await guideApi.GetGroupInfoAsync(new GetGroupInfoInput
+            {
+                GroupId = 1,
+                Page = 1,
+                Num = 10
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task AddGuide2GuideGroupAsync_Test()
+        {
+            var result = await guideApi.AddGuide2GuideGroupAsync(new AddGuide2GuideGroupInput
+            {
+                GroupId = 1,
+                GuideAccount = "1"
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task DelGuide2GuideGroupAsync_Test()
+        {
+            var result = await guideApi.DelGuide2GuideGroupAsync(new DelGuide2GuideGroupInput
+            {
+                GroupId = 1,
+                GuideAccount = "1"
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGroupByGuideAsync_Test()
+        {
+            var result = await guideApi.GetGroupByGuideAsync(new GetGroupByGuideInput
+            {
+                GuideAccount = "wx"
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task DelGuideGroupAsync_Test()
+        {
+            var result = await guideApi.DelGuideGroupAsync(new DelGuideGroupInput
+            {
+                GroupId = 1
+            });
+            result.EnsureSuccess();
+        }
     }
 }

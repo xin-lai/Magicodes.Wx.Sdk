@@ -181,13 +181,14 @@
     - [x] 获取快捷回复与关注自动回复（`GetGuideConfigAsync`）
     - [x] 设置离线自动回复与敏感词（`SetGuideAcctConfigAsync`）
     - [x] 获取离线自动回复与敏感词（`GetGuideAcctConfigAsync`）
-    - [ ] 新建顾问分组
-    - [ ] 获取顾问分组列表
-    - [ ] 获取顾问分组信息
-    - [ ] 分组内添加顾问
-    - [ ] 分组内删除顾问
-    - [ ] 获取顾问所在分组
-    - [ ] 删除顾问分组
+    - [x] 允许微信用户复制小程序页面路径（`PushShowWxaPathMenuAsync`）
+    - [x] 新建顾问分组（`NewGuideGroupAsync`）
+    - [x] 获取顾问分组列表（`GetGuideGroupListAsync`）
+    - [x] 获取顾问分组信息（`GetGroupInfoAsync`）
+    - [x] 分组内添加顾问（`AddGuide2GuideGroupAsync`）
+    - [x] 分组内删除顾问（`DelGuide2GuideGroupAsync`）
+    - [x] 获取顾问所在分组（`GetGroupByGuideAsync`）
+    - [x] 删除顾问分组（`DelGuideGroupAsync`）
   - [ ] 客户管理
     - [ ] 为顾问分配客户
     - [ ] 为顾问移除客户
