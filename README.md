@@ -173,14 +173,14 @@
     - [x] 获取顾问信息（`GetGuideAcctAsync`）
     - [x] 修改顾问信息（`UpdateGuideAcctAsync`）
     - [x] 删除顾问（`DelGuideAcctAsync`）
-    - [ ] 获取服务号顾问列表
-    - [ ] 生产顾问二维码
+    - [x] 获取服务号顾问列表（`GetGuideAcctListAsync`）
+    - [x] 生产顾问二维码（`GuideCreateQrCodeAsync`）
     - [ ] 扫顾问二维码后的事件推送
-    - [ ] 获取顾问聊天记录
-    - [ ] 设置快捷回复与关注自动回复
-    - [ ] 获取快捷回复与关注自动回复
-    - [ ] 设置离线自动回复与敏感词
-    - [ ] 获取离线自动回复与敏感词
+    - [x] 获取顾问聊天记录（`GetGuideBuyerChatRecordAsync`）
+    - [x] 设置快捷回复与关注自动回复（`SetGuideConfigAsync`）
+    - [x] 获取快捷回复与关注自动回复（`GetGuideConfigAsync`）
+    - [x] 设置离线自动回复与敏感词（`SetGuideAcctConfigAsync`）
+    - [x] 获取离线自动回复与敏感词（`GetGuideAcctConfigAsync`）
     - [ ] 新建顾问分组
     - [ ] 获取顾问分组列表
     - [ ] 获取顾问分组信息
