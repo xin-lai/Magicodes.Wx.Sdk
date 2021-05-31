@@ -157,5 +157,61 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Guide
         /// <returns></returns>
         [HttpPost("delguidegroup")]
         Task<ApiResultBase> DelGuideGroupAsync([JsonNetContent(CharSet = "utf-8")] DelGuideGroupInput input);
+
+        /// <summary>
+        /// 为顾问分配客户
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("addguidebuyerrelation")]
+        Task<AddGuideBuyerRelationResult> AddGuideBuyerRelationAsync([JsonNetContent(CharSet = "utf-8")] AddGuideBuyerRelationInput input);
+
+        /// <summary>
+        /// 为顾问移除客户
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("delguidebuyerrelation")]
+        Task<DelGuideBuyerRelationResult> DelGuideBuyerRelationAsync([JsonNetContent(CharSet = "utf-8")] DelGuideBuyerRelationInput input);
+
+        /// <summary>
+        /// 获取顾问的客户列表
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguidebuyerrelationlist")]
+        Task<GetGuideBuyerRelationListResult> GetGuideBuyerRelationListAsync([JsonNetContent(CharSet = "utf-8")] GetGuideBuyerRelationListInput input);
+
+        /// <summary>
+        /// 为客户更换顾问
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("rebindguideacctforbuyer")]
+        Task<RebindGuideAcctForBuyerResult> RebindGuideAcctForBuyerAsync([JsonNetContent(CharSet = "utf-8")] RebindGuideAcctForBuyerInput input);
+
+        /// <summary>
+        /// 修改客户昵称
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("updateguidebuyerrelation")]
+        Task<ApiResultBase> UpdateGuideBuyerRelationAsync([JsonNetContent(CharSet = "utf-8")] UpdateGuideBuyerRelationInput input);
+
+        /// <summary>
+        /// 查询客户所属顾问
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguidebuyerrelationbybuyer")]
+        Task<GetGuideBuyerRelationByBuyerResult> GetGuideBuyerRelationByBuyerAsync([JsonNetContent(CharSet = "utf-8")] GetGuideBuyerRelationByBuyerInput input);
+
+        /// <summary>
+        /// 查询指定顾问和客户的关系
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguidebuyerrelation")]
+        Task<GetGuideBuyerRelationResult> GetGuideBuyerRelationAsync([JsonNetContent(CharSet = "utf-8")] GetGuideBuyerRelationInput input);
     }
 }

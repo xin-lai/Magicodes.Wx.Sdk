@@ -212,5 +212,76 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             });
             result.EnsureSuccess();
         }
+
+        [Fact]
+        public async Task AddGuideBuyerRelationAsync_Test()
+        {
+            var result = await guideApi.AddGuideBuyerRelationAsync(new AddGuideBuyerRelationInput
+            {
+                GuideAccount = "wx",
+                GuideOpenId = "magicodes"
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task DelGuideBuyerRelationAsync_Test()
+        {
+            var result = await guideApi.DelGuideBuyerRelationAsync(new DelGuideBuyerRelationInput
+            {
+                GuideAccount = "wx",
+                GuideOpenId = "magicodes"
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideBuyerRelationListAsync_Test()
+        {
+            var result = await guideApi.GetGuideBuyerRelationListAsync(new GetGuideBuyerRelationListInput
+            {
+                GuideAccount = "wx",
+                GuideOpenId = "magicodes",
+                Page = 1,
+                Num = 20
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task RebindGuideAcctForBuyerAsync_Test()
+        {
+            var result = await guideApi.RebindGuideAcctForBuyerAsync(new RebindGuideAcctForBuyerInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task UpdateGuideBuyerRelationAsync_Test()
+        {
+            var result = await guideApi.UpdateGuideBuyerRelationAsync(new UpdateGuideBuyerRelationInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideBuyerRelationByBuyerAsync_Test()
+        {
+            var result = await guideApi.GetGuideBuyerRelationByBuyerAsync(new GetGuideBuyerRelationByBuyerInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideBuyerRelationAsync_Test()
+        {
+            var result = await guideApi.GetGuideBuyerRelationAsync(new GetGuideBuyerRelationInput
+            {
+            });
+            result.EnsureSuccess();
+        }
     }
 }
