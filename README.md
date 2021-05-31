@@ -190,24 +190,24 @@
     - [x] 获取顾问所在分组（`GetGroupByGuideAsync`）
     - [x] 删除顾问分组（`DelGuideGroupAsync`）
   - [x] 客户管理
-    - [x] 为顾问分配客户
-    - [x] 为顾问移除客户
-    - [x] 获取顾问的客户列表
-    - [x] 为客户更好顾问
-    - [x] 修改客户昵称
-    - [x] 查询客户所属顾问
-    - [x] 查询指定顾问和客户的关系
-  - [ ] 标签管理
-    - [ ] 新建标签类型
-    - [ ] 删除标签类型
-    - [ ] 为标签添加可选值
-    - [ ] 获取标签和可选值
-    - [ ] 为客户设置标签
-    - [ ] 查询客户标签
-    - [ ] 根据标签值刷选客户
-    - [ ] 删除客户标签
-    - [ ] 设置自定义客户信息
-    - [ ] 获取自定义客户信息
+    - [x] 为顾问分配客户（`AddGuideBuyerRelationAsync`）
+    - [x] 为顾问移除客户（`DelGuideBuyerRelationAsync`）
+    - [x] 获取顾问的客户列表（`GetGuideBuyerRelationListAsync`）
+    - [x] 为客户更好顾问（`RebindGuideAcctForBuyerAsync`）
+    - [x] 修改客户昵称（`UpdateGuideBuyerRelationAsync`）
+    - [x] 查询客户所属顾问（`GetGuideBuyerRelationByBuyerAsync`）
+    - [x] 查询指定顾问和客户的关系（`GetGuideBuyerRelationAsync`）
+  - [x] 标签管理
+    - [x] 新建标签类型（`NewGuideTagOptionAsync`）
+    - [x] 删除标签类型（`DelGuideTagOptionAsync`）
+    - [x] 为标签添加可选值（`AddGuideTagOptionAsync`）
+    - [x] 获取标签和可选值（`GetGuideTagOptionAsync`）
+    - [x] 为客户设置标签（`AddGuideBuyerTagAsync`）
+    - [x] 查询客户标签（`GetGuideBuyerTagAsync`）
+    - [x] 根据标签值刷选客户（`QueryGuideBuyerByTagAsync`）
+    - [x] 删除客户标签（`DelGuideBuyerTagAsync`）
+    - [x] 设置自定义客户信息（`AddGuideBuyerDisplayTagAsync`）
+    - [x] 获取自定义客户信息（`GetGuideBuyerDisplayTagAsync`）
   - [ ] 素材管理
     - [ ] 添加小程序卡片素材
     - [ ] 查询小程序卡片素材

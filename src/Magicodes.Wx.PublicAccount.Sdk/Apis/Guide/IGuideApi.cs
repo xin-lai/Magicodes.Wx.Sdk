@@ -213,5 +213,84 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Guide
         /// <returns></returns>
         [HttpPost("getguidebuyerrelation")]
         Task<GetGuideBuyerRelationResult> GetGuideBuyerRelationAsync([JsonNetContent(CharSet = "utf-8")] GetGuideBuyerRelationInput input);
+
+        /// <summary>
+        /// 新建标签类型
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("newguidetagoption")]
+        Task<ApiResultBase> NewGuideTagOptionAsync([JsonNetContent(CharSet = "utf-8")] NewGuideTagOptionInput input);
+
+        /// <summary>
+        /// 删除标签类型
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("delguidetagoption")]
+        Task<ApiResultBase> DelGuideTagOptionAsync([JsonNetContent(CharSet = "utf-8")] DelGuideTagOptionInput input);
+
+        /// <summary>
+        /// 为标签添加可选值
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("addguidetagoption")]
+        Task<ApiResultBase> AddGuideTagOptionAsync([JsonNetContent(CharSet = "utf-8")] AddGuideTagOptionInput input);
+
+        /// <summary>
+        /// 获取标签和可选值
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("getguidetagoption")]
+        Task<GetGuideTagOptionResult> GetGuideTagOptionAsync();
+
+        /// <summary>
+        /// 为客户设置标签
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("addguidebuyertag")]
+        Task<AddGuideBuyerTagResult> AddGuideBuyerTagAsync([JsonNetContent(CharSet = "utf-8")] AddGuideBuyerTagInput input);
+
+        /// <summary>
+        /// 查询客户标签
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguidebuyertag")]
+        Task<GetGuideBuyerTagResult> GetGuideBuyerTagAsync([JsonNetContent(CharSet = "utf-8")] GetGuideBuyerTagInput input);
+
+        /// <summary>
+        /// 根据标签值筛选客户
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("queryguidebuyerbytag")]
+        Task<QueryGuideBuyerByTagResult> QueryGuideBuyerByTagAsync([JsonNetContent(CharSet = "utf-8")] QueryGuideBuyerByTagInput input);
+
+        /// <summary>
+        /// 删除客户标签
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("delguidebuyertag")]
+        Task<DelGuideBuyerTagResult> DelGuideBuyerTagAsync([JsonNetContent(CharSet = "utf-8")] DelGuideBuyerTagInput input);
+
+        /// <summary>
+        /// 设置自定义客户信息
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("addguidebuyerdisplaytag")]
+        Task<ApiResultBase> AddGuideBuyerDisplayTagAsync([JsonNetContent(CharSet = "utf-8")] AddGuideBuyerDisplayTagInput input);
+
+        /// <summary>
+        /// 获取自定义客户信息
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguidebuyerdisplaytag")]
+        Task<GetGuideBuyerDisplayTagResult> GetGuideBuyerDisplayTagAsync([JsonNetContent(CharSet = "utf-8")] GetGuideBuyerDisplayTagInput input);
     }
 }

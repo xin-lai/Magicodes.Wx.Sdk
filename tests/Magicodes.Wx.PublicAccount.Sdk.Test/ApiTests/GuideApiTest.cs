@@ -283,5 +283,91 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             });
             result.EnsureSuccess();
         }
+
+        [Fact]
+        public async Task NewGuideTagOptionAsync_Test()
+        {
+            var result = await guideApi.NewGuideTagOptionAsync(new NewGuideTagOptionInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task DelGuideTagOptionAsync_Test()
+        {
+            var result = await guideApi.DelGuideTagOptionAsync(new DelGuideTagOptionInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task AddGuideTagOptionAsync_Test()
+        {
+            var result = await guideApi.AddGuideTagOptionAsync(new AddGuideTagOptionInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideTagOptionAsync_Test()
+        {
+            var result = await guideApi.GetGuideTagOptionAsync();
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task AddGuideBuyerTagAsync_Test()
+        {
+            var result = await guideApi.AddGuideBuyerTagAsync(new AddGuideBuyerTagInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideBuyerTagAsync_Test()
+        {
+            var result = await guideApi.GetGuideBuyerTagAsync(new GetGuideBuyerTagInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task QueryGuideBuyerByTagAsync_Test()
+        {
+            var result = await guideApi.QueryGuideBuyerByTagAsync(new QueryGuideBuyerByTagInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task DelGuideBuyerTagAsync_Test()
+        {
+            var result = await guideApi.DelGuideBuyerTagAsync(new DelGuideBuyerTagInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task AddGuideBuyerDisplayTagAsync_Test()
+        {
+            var result = await guideApi.AddGuideBuyerDisplayTagAsync(new AddGuideBuyerDisplayTagInput
+            {
+            });
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideBuyerDisplayTagAsync_Test()
+        {
+            var result = await guideApi.GetGuideBuyerDisplayTagAsync(new GetGuideBuyerDisplayTagInput { });
+            result.EnsureSuccess();
+        }
     }
 }
