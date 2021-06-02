@@ -218,12 +218,12 @@
     - [ ] 添加文字素材
     - [ ] 查询文字素材
     - [ ] 删除文字素材
-  - [ ] 群发任务管理
-    - [ ] 添加群发任务
-    - [ ] 获取群发任务列表
-    - [ ] 获取指定群发任务信息
-    - [ ] 修改群发任务
-    - [ ] 取消群发任务
+  - [x] 群发任务管理
+    - [x] 添加群发任务（`AddGuideMasssendJobAsync`）
+    - [x] 获取群发任务列表（`GetGuideMassendJobListAsync`）
+    - [x] 获取指定群发任务信息（`GetGuideMassendJobAsync`）
+    - [x] 修改群发任务（`UpdateGuideMasssendJobAsync`）
+    - [x] 取消群发任务（`CancelGuideMassendJobAsync`）
 
 - [ ] 素材管理（`IMediaApi`）
 

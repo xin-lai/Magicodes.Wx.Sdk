@@ -292,5 +292,45 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Guide
         /// <returns></returns>
         [HttpPost("getguidebuyerdisplaytag")]
         Task<GetGuideBuyerDisplayTagResult> GetGuideBuyerDisplayTagAsync([JsonNetContent(CharSet = "utf-8")] GetGuideBuyerDisplayTagInput input);
+
+        /// <summary>
+        /// 添加群发任务
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("addguidemassendjob")]
+        Task<AddGuideMasssendJobResult> AddGuideMasssendJobAsync([JsonNetContent(CharSet = "utf-8")] AddGuideMasssendJobInput input);
+
+        /// <summary>
+        /// 获取群发任务列表
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguidemassendjoblist")]
+        Task<GetGuideMassendJobListResult> GetGuideMassendJobListAsync([JsonNetContent(CharSet = "utf-8")] GetGuideMassendJobListInput input);
+
+        /// <summary>
+        /// 获取指定群发任务信息
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguidemassendjob")]
+        Task<GetGuideMassendJobResult> GetGuideMassendJobAsync([JsonNetContent(CharSet = "utf-8")] GetGuideMassendJobInput input);
+
+        /// <summary>
+        /// 修改群发任务
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("updateguidemassendjob")]
+        Task<ApiResultBase> UpdateGuideMasssendJobAsync([JsonNetContent(CharSet = "utf-8")] UpdateGuideMasssendJobInput input);
+
+        /// <summary>
+        /// 取消群发任务
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("cancelguidemassendjob")]
+        Task<ApiResultBase> CancelGuideMassendJobAsync([JsonNetContent(CharSet = "utf-8")] CancelGuideMassendJobInput input);
     }
 }

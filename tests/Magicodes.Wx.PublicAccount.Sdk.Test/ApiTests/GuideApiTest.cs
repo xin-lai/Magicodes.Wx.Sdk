@@ -369,5 +369,40 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             var result = await guideApi.GetGuideBuyerDisplayTagAsync(new GetGuideBuyerDisplayTagInput { });
             result.EnsureSuccess();
         }
+
+        [Fact]
+        public async Task AddGuideMasssendJobAsync_Test()
+        {
+            var result = await guideApi.AddGuideMasssendJobAsync(new AddGuideMasssendJobInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideMassendJobListAsync_Test()
+        {
+            var result = await guideApi.GetGuideMassendJobListAsync(new GetGuideMassendJobListInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideMassendJobAsync_Test()
+        {
+            var result = await guideApi.GetGuideMassendJobAsync(new GetGuideMassendJobInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task UpdateGuideMasssendJobAsync_Test()
+        {
+            var result = await guideApi.UpdateGuideMasssendJobAsync(new UpdateGuideMasssendJobInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task CancelGuideMassendJobAsync_Test()
+        {
+            var result = await guideApi.CancelGuideMassendJobAsync(new CancelGuideMassendJobInput());
+            result.EnsureSuccess();
+        }
     }
 }
