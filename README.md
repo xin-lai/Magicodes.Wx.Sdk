@@ -208,16 +208,16 @@
     - [x] 删除客户标签（`DelGuideBuyerTagAsync`）
     - [x] 设置自定义客户信息（`AddGuideBuyerDisplayTagAsync`）
     - [x] 获取自定义客户信息（`GetGuideBuyerDisplayTagAsync`）
-  - [ ] 素材管理
-    - [ ] 添加小程序卡片素材
-    - [ ] 查询小程序卡片素材
-    - [ ] 删除 小程序卡片素材
-    - [ ] 添加图片素材
-    - [ ] 查询图片素材
-    - [ ] 删除图片素材
-    - [ ] 添加文字素材
-    - [ ] 查询文字素材
-    - [ ] 删除文字素材
+  - [x] 素材管理
+    - [x] 添加小程序卡片素材（`SetGuideCardMaterialAsync`）
+    - [x] 查询小程序卡片素材（`GetGuideCardMaterialAsync`）
+    - [x] 删除 小程序卡片素材（`DelGuideCardMaterialAsync`）
+    - [x] 添加图片素材（`SetGuideImageMaterialAsync`）
+    - [x] 查询图片素材（`GetGuideImageMaterialAsync`）
+    - [x] 删除图片素材（`DelGuideImageMaterialAsync`）
+    - [x] 添加文字素材（`SetGuideWordMaterialAsync`） 
+    - [x] 查询文字素材（`GetGuideWordMaterialAsync`）
+    - [x] 删除文字素材（`DelGuideWordMaterialAsync`）
   - [x] 群发任务管理
     - [x] 添加群发任务（`AddGuideMasssendJobAsync`）
     - [x] 获取群发任务列表（`GetGuideMassendJobListAsync`）

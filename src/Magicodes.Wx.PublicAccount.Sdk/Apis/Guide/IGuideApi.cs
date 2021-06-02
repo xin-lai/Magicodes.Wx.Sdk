@@ -332,5 +332,77 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Guide
         /// <returns></returns>
         [HttpPost("cancelguidemassendjob")]
         Task<ApiResultBase> CancelGuideMassendJobAsync([JsonNetContent(CharSet = "utf-8")] CancelGuideMassendJobInput input);
+
+        /// <summary>
+        /// 添加小程序卡片素材
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("setguidecardmaterial")]
+        Task<ApiResultBase> SetGuideCardMaterialAsync([JsonNetContent(CharSet = "utf-8")] SetGuideCardMaterialInput input);
+
+        /// <summary>
+        /// 查询小程序卡片素材
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguidecardmaterial")]
+        Task<GetGuideCardMaterialResult> GetGuideCardMaterialAsync([JsonNetContent(CharSet = "utf-8")] GetGuideCardMaterialInput input);
+
+        /// <summary>
+        /// 删除小程序卡片素材
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("delguidecardmaterial")]
+        Task<ApiResultBase> DelGuideCardMaterialAsync([JsonNetContent(CharSet = "utf-8")] DelGuideCardMaterialInput input);
+
+        /// <summary>
+        /// 添加图片素材
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("setguideimagematerial")]
+        Task<ApiResultBase> SetGuideImageMaterialAsync([JsonNetContent(CharSet = "utf-8")] SetGuideImageMaterialInput input);
+
+        /// <summary>
+        /// 查询图片素材
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguideimagematerial")]
+        Task<GetGuideImageMaterialResult> GetGuideImageMaterialAsync([JsonNetContent(CharSet = "utf-8")] GetGuideImageMaterialInput input);
+
+        /// <summary>
+        /// 删除图片素材
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("delguideimagematerial")]
+        Task<ApiResultBase> DelGuideImageMaterialAsync([JsonNetContent(CharSet = "utf-8")] DelGuideImageMaterialInput input);
+
+        /// <summary>
+        /// 添加文字素材
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("setguidewordmaterial")]
+        Task<ApiResultBase> SetGuideWordMaterialAsync([JsonNetContent(CharSet = "utf-8")] SetGuideWordMaterialInput input);
+
+        /// <summary>
+        /// 查询文字素材
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("getguidewordmaterial")]
+        Task<GetGuideWordMaterialResult> GetGuideWordMaterialAsync([JsonNetContent(CharSet = "utf-8")] GetGuideWordMaterialInput input);
+
+        /// <summary>
+        /// 删除文字素材
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("delguidewordmaterial")]
+        Task<ApiResultBase> DelGuideWordMaterialAsync([JsonNetContent(CharSet = "utf-8")] DelGuideWordMaterialInput input);
     }
 }

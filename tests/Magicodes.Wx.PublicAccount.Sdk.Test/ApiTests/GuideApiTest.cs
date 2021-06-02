@@ -404,5 +404,68 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Test.ApiTests
             var result = await guideApi.CancelGuideMassendJobAsync(new CancelGuideMassendJobInput());
             result.EnsureSuccess();
         }
+
+        [Fact]
+        public async Task SetGuideCardMaterialAsync_Test()
+        {
+            var result = await guideApi.SetGuideCardMaterialAsync(new SetGuideCardMaterialInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideCardMaterialAsync_Test()
+        {
+            var result = await guideApi.GetGuideCardMaterialAsync(new GetGuideCardMaterialInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task DelGuideCardMaterialAsync_Test()
+        {
+            var result = await guideApi.DelGuideCardMaterialAsync(new DelGuideCardMaterialInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task SetGuideImageMaterialAsync_Test()
+        {
+            var result = await guideApi.SetGuideImageMaterialAsync(new SetGuideImageMaterialInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideImageMaterialAsync_Test()
+        {
+            var result = await guideApi.GetGuideImageMaterialAsync(new GetGuideImageMaterialInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task DelGuideImageMaterialAsync_Test()
+        {
+            var result = await guideApi.DelGuideImageMaterialAsync(new DelGuideImageMaterialInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task SetGuideWordMaterialAsync_Test()
+        {
+            var result = await guideApi.SetGuideWordMaterialAsync(new SetGuideWordMaterialInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task GetGuideWordMaterialAsync_Test()
+        {
+            var result = await guideApi.GetGuideWordMaterialAsync(new GetGuideWordMaterialInput());
+            result.EnsureSuccess();
+        }
+
+        [Fact]
+        public async Task DelGuideWordMaterialAsync_Test()
+        {
+            var result = await guideApi.DelGuideWordMaterialAsync(new DelGuideWordMaterialInput());
+            result.EnsureSuccess();
+        }
     }
 }
