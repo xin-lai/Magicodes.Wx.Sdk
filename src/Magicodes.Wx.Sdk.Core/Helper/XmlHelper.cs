@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Magicodes.Wx.PublicAccount.Sdk.Helper
+namespace Magicodes.Wx.Sdk.Core.Helper
 {
     public class XmlHelper
     {

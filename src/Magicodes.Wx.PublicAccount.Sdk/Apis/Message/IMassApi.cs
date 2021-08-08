@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magicodes.Wx.Sdk.Core;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;

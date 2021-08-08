@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using WebApiClientCore;
 using WebApiClientCore.Attributes;
 
-namespace Magicodes.Wx.PublicAccount.Sdk.Apis
+namespace Magicodes.Wx.Sdk.Core
 {
     public class AccessTokenApiFilter : ApiFilterAttribute
     {

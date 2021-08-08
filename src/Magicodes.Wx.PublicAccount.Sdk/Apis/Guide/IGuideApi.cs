@@ -1,4 +1,5 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.Apis.Guide.Dtos;
+using Magicodes.Wx.Sdk.Core;
 using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
 

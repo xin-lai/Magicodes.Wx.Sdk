@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Magicodes.Wx.PublicAccount.Sdk.Helper
+namespace Magicodes.Wx.Sdk.Core.Helper
 {
     /// <summary>
     /// 微信时间戳转换

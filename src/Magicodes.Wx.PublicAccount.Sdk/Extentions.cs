@@ -9,6 +9,9 @@ using Magicodes.Wx.PublicAccount.Sdk.Apis.NewTmpl;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Sns;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.Token;
 using Magicodes.Wx.PublicAccount.Sdk.Apis.User;
+using Magicodes.Wx.PublicAccount.Sdk.Config;
+using Magicodes.Wx.Sdk.Core;
+using Magicodes.Wx.Sdk.Core.Helper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,7 +31,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
             services
                 .AddWebApiClient()
                 .UseJsonFirstApiActionDescriptor();
-
+            //TODO:添加自动映射
             services.AddSingleton<WxFuncs>();
             services.AddHttpApi<ITokenApi>();
             services.AddHttpApi<IOauth2Api>();
@@ -63,7 +66,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk
                 IConfigurationSection wechatConfig = config.GetSection("Wx");
                 if (wechatConfig != null)
                 {
-                    funcs.GetWeChatOptions = () => WxHelper.GetWeChatOptionsByConfiguration(config);
+                    funcs.GetWeChatOptions = () => ConfigHelper.GetWeChatOptionsByConfiguration(config);
                 }
             }
             return app;

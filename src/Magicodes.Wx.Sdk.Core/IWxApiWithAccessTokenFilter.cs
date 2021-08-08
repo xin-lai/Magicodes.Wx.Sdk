@@ -1,6 +1,6 @@
 ﻿using WebApiClientCore.Attributes;
 
-namespace Magicodes.Wx.PublicAccount.Sdk.Apis
+namespace Magicodes.Wx.Sdk.Core
 {
     /// <summary>
     /// 

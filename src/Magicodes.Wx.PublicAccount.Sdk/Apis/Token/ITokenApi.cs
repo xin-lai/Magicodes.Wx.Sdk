@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Magicodes.Wx.Sdk.Core;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
 

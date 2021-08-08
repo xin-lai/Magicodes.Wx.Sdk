@@ -15,7 +15,7 @@
 
 namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages.From
 {
-    using Magicodes.Wx.PublicAccount.Sdk.Helper;
+    using Magicodes.Wx.Sdk.Core.Helper;
     using System;
     using System.Xml.Serialization;
 

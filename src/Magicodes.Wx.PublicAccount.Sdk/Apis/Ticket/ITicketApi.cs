@@ -1,4 +1,5 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.Apis.Ticket.Dtos;
+using Magicodes.Wx.Sdk.Core;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

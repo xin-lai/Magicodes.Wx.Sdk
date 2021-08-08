@@ -16,7 +16,7 @@
 namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
 {
     using Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages.To;
-    using Magicodes.Wx.PublicAccount.Sdk.Helper;
+    using Magicodes.Wx.Sdk.Core.Helper;
 
     /// <summary>
     /// 发送消息扩展

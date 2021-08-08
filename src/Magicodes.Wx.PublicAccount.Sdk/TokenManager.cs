@@ -1,4 +1,5 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.Apis.Token;
+using Magicodes.Wx.Sdk.Core;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;

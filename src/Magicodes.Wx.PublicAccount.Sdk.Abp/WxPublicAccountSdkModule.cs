@@ -1,4 +1,6 @@
 ﻿using Magicodes.Wx.PublicAccount.Sdk.AspNet;
+using Magicodes.Wx.PublicAccount.Sdk.Config;
+using Magicodes.Wx.Sdk.Core.Helper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -45,7 +47,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.Abp
                         else
                         {
                             IConfiguration config = app.ApplicationServices.GetRequiredService<IConfiguration>();
-                            return WxHelper.GetWeChatOptionsByConfiguration(config);
+                            return ConfigHelper.GetWeChatOptionsByConfiguration(config);
                         }
                     };
                 }

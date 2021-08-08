@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using Magicodes.Wx.Sdk.Core;
+using System.Threading.Tasks;
 using WebApiClientCore.Attributes;
 
 namespace Magicodes.Wx.PublicAccount.Sdk.Apis.Sns

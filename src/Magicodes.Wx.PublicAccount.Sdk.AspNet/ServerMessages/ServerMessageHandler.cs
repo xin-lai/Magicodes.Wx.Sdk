@@ -17,7 +17,6 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
 {
     using Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages.From;
     using Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages.To;
-    using Magicodes.Wx.PublicAccount.Sdk.Helper;
     using Microsoft.Extensions.Logging;
     using System;
     using System.Collections.Generic;
@@ -27,6 +26,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet.ServerMessages
     using System.Threading.Tasks;
     using System.Xml.Linq;
     using Microsoft.Extensions.DependencyInjection;
+    using Magicodes.Wx.Sdk.Core.Helper;
 
     /// <summary>
     /// 服务器消息处理类
