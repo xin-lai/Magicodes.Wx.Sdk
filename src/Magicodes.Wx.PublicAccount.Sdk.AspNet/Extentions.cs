@@ -19,7 +19,7 @@ namespace Magicodes.Wx.PublicAccount.Sdk.AspNet
         /// <returns></returns>
         public static IServiceCollection AddServerMessageHandler(this IServiceCollection services)
         {
-            services.AddSingleton<ServerMessageHandler>();
+            services.AddTransient<ServerMessageHandler>();
             services.AddTransient<WxEventController>();
             return services;
         }
